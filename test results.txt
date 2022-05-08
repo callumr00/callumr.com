@@ -4,26 +4,59 @@ Google Lighthouse
 
         Page                 |Performance|Accessibility|Best Practices|SEO|
         -------------------------------------------------------------------
-        index.html           |100        |100          |100           |100|✓
-        essays.html          |100        |100          |100           |100|✓
-        essayTemplate.html   |100        |100          |100           |100|✓
-        books.html           |100        |100          |100           |100|✓
-        photography.html     |100        |100          |100           |100|✓
-        404.html             |100        |100          |100           |100|✓
+        index.html           |100        |100          |100           |100| ✓
+        essays.html          |100        |100          |100           |100| ✓
+        essayTemplate.html   |100        |100          |100           |100| ✓
+        books.html           |100        |100          |100           |100| ✓
+        photography.html     |100        |100          |100           |100| ✓
+        404.html             |100        |100          |100           |100| ✓
 
 
     Desktop
 
         Page                 |Performance|Accessibility|Best Practices|SEO|
         -------------------------------------------------------------------
-        index.html           |100        |100          |100           |100|✓
-        essays.html          |100        |100          |100           |100|✓
-        essayTemplate.html   |100        |100          |100           |100|✓
-        books.html           |100        |100          |100           |100|✓
+        index.html           |100        |100          |100           |100| ✓
+        essays.html          |100        |100          |100           |100| ✓
+        essayTemplate.html   |100        |100          |100           |100| ✓
+        books.html           |100        |100          |100           |100| ✓
         photography.html     |92         |100          |100           |100|
-        404.html             |100        |100          |100           |100|✓
+        404.html             |100        |100          |100           |100| ✓
 
 
 WAVE Web Accessibility Evaluation Tool
 
+        Page                 |Errors|Contrast Errors|Alerts|Features|Structural Elements|ARIA|
+        --------------------------------------------------------------------------------------
+        index.html           |0     |0              |1     |7       |10                 |0   |
+        essays.html          |0     |0              |0     |7       |5                  |0   | ✓
+        essayTemplate.html   |0     |0              |0     |6       |7                  |0   | ✓
+        books.html           |0     |0              |0     |20      |43                 |0   | ✓
+        photography.html     |0     |0              |0     |13      |11                 |0   | ✓
+        404.html             |0     |0              |0     |6       |5                  |0   |
+
+
 PageSpeed insights
+
+    Mobile
+
+        Page                 |Performance|
+        ----------------------------------
+        index.html           |94         |
+        essays.html          |94         |
+        essayTemplate.html   |94         |
+        books.html           |85         |
+        photography.html     |80         |
+        404.html             |94         |
+
+
+    Desktop
+
+        Page                 |Performance|
+        ----------------------------------
+        index.html           |99         |
+        essays.html          |99         |
+        essayTemplate.html   |99         |
+        books.html           |97         |
+        photography.html     |94         |
+        404.html             |99         |
