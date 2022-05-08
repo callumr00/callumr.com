@@ -33,7 +33,7 @@ WAVE Web Accessibility Evaluation Tool
         essayTemplate.html   |0     |0              |0     |6       |7                  |0   | ✓
         books.html           |0     |0              |0     |20      |43                 |0   | ✓
         photography.html     |0     |0              |0     |13      |11                 |0   | ✓
-        404.html             |0     |0              |0     |6       |5                  |0   |
+        404.html             |0     |0              |0     |6       |5                  |0   | ✓
 
 
 PageSpeed insights
