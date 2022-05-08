@@ -1,0 +1,2 @@
+RewriteEngine on
+ErrorDocument 404 https://callumr.com/404.html
