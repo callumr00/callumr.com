@@ -1,2 +1,0 @@
-# callumr.com
-Personal Website
