@@ -1,0 +1,29 @@
+Google Lighthouse
+
+    Mobile
+
+        Page                 |Performance|Accessibility|Best Practices|SEO|
+        -------------------------------------------------------------------
+        index.html           |100        |100          |100           |100|✓
+        essays.html          |100        |100          |100           |100|✓
+        essayTemplate.html   |100        |100          |100           |100|✓
+        books.html           |100        |100          |100           |100|✓
+        photography.html     |100        |100          |100           |100|✓
+        404.html             |100        |100          |100           |100|✓
+
+
+    Desktop
+
+        Page                 |Performance|Accessibility|Best Practices|SEO|
+        -------------------------------------------------------------------
+        index.html           |100        |100          |100           |100|✓
+        essays.html          |100        |100          |100           |100|✓
+        essayTemplate.html   |100        |100          |100           |100|✓
+        books.html           |100        |100          |100           |100|✓
+        photography.html     |92         |100          |100           |100|
+        404.html             |100        |100          |100           |100|✓
+
+
+WAVE Web Accessibility Evaluation Tool
+
+PageSpeed insights

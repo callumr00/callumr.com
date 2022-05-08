@@ -1,0 +1,55 @@
+// Dark Mode
+@include media-dark {
+
+}
+
+// Mobile - =< 599px
+@include media-xs {
+
+}
+
+// Tablet - >= 600px
+@include media-sm {
+    .nav {
+        padding: 0 5em;
+    }
+
+    .header {
+        .page__filter {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &--desc {
+                padding-bottom: 0;
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Laptop - >= 900px
+@include media-md {
+    .nav {
+        padding: 0 9em;
+    }
+}
+
+// Desktop - >= 1200px
+@include media-lg {
+    body {
+        .index__about {
+            display: flex;
+
+            &--profile {
+                margin-left: 2rem;
+                padding: 2rem 0;
+                width: 50%;
+            }
+        }
+    }
+}
+
+// Desktop (Large) - >= 1800px
+@include media-xl {
+
+}

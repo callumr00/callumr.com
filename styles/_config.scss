@@ -1,0 +1,156 @@
+// -- General --
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+// -- Colours --
+
+$colours: (
+    'body': #151515,
+    'primary': #eeeeee,
+    'secondary': #cccccc,
+    'tertiary': #bbbbbb,
+);
+
+@function colour($colour-name) {
+    @return map-get($colours, $colour-name)
+};
+
+
+
+// -- Layout --
+
+@mixin flexSpaceEvenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+
+// -- Text --
+
+// Font-Size
+$font-sizes: (
+    'text--xl': clamp(2rem, 6.25vw, 2.4rem),
+    'text--lg': clamp(1.625rem, 6.25vw, 2.25rem),
+    'text--md': clamp(1.375rem, 6.25vw, 1.75rem),
+    'text--sm': clamp(1.125rem, 6.25vw, 1.25rem),
+    'text--xs': clamp(1rem, 6.25vw, 1.05rem),
+
+    'icon--xl': clamp(3.8rem, 6.25vw, 5rem),
+    'icon--lg': clamp(3rem, 6.25vw, 3.4rem),
+    'icon--md': clamp(2rem, 6.25vw, 2.6rem),
+    'icon--sm': clamp(1.8rem, 6.25vw, 2.4rem),
+    'icon--xs': clamp(1rem, 6.25vw, 1.2rem)
+);
+
+@function size($size-name) {
+    @return map-get($font-sizes, $size-name)
+};
+
+// Font-Weight
+$font-weights: (
+    'regular': 400,
+    'medium': 500,
+    'semi-bold': 600
+);
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+};
+
+// Line-Height
+
+// Notes:
+// Input: lineHeight([font-size in rem])
+// Output: line-height
+
+// 16px font size = 145% line height
+// 48px font size = 120% line height
+@function lineHeight($font-size) {
+    @return calc(((-0.78125 * ($font-size * 16)) + 157.5) / 100)
+};
+
+
+
+// -- Transitions -- 
+
+@mixin transitionDuration {
+    transition-duration: 0.2s;
+}
+
+$transitionDuration: (
+    'hover--slow': 200ms,
+    'hover--med': 160ms,
+    'hover--fast': 120ms,
+);
+
+@function transitionDuration($TD-name) {
+    @return map-get($transitionDuration, $TD-name)
+};
+
+
+
+// -- Media Queries --
+
+// Dark Mode
+@mixin media-dark{
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+// Mobile
+@mixin media-xs {
+    @media screen and (max-width: 599px) {
+        @content;
+    }
+}
+
+// Tablet
+@mixin media-sm {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+// Laptop
+@mixin media-md {
+    @media screen and (min-width: 900px) {
+        @content;
+    }
+}
+
+// Desktop
+@mixin media-lg {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Desktop (Large)
+@mixin media-xl {
+    @media screen and (min-width: 1800px) {
+        @content;
+    }
+}
