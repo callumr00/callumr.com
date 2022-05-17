@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Page Title-->
-    <title>Callum Rafter - Essays</title>
+    <title>Essays - Callum Rafter</title>
 
     <!-- Page Description -->
     <meta
@@ -31,49 +31,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#202020">
 </head>
 
 <body>
 
-    <nav class="nav">
-        <div class="icons__container">
-            <a href="index"><img src="/img/nav/Home.svg" alt="Home Icon"></a>
-            <a href="essays"><img src="/img/nav/Essay.svg" alt="Essay Icon" class="active"></a>
-            <a href="books"><img src="/img/nav/Book.svg" alt="Book Icon"></a>
-            <a href="photography"><img src="/img/nav/Camera.svg" alt="Camera Icon"></a>
-            <a href="mailto:callum.rafter@protonmail.com"><img src="/img/nav/Email.svg" alt="Email Icon"></a>
+    <header class="header">
+        <div class="header__icons">
+            <a class="header__icon" href="https://en.wikipedia.org/wiki/Ankh"><img src="./img/svg/ankh.svg" alt=""></a>
+            <a class="header__icon" href="https://en.wikipedia.org/wiki/Memento_mori">
+                <img src="./img/svg/hourglass.svg" alt="">
+                <img src="./img/svg/skull.svg" alt="">
+            </a>
         </div>
+        <h1 class="header__text">Callum Rafter</h1>
+        <div class="header__socials">
+            <a class="header__social" href="https://github.com/cally2k"><img src="./img/svg/github.svg" alt=""></a>
+            <a class="header__social" href="https://www.linkedin.com/in/callum-rafter"><img src="./img/svg/linkedin.svg" alt=""></a>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="index" class="nav__link">Home</a>
+        <a href="essays" class="nav__link active">Essays</a>
+        <a href="books" class="nav__link">Books</a>
+        <a href="photos" class="nav__link">Photos</a>
     </nav>
 
-    <header class="header">
-        <h1 class="header__text">Callum Rafter</h1>
-
+    <main class="container">
         <div class="page__filter">
             <label for="filter" class="page__filter--desc">Filter by topic</label>
             <input id="filter" class="page__filter--type" type="text"></input>
         </div>
-    </header>
 
-    <main class="container">
         <div class="essays__cards">
-            <h2 class="empty">Empty</h2>
 
+
+            <h2 class="empty">Empty</h2>
+            
             <!-- <a href="essays/essayTemplate" class="essays__link">
                 <div class="essays__card">
-                    <h5 class="essays__card--date">Jun 25, 2021</h3>
-                    <h3 class="essays__card--title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <h4 class="essays__card--summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est totam delectus, officia consectetur velit minima! Obcaecati blanditiis natus dolorum aspernatur?</h3>
+                    <h3 class="essays__card--date">Jun 25, 2021</h3>
+                    <h2 class="essays__card--title">Lorem ipsum dolor sit amet consectetur adipisicing elit. -></h2>
+                    <p class="essays__card--summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est totam delectus, officia consectetur velit minima! Obcaecati blanditiis natus dolorum aspernatur?</p>
                     <div class="essays__card--info">
-                        <h5 class="essays__card--tags">Bitcoin</h3>
-                        <h5 class="essays__card--time">20 min read</h3>
+                        <p class="essays__card--tags">Bitcoin</p>
+                        <p class="essays__card--time">20 min read</p>
                     </div>
                 </div>
             </a> -->
