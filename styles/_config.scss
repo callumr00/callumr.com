@@ -1,15 +1,18 @@
 // -- General --
 
+// Remove default padding etc
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+// Set overflow rules
 html {
     overflow-y: scroll;
 }
 
+// Set font
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -18,13 +21,16 @@ body {
 
 // -- Colours --
 
+// Set colour variables
 $colours: (
-    'body': #151515,
-    'primary': #eeeeee,
-    'secondary': #cccccc,
-    'tertiary': #bbbbbb,
+    'body'     : #151515,
+    'bodyL'    : #202020,
+    'primary'  : #FFFFFF,
+    'secondary': #a0adbe,
+    'tertiary' : #646C77,
 );
 
+// Define colour function
 @function colour($colour-name) {
     @return map-get($colours, $colour-name)
 };
@@ -50,34 +56,47 @@ $colours: (
 // -- Text --
 
 // Font-Size
-$font-sizes: (
-    'text--xl': clamp(2rem, 6.25vw, 2.4rem),
-    'text--lg': clamp(1.625rem, 6.25vw, 2.25rem),
-    'text--md': clamp(1.375rem, 6.25vw, 1.75rem),
-    'text--sm': clamp(1.125rem, 6.25vw, 1.25rem),
-    'text--xs': clamp(1rem, 6.25vw, 1.05rem),
 
-    'icon--xl': clamp(3.8rem, 6.25vw, 5rem),
-    'icon--lg': clamp(3rem, 6.25vw, 3.4rem),
-    'icon--md': clamp(2rem, 6.25vw, 2.6rem),
-    'icon--sm': clamp(1.8rem, 6.25vw, 2.4rem),
-    'icon--xs': clamp(1rem, 6.25vw, 1.2rem)
+// Set min font size (rem)
+$min-size: (
+    'header'   : 2rem,
+    'primary'  : 1.125rem,
+    'secondary': 1rem,
+    'tertiary' : 1rem
 );
 
+// Define min-size function
+@function min-size($size-name) {
+    @return map-get($min-size, $size-name)
+};
+
+// Define responsive size
+$font-sizes: (
+    'header'   : clamp(min-size(header), 6.25vw, calc(min-size(header)*1.25)),
+    'primary'   : clamp(min-size(primary), 6.25vw, calc(min-size(primary)*1.25)),
+    'secondary'   : clamp(min-size(secondary), 6.25vw, calc(min-size(secondary)*1.25)),
+    'tertiary'   : clamp(min-size(tertiary), 6.25vw, calc(min-size(tertiary)*1.25)),
+);
+
+// Define size function
 @function size($size-name) {
     @return map-get($font-sizes, $size-name)
 };
 
+
 // Font-Weight
+
+// Set weight variables
 $font-weights: (
     'regular': 400,
-    'medium': 500,
-    'semi-bold': 600
+    'medium' : 500,
 );
 
+// Define weight function
 @function weight($weight-name) {
     @return map-get($font-weights, $weight-name)
 };
+
 
 // Line-Height
 
@@ -87,7 +106,7 @@ $font-weights: (
 
 // 16px font size = 145% line height
 // 48px font size = 120% line height
-@function lineHeight($font-size) {
+@function height($font-size) {
     @return calc(((-0.78125 * ($font-size * 16)) + 157.5) / 100)
 };
 
@@ -95,18 +114,16 @@ $font-weights: (
 
 // -- Transitions -- 
 
-@mixin transitionDuration {
-    transition-duration: 0.2s;
-}
-
-$transitionDuration: (
-    'hover--slow': 200ms,
-    'hover--med': 160ms,
-    'hover--fast': 120ms,
+// Set transition variables
+$duration: (
+    'slow': 200ms,
+    'medium' : 160ms,
+    'fast': 120ms,
 );
 
-@function transitionDuration($TD-name) {
-    @return map-get($transitionDuration, $TD-name)
+// Define transition function
+@function duration($TD-name) {
+    @return map-get($duration, $TD-name)
 };
 
 

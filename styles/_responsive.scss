@@ -11,17 +11,21 @@
 // Tablet - >= 600px
 @include media-sm {
     .nav {
-        padding: 0 5em;
+        // padding: 0 5em;
     }
 
-    .header {
-        .page__filter {
-            display: grid;
+    body {
+        .photography__cards {
             grid-template-columns: repeat(2, 1fr);
+        }
 
-            &--desc {
-                padding-bottom: 0;
-                text-align: left;
+        .books__card{
+            flex-direction:row;
+
+            &--img {
+                align-items: flex-end;
+                width: 40%;
+                border-radius: 0 30px 30px 0;
             }
         }
     }
@@ -29,9 +33,7 @@
 
 // Laptop - >= 900px
 @include media-md {
-    .nav {
-        padding: 0 9em;
-    }
+
 }
 
 // Desktop - >= 1200px
@@ -45,6 +47,14 @@
                 padding: 2rem 0;
                 width: 50%;
             }
+        }
+
+        .essays__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .books__cards {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
