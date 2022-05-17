@@ -20,7 +20,7 @@ const filterFunction = () => {
 
         // Add stylings to found items
         if (input.value.length > 0) {
-            item.style.borderBottom = "1px solid #00ff70"
+            item.style.borderBottom = "3px solid #00ff70"
         } else {
             item.style.borderBottom = ""
         }
