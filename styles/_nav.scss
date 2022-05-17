@@ -8,6 +8,7 @@
         color: colour(secondary);
         font-weight: weight(medium);
         margin: 0 0.5em;
+        transition-duration: duration(fast);
 
         &:hover{
             color: colour(primary);
