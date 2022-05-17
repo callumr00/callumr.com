@@ -11,9 +11,6 @@
 // Tablet - >= 600px
 @include media-sm {
     body {
-        .photography__cards {
-            grid-template-columns: repeat(2, 1fr);
-        }
 
         .books__cards {
             justify-content: center;
@@ -40,7 +37,11 @@
 
 // Laptop - >= 900px
 @include media-md {
-
+    body {
+        .photography__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }
 
 // Desktop - >= 1200px

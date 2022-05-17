@@ -6,6 +6,8 @@
 }
 
 .photography__card {
+    margin: 0 auto;
+    max-width: 600px;
     @include flexCenter (column);
     background: colour(body);
     position: relative;

@@ -291,6 +291,8 @@ body .header__text {
 }
 
 .photography__card {
+  margin: 0 auto;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,9 +383,6 @@ body .header__text {
 }
 
 @media screen and (min-width: 600px) {
-  body .photography__cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
   body .books__cards {
     justify-content: center;
   }
@@ -401,6 +400,11 @@ body .header__text {
     border-radius: 0 30px 30px 0;
     border-bottom: none;
     transform: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  body .photography__cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1200px) {
