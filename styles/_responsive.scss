@@ -10,10 +10,6 @@
 
 // Tablet - >= 600px
 @include media-sm {
-    .nav {
-        // padding: 0 5em;
-    }
-
     body {
         .photography__cards {
             grid-template-columns: repeat(2, 1fr);
