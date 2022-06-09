@@ -2,6 +2,7 @@
     margin: auto;
     max-width: 1200px;
     text-align: center;
+    color: colour(disabled);
 
     &__link {
         text-decoration: none;
@@ -15,8 +16,8 @@
         }
     }
 
-    .active {
-        color: colour(tertiary);
+    .disabled {
+        color: colour(disabled);
         pointer-events: none;
     }
 }
