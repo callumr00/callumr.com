@@ -28,6 +28,7 @@ $colours: (
     'primary'  : #FFFFFF,
     'secondary': #c1d0e0,
     'tertiary' : #98A2A9,
+    'disabled' : #728088,
 );
 
 // Define colour function
@@ -117,7 +118,7 @@ $font-weights: (
 // Set transition variables
 $duration: (
     'slow': 200ms,
-    'medium' : 160ms,
+    'medium': 160ms,
     'fast': 120ms,
 );
 
