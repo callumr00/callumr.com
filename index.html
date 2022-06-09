@@ -20,7 +20,7 @@
     <!-- Page Description -->
     <meta
     name="description"
-    content="Homepage & brief summary of Callum Rafter's interests"
+    content="Callum Rafter's personal website to share essays written, photos taken and books read"
     />
 
     <!-- Import CSS -->
@@ -40,6 +40,7 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#202020">
+</head>
 
 <body>
 
@@ -51,46 +52,31 @@
                 <img src="./img/svg/skull.svg" alt="Skull">
             </a>
         </div>
-        <h1 class="header__text">Callum Rafter</h1>
+        <h1 class="header__home">Callum Rafter</h1>
         <div class="header__socials">
             <a class="header__social" href="https://github.com/cally2k" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
             <a class="header__social" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
         </div>
     </header>
 
-    <nav class="nav">
-        <a href="index" class="nav__link active">Home</a>
-        <a href="essays" class="nav__link">Essays</a>
-        <a href="books" class="nav__link">Books</a>
-        <a href="photos" class="nav__link">Photos</a>
-    </nav>
-
     <main class="container">
-        <div class="index__about">
-            <div class="index__about--text">
-                <p class="index__about--head">Professions</p>
-                <ul class="index__about--list">
-                    <li class="index__about--listitem">Data Analysis</li>
-                    <li class="index__about--listitem">Ski Instructing</li>
-                    <li class="index__about--listitem">Web Development</li>
-                </ul>
-                <p class="index__about--head">Hobbies</p>
-                <ul class="index__about--list">
-                    <li class="index__about--listitem">Climbing</li>
-                    <li class="index__about--listitem">Hiking</li>
-                    <li class="index__about--listitem">Photography</li>
-                    <li class="index__about--listitem">Programming</li>
-                    <li class="index__about--listitem">Skiing</li>
-                    <li class="index__about--listitem">Weightlifting</li>
-                </ul>
-                <p class="index__about--head">Interests</p>
-                <ul class="index__about--list">
-                    <li class="index__about--listitem">Economics</li>
-                    <li class="index__about--listitem">Finance</li>
-                    <li class="index__about--listitem">Philosophy</li>
-                </ul>
-            </div>
-            <img class="index__about--profile" rel="preload" src="img/index/CR_Normal.jpg" onmouseover="this.src='img/index/CR_LaserEyes.jpg';" onmouseout="this.src='img/index/CR_Normal.jpg';" alt="Callum Rafter">
+        <div class="index__cards">
+            <a href="about" class="index__card">
+                <img src="./img/index/about.svg" alt="about section illustration" class="index__card--img">
+                <p class="index__card--text">About -></p>
+            </a>
+            <a href="books" class="index__card">
+                <img src="./img/index/books.svg" alt="books section illustration" class="index__card--img">
+                <p class="index__card--text">Books -></p>
+            </a>
+            <a href="essays" class="index__card">
+                <img src="./img/index/essays.svg" alt="essays section illustration" class="index__card--img">
+                <p class="index__card--text">Essays -></p>
+            </a>
+            <a href="photos" class="index__card">
+                <img src="./img/index/photos.svg" alt="photos section illustration" class="index__card--img">
+                <p class="index__card--text">Photos -></p>
+            </a>
         </div>
     </main>
 
