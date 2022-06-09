@@ -31,6 +31,7 @@ body .header {
 }
 body .header__icon {
   text-decoration: none;
+  transition-duration: 120ms;
 }
 body .header__icon img {
   height: 25px;
@@ -44,6 +45,7 @@ body .header__socials {
 }
 body .header__social {
   padding-left: 0.5em;
+  transition-duration: 120ms;
 }
 body .header__social img {
   height: 25px;
@@ -52,11 +54,14 @@ body .header__social img {
 body .header__social:hover {
   filter: brightness(1.6);
 }
-body .header__text {
+body .header__home {
   color: #FFFFFF;
-  letter-spacing: 2px;
-  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 600;
   text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
 }
 
 .page__filter {
@@ -99,6 +104,7 @@ body .header__text {
   margin: auto;
   max-width: 1200px;
   text-align: center;
+  color: #728088;
 }
 .nav__link {
   text-decoration: none;
@@ -110,33 +116,41 @@ body .header__text {
 .nav__link:hover {
   color: #FFFFFF;
 }
-.nav .active {
-  color: #98A2A9;
+.nav .disabled {
+  color: #728088;
   pointer-events: none;
 }
 
-.index__about {
-  max-width: 800px;
+.index__cards {
+  margin: 3rem 0;
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.index__card {
+  text-decoration: none;
+  background-color: #202020;
+  width: 300px;
   margin: auto;
-}
-.index__about--text {
-  padding: 2rem 0;
-  min-width: 300px;
-}
-.index__about--head {
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: clamp(1rem, 6.25vw, 1.25rem);
-}
-.index__about--list {
-  padding-bottom: 1rem;
-  list-style: none;
-  color: #98A2A9;
-  font-size: clamp(1rem, 6.25vw, 1.25rem);
-}
-.index__about--profile {
-  width: 100%;
   border-radius: 20px;
+  box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+  transition-duration: 160ms;
+}
+.index__card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 13px 15px 9px rgba(0, 0, 0, 0.5);
+}
+.index__card--img {
+  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+  height: 250px;
+}
+.index__card--text {
+  padding-bottom: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .essays__cards {
@@ -213,7 +227,7 @@ body .header__text {
 
 .books__cards {
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
   margin: 0 0 3rem 0;
 }
 
@@ -224,12 +238,12 @@ body .header__text {
   transition-duration: 120ms;
   display: flex;
   margin: 3rem auto 0 auto;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
   flex-direction: column-reverse;
   align-items: center;
 }
 .books__card:hover {
-  outline: solid white 2px;
+  outline: 2px solid white;
 }
 .books__card--details {
   display: grid;
@@ -284,14 +298,14 @@ body .header__text {
   border-bottom: 10px solid #c1d0e0;
 }
 
-.photography__cards {
+.photos__cards {
   padding: 3rem 0 6rem 0;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2em;
 }
 
-.photography__card {
+.photos__card {
   margin: 0 auto;
   max-width: 600px;
   display: flex;
@@ -302,13 +316,13 @@ body .header__text {
   position: relative;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.photography__card--img {
+.photos__card--img {
   display: block;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.photography__card--location {
+.photos__card--location {
   color: #FFFFFF;
   font-weight: 400;
   line-height: 1.434375;
@@ -317,7 +331,7 @@ body .header__text {
   position: absolute;
   top: 5%;
 }
-.photography__card--visit {
+.photos__card--visit {
   color: #FFFFFF;
   font-size: clamp(1rem, 6.25vw, 1.25rem);
   text-decoration: none;
@@ -326,7 +340,7 @@ body .header__text {
   top: 88%;
   padding: 0.2em 0;
 }
-.photography__card--visit:after {
+.photos__card--visit:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -336,22 +350,25 @@ body .header__text {
   background-color: #FFFFFF;
   transform: scaleX(0);
   transform-origin: bottom right;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
-.photography__card--visit:hover {
+.photos__card--visit:hover {
   box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0);
 }
-.photography__card--visit:hover:after {
+.photos__card--visit:hover:after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
-.photography__card--location, .photography__card--visit {
+.photos__card--location, .photos__card--visit {
   transform: translateY(100px);
 }
-.photography__card:hover img {
+.photos__card:hover {
+  outline: 2px solid white;
+}
+.photos__card:hover img {
   filter: blur(3px) brightness(30%);
 }
-.photography__card:hover h2, .photography__card:hover p, .photography__card:hover a {
+.photos__card:hover h2, .photos__card:hover p, .photos__card:hover a {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   transition-duration: 160ms;
@@ -359,20 +376,46 @@ body .header__text {
   opacity: 1;
 }
 
-.photography__details {
+.photos__details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
   position: absolute;
   transition-duration: 200ms;
 }
-.photography__details--info {
+.photos__details--info {
   color: #c1d0e0;
   text-decoration: none;
   opacity: 0;
   transition-duration: 160ms;
   padding: 0 0.8em;
   transform: translateY(100px);
+}
+
+.about__profile {
+  padding: 1rem 0 4rem 0;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.about__text {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+}
+.about__text--text {
+  min-width: 300px;
+}
+.about__text--head {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: clamp(1rem, 6.25vw, 1.25rem);
+}
+.about__text--list {
+  padding-bottom: 1rem;
+  list-style: none;
+  color: #98A2A9;
+  font-size: clamp(1rem, 6.25vw, 1.25rem);
 }
 
 .err404 {
@@ -384,6 +427,22 @@ body .header__text {
 }
 
 @media screen and (min-width: 600px) {
+  body .index__cards {
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 50px);
+    transform: translate(-50%, -50%);
+  }
+  body .index__card {
+    width: 200px;
+  }
+  body .index__card--img {
+    height: 160px;
+  }
+  body .about__text {
+    grid-template-columns: repeat(2, 1fr);
+  }
   body .books__cards {
     justify-content: center;
   }
@@ -404,6 +463,12 @@ body .header__text {
   }
 }
 @media screen and (min-width: 900px) {
+  body .index__card {
+    width: 300px;
+  }
+  body .index__card--img {
+    height: 250px;
+  }
   body .photography__cards {
     grid-template-columns: repeat(2, 1fr);
   }
