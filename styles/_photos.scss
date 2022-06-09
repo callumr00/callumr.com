@@ -1,11 +1,11 @@
-.photography__cards {
+.photos__cards {
     padding: 3rem 0 6rem 0;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2em;
 }
 
-.photography__card {
+.photos__card {
     margin: 0 auto;
     max-width: 600px;
     @include flexCenter (column);
@@ -46,7 +46,7 @@
             background-color: colour(primary);
             transform: scaleX(0);
             transform-origin: bottom right;
-            transition: transform 0.3s;
+            transition: transform 0.2s;
         }
     
         &:hover {
@@ -64,6 +64,7 @@
     }
 
     &:hover {
+        outline: 2px solid white;
         img {
             filter: blur(3px) brightness(30%);
         }
@@ -76,7 +77,7 @@
     }
 }
 
-.photography__details {
+.photos__details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
