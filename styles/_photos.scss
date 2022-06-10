@@ -11,7 +11,7 @@
     @include flexCenter (column);
     background: colour(body);
     position: relative;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 8px 4px rgba(0,0,0,0.5);
 
     &--img {
         display: block;
