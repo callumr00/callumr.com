@@ -100,6 +100,41 @@ body .header__home {
   transform: translate(-50%, -50%);
 }
 
+@-webkit-keyframes fadeinHome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinHome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 .nav {
   margin: auto;
   max-width: 1200px;
@@ -127,6 +162,26 @@ body .header__home {
   grid-gap: 3rem;
 }
 
+.index__card:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.index__card:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.index__card:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.index__card:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
 .index__card {
   text-decoration: none;
   background-color: #202020;
@@ -135,6 +190,9 @@ body .header__home {
   border-radius: 20px;
   box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
   transition-duration: 160ms;
+  opacity: 0;
+  -webkit-animation: fadeinHome 1.2s forwards;
+          animation: fadeinHome 1.2s forwards;
 }
 .index__card:hover {
   transform: translateY(-20px);
@@ -231,6 +289,96 @@ body .header__home {
   margin: 0 0 3rem 0;
 }
 
+.books__card:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.books__card:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.books__card:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.books__card:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.books__card:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.books__card:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.books__card:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.books__card:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.books__card:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.books__card:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.books__card:nth-child(11) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+.books__card:nth-child(12) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.books__card:nth-child(13) {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+.books__card:nth-child(14) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.books__card:nth-child(15) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.books__card:nth-child(16) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.books__card:nth-child(17) {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+.books__card:nth-child(18) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
 .books__card {
   max-width: 600px;
   background-color: #202020;
@@ -241,6 +389,9 @@ body .header__home {
   box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
   flex-direction: column-reverse;
   align-items: center;
+  opacity: 0;
+  -webkit-animation: fadein 1.2s forwards;
+          animation: fadein 1.2s forwards;
 }
 .books__card:hover {
   outline: 2px solid white;
@@ -306,6 +457,41 @@ body .header__home {
   grid-gap: 2em;
 }
 
+.photos__card:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.photos__card:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.photos__card:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.photos__card:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.photos__card:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.photos__card:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.photos__card:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
 .photos__card {
   margin: 0 auto;
   max-width: 600px;
@@ -316,6 +502,22 @@ body .header__home {
   background: #151515;
   position: relative;
   box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-animation: fadein 1.2s forwards;
+          animation: fadein 1.2s forwards;
+}
+.photos__card:hover {
+  outline: 2px solid white;
+}
+.photos__card:hover img {
+  filter: blur(3px) brightness(30%);
+}
+.photos__card:hover h2, .photos__card:hover p, .photos__card:hover a {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  transition-duration: 160ms;
+  transform: translateY(0);
+  opacity: 1;
 }
 .photos__card--img {
   display: block;
@@ -345,7 +547,7 @@ body .header__home {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #FFFFFF;
@@ -362,19 +564,6 @@ body .header__home {
 }
 .photos__card--location, .photos__card--visit {
   transform: translateY(100px);
-}
-.photos__card:hover {
-  outline: 2px solid white;
-}
-.photos__card:hover img {
-  filter: blur(3px) brightness(30%);
-}
-.photos__card:hover h2, .photos__card:hover p, .photos__card:hover a {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  transition-duration: 160ms;
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .photos__details {
@@ -397,12 +586,18 @@ body .header__home {
   padding: 1rem 0 4rem 0;
   margin: 0 auto;
   max-width: 200px;
+  opacity: 0;
+  -webkit-animation: fadein 1.2s forwards;
+          animation: fadein 1.2s forwards;
 }
 
 .about__text {
   max-width: 800px;
   margin: auto;
   display: grid;
+  opacity: 0;
+  -webkit-animation: fadein 1.2s 0.1s forwards;
+          animation: fadein 1.2s 0.1s forwards;
 }
 .about__text--text {
   min-width: 300px;
