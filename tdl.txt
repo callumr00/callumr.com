@@ -1,0 +1,9 @@
+Implement
+
+------------------------------------------------
+Improve
+    Replace placeholder text in blog posts
+    Update sitemap
+    Update tests
+------------------------------------------------
+Bugs

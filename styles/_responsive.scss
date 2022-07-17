@@ -11,32 +11,30 @@
 // Tablet - >= 600px
 @include media-sm {
     body {
-        
-        .index__cards {
-            grid-template-columns: repeat(2, 1fr);
-            position: absolute;
-            left: 50%;
-            top: calc(50% - 50px);
-            transform: translate(-50%, -50%);
-        }
+        .index {
+            &__portrait {
+                margin: 5rem 0;
+            }
 
-        .index__card {
-            width: 200px;
-            &--img {
-                height: 160px;
+            &__pages--cards, &__work--cards {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 3rem;
             }
         }
 
-        .about__text {
+        .blog__cards {
             grid-template-columns: repeat(2, 1fr);
         }
 
         .books__cards {
+            grid-gap: 2em;
+        }
+
+        .books__cards, .blog__cards {
             justify-content: center;
         }
 
-        .books__card{
-            margin: 0;
+        .books__card, .blog__cards {
             flex-direction:row;
             align-items: initial;
 
@@ -51,17 +49,110 @@
                 transform: none;
             }
         }
+
+        .photos__details--info {
+            font-size: 18px;
+        }
     }
 }
 
 // Laptop - >= 900px
 @include media-md {
     body {
-        .index__card {
-            width: 300px;
-            &--img {
-                height: 250px;
+        .nav {
+            max-width: 1200px;
+            position: absolute;
+            width: 84%;
+            height: 6rem;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 5fr 4fr 1fr;
+            background-color: #FFFFFF00;
+            visibility: visible;
+            transform: none;
+            border-bottom: 1px solid colour(tertiary);
+
+            opacity: 0;
+            animation: fadein--nav 0.4s forwards;
+
+            &__menu {
+                display: flex;
+                border: none;
+                justify-content: flex-end;
             }
+
+            &__item {
+                transform: none;
+                margin: auto 0;
+                padding: 0 0 0.5rem 1.5rem;
+            }
+
+            &__link {
+                text-decoration: none;
+                color: colour(secondary);
+                font-weight: 600;
+                font-size: 14px;
+    
+                transition-duration: duration(fast);
+    
+                &:hover {
+                    color: colour(accent);
+                }
+            }
+
+            &__icons {
+                display: flex;
+                padding: 1rem 0;
+            }
+
+            &__icons:nth-child(1) {
+                justify-content: flex-start;
+            }
+
+            &__icons:nth-child(3) {
+                justify-content: flex-end;
+
+                .nav__icon {
+                    padding-left: 0.5rem;
+                }
+            }
+
+            &__icon {
+                filter: brightness(1);
+                text-decoration: none;
+                transition-duration: duration(fast);
+    
+                img {
+                    height: 25px;
+                    width: 25px;
+                }
+    
+                &:hover {
+                    filter: brightness(0.2);
+                }
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+
+        header, .nav, .container {
+            margin: 0 8%;
+        }
+
+        header {
+            border: none;
+        }
+        
+
+        .index__work--cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 3rem;
+        }
+
+        .blog__cards {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .photos__cards {
@@ -73,18 +164,25 @@
 // Desktop - >= 1200px
 @include media-lg {
     body {
-        .index__about {
-            display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-            &--profile {
-                margin-left: 2rem;
-                padding: 2rem 0;
-                width: 50%;
-            }
+        .nav {
+            right: auto;
         }
 
-        .essays__cards {
-            grid-template-columns: repeat(2, 1fr);
+        header, .nav, .container {
+            margin: 0 8%;
+        }
+
+        .index__pages--cards, .index__work--cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .blog__cards {
+            grid-template-columns: repeat(3, 1fr);
         }
 
         .books__cards {

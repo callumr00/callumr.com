@@ -44,35 +44,41 @@
 
 <body>
 
-    <header class="header">
-        <div class="header__icons">
-            <a class="header__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
-            <a class="header__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
+    <header>
+        <a href="index.html" class="nav__home"><h1>CR</h1></a>
+    </header>
+
+    <div class="burger">
+        <span class="burger__menu"></span>
+    </div>
+
+    <nav class="nav">
+        <div class="nav__icons">
+            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
+            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
                 <img src="./img/svg/hourglass.svg" alt="Hourglass">
                 <img src="./img/svg/skull.svg" alt="Skull">
             </a>
         </div>
-        <h1 class="header__home">Callum Rafter</h1>
-        <div class="header__socials">
-            <a class="header__social" href="https://github.com/cally2k" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-            <a class="header__social" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
+        <ul class="nav__menu">
+            <li class="nav__item">
+                <a href="blog.html" class="nav__link">Blog</a>
+            </li>
+            <li class="nav__item">
+                <a href="books.html" class="nav__link disabled">Books</a>
+            </li>
+            <li class="nav__item">
+                <a href="photos.html" class="nav__link">Photos</a>
+            </li>
+        </ul>
+        <div class="nav__icons">
+            <a class="nav__icon" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
+            <a class="nav__icon" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
         </div>
-    </header>
-
-    <nav class="nav">
-        <a href="index" class="nav__link">Callumr.com</a>
-        &#8594;
-        <a href="books" class="nav__link disabled">Books</a>
     </nav>
 
     <main class="container">
-        <div class="page__filter">
-            <label for="filter" class="page__filter--desc">Filter by topic</label>
-            <input id="filter" class="page__filter--type" type="text"></input>
-        </div>
-        
         <div class="books__cards">
-
             <!-- The Price of Tomorrow - Jeff Booth -->
             <div class="books__card">
                 <div class="books__card--details">
@@ -408,8 +414,15 @@
         </div>
     </main>
 
-</body>
+    <footer>
+        <div class="footer__links">        
+            <a class="footer__link" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
+            <a class="footer__link" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
+            <a class="footer__link" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
+        </div>
+    </footer>
 
-<script src="/scripts/filter_books.js"></script>
+    <script src="./scripts/nav.js"></script>
+</body>
 
 </html>

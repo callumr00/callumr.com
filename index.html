@@ -44,42 +44,114 @@
 
 <body>
 
-    <header class="header">
-        <div class="header__icons">
-            <a class="header__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
-            <a class="header__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
+    <header>
+        <a href="index.html" class="nav__home"><h1>CR</h1></a>
+    </header>
+
+    <div class="burger">
+        <span class="burger__menu"></span>
+    </div>
+
+    <nav class="nav">
+        <div class="nav__icons">
+            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
+            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
                 <img src="./img/svg/hourglass.svg" alt="Hourglass">
                 <img src="./img/svg/skull.svg" alt="Skull">
             </a>
         </div>
-        <h1 class="header__home">Callum Rafter</h1>
-        <div class="header__socials">
-            <a class="header__social" href="https://github.com/cally2k" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-            <a class="header__social" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
+        <ul class="nav__menu">
+            <li class="nav__item">
+                <a href="blog.html" class="nav__link link--colour">Blog</a>
+            </li>
+            <li class="nav__item">
+                <a href="books.html" class="nav__link link--colour">Books</a>
+            </li>
+            <li class="nav__item">
+                <a href="photos.html" class="nav__link link--colour">Photos</a>
+            </li>
+        </ul>
+        <div class="nav__icons">
+            <a class="nav__icon" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
+            <a class="nav__icon" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
         </div>
-    </header>
+    </nav>
 
     <main class="container">
-        <div class="index__cards">
-            <a href="about" class="index__card">
-                <img src="./img/index/about.svg" alt="about section illustration" class="index__card--img">
-                <p class="index__card--text">About -></p>
-            </a>
-            <a href="books" class="index__card">
-                <img src="./img/index/books.svg" alt="books section illustration" class="index__card--img">
-                <p class="index__card--text">Books -></p>
-            </a>
-            <a href="essays" class="index__card">
-                <img src="./img/index/essays.svg" alt="essays section illustration" class="index__card--img">
-                <p class="index__card--text">Essays -></p>
-            </a>
-            <a href="photos" class="index__card">
-                <img src="./img/index/photos.svg" alt="photos section illustration" class="index__card--img">
-                <p class="index__card--text">Photos -></p>
-            </a>
+        <img class="index__portrait" src="./img/index/featureImage-min.jpg" alt="">
+
+        <h2 class="index__bio"><span class="index__bio--bold">I’m Callum — a financial analyst based in the UK.</span><br>I started as a web developer and have since broadened my horizons to include data analysis, with a focus towards finance and Bitcoin.</h2>
+
+        <div class="index__pages">
+            <h3 class="index__pages--head">Pages</h3>
+            <div class="index__pages--cards">
+                <a href="blog.html">
+                    <div class="index__pages--card">
+                        <h4>Blog</h4>
+                        <p>I share insights on various topics of interest.</p>
+                    </div>
+                </a>
+                <a href="books.html">
+                    <div class="index__pages--card">
+                        <h4>Books I've Read</h4>
+                        <p>You can see a list of the books i’ve read and my thoughts on them.</p>
+                    </div>
+                </a>
+                <a href="photos.html">
+                    <div class="index__pages--card">
+                        <h4>Photography</h4>
+                        <p>I take photos in an effort to both create and preserve memories.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="index__work">
+            <h3 class="index__work--head">Work</h3>
+            <div class="index__work--cards">
+
+                <a href="./blog/vanguard-investor-summary.html" class="index__work--link">
+                    <div class="index__work--card">
+                        <img src="./img/blog/Vanguard Investor Summary/vanguardSummary-min.jpg" alt="Chart showing Vanguard Investor fund performance">
+                        <div class="index__work--details">
+                            <h4>Vanguard Investor Summary</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in quia, et optio numquam consectetur.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./blog/bitcoin-block-length.html" class="index__work--link">
+                    <div class="index__work--card">
+                        <img src="./img/blog/Bicoin Block Length/blockLength-min.jpg" alt="Chart showing Bitcoin's block length">
+                        <div class="index__work--details">
+                            <h4>Bitcoin Block Length</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in quia, et optio numquam consectetur.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./blog/bitcoin-issuance-schedule.html" class="index__work--link">
+                    <div class="index__work--card">
+                        <img src="./img/blog/Bitcoin Issuance Schedule/issuanceSchedule-min.jpg" alt="Chart showing Bitcoin's issuance schedule">
+                        <div class="index__work--details">
+                            <h4>Bitcoin Issuance Schedule</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in quia, et optio numquam consectetur.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </main>
 
+    <footer>
+        <div class="footer__links">        
+            <a class="footer__link" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
+            <a class="footer__link" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
+            <a class="footer__link" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
+        </div>
+    </footer>
+
+    <script src="./scripts/nav.js"></script>
 </body>
 
 </html>

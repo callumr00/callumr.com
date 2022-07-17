@@ -1,0 +1,142 @@
+// Blog page
+
+.blog__cards {
+    display: grid;
+    grid-gap: 2rem;
+    margin: 5rem 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@for $i from 1 through 10 {
+    .blog__link:nth-child(#{$i}) {
+        animation-delay: (0.075 * $i) + 0.2s;
+    }
+} 
+
+.blog__link {
+    opacity: 0;
+    animation: fadein--body 1.2s forwards;
+}
+
+.blog__card {
+    border-radius: 30px;
+    transition-duration: duration(fast);
+    display: grid;
+    box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
+
+    &:hover {
+        .blog__card--title {
+            color: colour(accent);
+        }
+        .blog__card--title::after {
+            transform: translateX(10px);
+        }
+    }
+
+    &--details {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr 1fr;
+        padding: 0.5rem 1rem;
+    }
+
+    &--date {
+        color: colour(tertiary);
+        font-size: 14px;
+        font-weight: weight(regular);
+        margin: auto 0;
+    }
+
+    &--title {
+        font-size: 18px;
+        color: colour(primary);
+        font-weight: weight(medium);
+        margin: auto 0;
+        height: 42px;
+
+        &::after {
+            content: "->";
+            display: inline-block;
+            padding-left: 0.5rem;
+            transition-duration: duration(medium);
+        }
+    }
+
+    &--summary {
+        color: colour(tertiary);
+        font-size: 14px;
+        font-weight: weight(regular);
+        padding: 0.5em 0;
+    }
+
+    &--tags {
+        font-size: 14px;
+        color: colour(tertiary);
+        font-weight: weight(regular);
+        margin: auto auto 0 0;
+        padding: 0.5em 0;
+    }
+
+    &--img {
+        width: 100%;
+        border-radius: 30px 30px 0 0;
+    }
+}
+
+
+// Blog posts
+
+@for $i from 1 through 10 {
+    .blog__content:nth-child(#{$i}) {
+        animation-delay: (0.075 * $i) + 0.2s;
+    }
+} 
+
+.blog__content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    opacity: 0;
+    animation: fadein--body 1.2s 0.4s forwards;
+
+    &--text {
+        margin: auto;
+        max-width: 600px;
+
+
+    }
+
+    h2 {
+        text-align: center;
+        margin: 5rem 0;
+        font-size: clamp(1.5rem, 6.25vw, 2.2rem);
+        line-height: 1.4em;
+        letter-spacing: -0.02em;
+        color: colour(secondary);
+        font-weight: 400;
+    }
+
+    h3 {
+        margin: 2rem 0 1rem 0;
+        font-size: clamp(1.3rem, 6.25vw, 1.6rem);
+        line-height: 1.4em;
+        letter-spacing: -0.02em;
+        color: colour(secondary);
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 18px;
+        color: colour(primary);
+        font-weight: 500;
+        line-height: height(1);
+        margin-bottom: 0.4rem;
+    }
+
+    img {
+        padding: 2rem 0;
+        max-width: 100%;
+    }
+}

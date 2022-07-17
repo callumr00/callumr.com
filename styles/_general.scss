@@ -1,27 +1,170 @@
 body {
     // Body
     background-color: colour(body);
-    margin: 0 5%;
 
 
     // Container
     .container {
-        margin: auto;
+        margin: 0 5%;
         max-width: 1200px;
         display: grid;
+        min-height: 100vh;
     }
 
-
     // Header
-    .header {
-        margin: auto;
+    header {
+        margin: 0 5%;
         max-width: 1200px;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
         padding: 1rem 0;
-        align-items: center;
+        border-bottom: 1px solid colour(tertiary);
+        font-size: 1.5rem;
+        text-align: center;
+        display: flex;
+        height: 6rem;
+        justify-content: center;
+        z-index: 5;
 
-        &__icon{
+        opacity: 0;
+        animation: fadein--nav 0.4s forwards;
+
+        a {
+            text-decoration: none;
+            color: colour(primary);
+            z-index: 2;
+        }
+    }
+
+    // Nav
+
+    @for $i from 1 through 5 {
+        .nav__item:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0s;
+        }
+    }
+
+    .burger {
+        justify-content: flex-end;
+        border-radius: 50px;
+        position: absolute;
+        z-index: 2;
+        top: 2.25rem;
+        right: 5vw;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include flexCenter(column);
+
+        opacity: 0;
+        animation: fadein--nav 0.4s forwards;
+
+        &.open {
+            position: fixed;
+        }
+
+        &__menu {
+            margin: auto;
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: colour(primary);
+            transition: all 0.3s ease-in-out;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                right: 0px;
+                width: 25px;
+                height: 3px;
+                background: colour(primary);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 8px;
+                right: 0px;
+                width: 20px;
+                height: 3px;
+                background: colour(primary);
+                transition: all 0.3s ease-in-out;
+            }
+            
+            &.open {
+                background: colour(tertiary);
+                transform: rotate(-45deg);
+
+                &::before {
+                    background: colour(tertiary);
+                    transform: translateY(8px) rotate(90deg);
+                }
+
+                &::after {
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .nav {
+        background: colour(primary);
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        visibility: hidden;
+        width: 300px;
+        height: 100%;
+        transform: translateX(100%);
+        transition: all 0.4s ease;
+        padding-top: 6rem;
+
+        &.open {
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        &__menu {
+            list-style-type: none;
+            margin: 0 2rem;
+            border-top: 1px solid colour(tertiary);
+            border-bottom: 1px solid colour(tertiary);
+        }
+
+        &__item {
+            align-items: center;
+            transform: translateX(50vw);
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+
+            &.open {
+                transform: translateX(0);
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            color: colour(body);
+            font-weight: 600;
+            font-size: 14px;
+
+            transition-duration: duration(fast);
+
+            &:hover {
+                color: colour(accent);
+            }
+        }
+
+        &__icons {
+            padding: 1rem 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__icon {
+            filter: brightness(1.8);
             text-decoration: none;
             transition-duration: duration(fast);
 
@@ -31,38 +174,50 @@ body {
             }
 
             &:hover {
-                filter: brightness(1.6);
-            }
-        }
-
-        &__socials {
-            margin-left: auto;
-        }
-
-        &__social{
-            padding-left: 0.5em;
-            transition-duration: duration(fast);
-
-            img {
-                height: 25px;
-                width: 25px;
-            }
-
-            &:hover {
-                filter: brightness(1.6);
+                filter: brightness(1);
             }
         }
     }
-    
-    .header__home {
-        color: colour(primary);
-        text-decoration: none;
-        letter-spacing: 1px;
-        font-weight: 600;
-        text-align: center;
-        font-size: 2rem;
-        margin: 0 auto;
+
+    // Footer
+    footer {
+        width: 100%;
+        background-color: colour(primary); 
+        padding: 4rem 5%;
+
+        .footer {
+            justify-content: center;
+            align-items: center;
+
+            &__links {
+                justify-content: center;
+                align-items: center;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            &__link{
+                padding-left: 0.5em;
+                transition-duration: duration(fast);
+
+                img {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                &:hover {
+                    filter: brightness(1.4);
+                }
+            }
+        }
     }
+}
+
+
+// Disabled
+.disabled {
+    color: colour(disabled) !important;
+    pointer-events: none;
 }
 
 
@@ -82,7 +237,6 @@ body {
     }
     &--type {
         padding: 0 0.5rem;
-        background-color: colour(bodyL);
         color: colour(primary);
         font-size: size(primary);
         line-height: lineHeight(1);
@@ -110,10 +264,11 @@ body {
 
 // Fade In Animation
 
-@keyframes fadeinHome {
+@keyframes fadein--nav {
     from 
     { 
         opacity: 0; 
+        transform: translateY(-30px);
     }
     to
     { 
@@ -121,7 +276,7 @@ body {
     }
 }
 
-@keyframes fadein {
+@keyframes fadein--body {
     from 
     { 
         opacity: 0; 

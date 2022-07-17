@@ -23,12 +23,13 @@ body {
 
 // Set colour variables
 $colours: (
-    'body'     : #151515,
-    'bodyL'    : #202020,
-    'primary'  : #FFFFFF,
-    'secondary': #c1d0e0,
-    'tertiary' : #98A2A9,
-    'disabled' : #728088,
+    'body'              : #FEFEFE,
+    'body--secondary'   : #bcc2c9,
+    'primary'           : #2b3035,
+    'secondary'         : #697582,
+    'tertiary'          : #9da6af,
+    'disabled'          : #7c7f83,
+    'accent'            : #0090ff,
 );
 
 // Define colour function
@@ -91,6 +92,7 @@ $font-sizes: (
 $font-weights: (
     'regular': 400,
     'medium' : 500,
+    'bold'   : 600
 );
 
 // Define weight function

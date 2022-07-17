@@ -1,42 +1,112 @@
-.index__cards {
-    margin: 3rem 0;
-    display: grid;
-    grid-gap: 3rem;
-}
-
-@for $i from 1 through 4 {
-    .index__card:nth-child(#{$i}) {
-        animation-delay: 0.1s * $i;
-    }
-} 
-
-.index__card {
-    text-decoration: none;
-    background-color: colour(bodyL);
-    width: 300px;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 0px 3px 8px 4px rgba(0,0,0,0.5);
-    transition-duration: duration(medium);
-    opacity: 0;
-    animation: fadeinHome 1.2s forwards;
-
-    &:hover {
-        transform: translateY(-20px);
-        box-shadow: 0px 13px 15px 9px rgba(0,0,0,0.4)
-    }
-
-    &--img {
-        padding: 1rem 1rem 0 1rem;
+.index {
+    &__portrait {
+        object-fit: none;
+        object-position: 50% 65%;
         width: 100%;
         height: 250px;
+        margin: 2rem 0;
+
+        opacity: 0;
+        animation: fadein--body 1.2s 0.25s forwards;
     }
 
-    &--text {
-        padding-bottom: 1rem;
-        color: white;
-        text-align: center;
-        font-size: 1.5rem;
+    &__bio {
+        margin-bottom: 5rem;
+        font-size: clamp(1.5rem, 6.25vw, 2.2rem);
+        line-height: 1.4em;
+        letter-spacing: -0.02em;
+        color: colour(secondary);
+        font-weight: 400;
+
+        opacity: 0;
+        animation: fadein--body 1.2s 0.35s forwards;
+
+        &--bold {
+            color: colour(primary);
+            font-weight: 600;
+        }
+    }
+
+    &__pages {
+        opacity: 0;
+        animation: fadein--body 1.2s 0.45s forwards;
+    }
+
+    &__work {
+        opacity: 0;
+        animation: fadein--body 1.2s 0.55s forwards;
+
+        &--link {
+            box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
+            border-radius: 30px;
+
+            &:hover {
+                transform: translateY(-20px);
+                box-shadow: 0px 8px 12px 5px rgba(0,0,0,0.08)
+            }
+        }
+
+        &--details {
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+    }
+
+    &__pages--head, &__work--head {
+        font-size: 12px;
+        color: colour(secondary);
         font-weight: 500;
+        line-height: height(1);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    &__pages--cards, &__work--cards {
+        display: grid;
+        grid-gap: 2rem;
+        margin-bottom: 5rem;
+
+        h4 {
+            font-size: 18px;
+            color: colour(primary);
+            font-weight: 500;
+            line-height: height(1.125);
+            margin-bottom: 0.4rem;
+
+            &::after {
+                content: "->";
+                display: inline-block;
+                padding-left: 0.5rem;
+                transition-duration: duration(medium);
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: colour(secondary);
+            font-weight: 400;
+            line-height: height(1);
+        }
+
+        a {
+            text-decoration: none;
+            color: colour(primary);
+            transition-duration: duration(fast);
+
+            &:hover {
+                h4 {
+                    color: colour(accent);
+                }
+                h4::after {
+                    transform: translateX(10px);
+                }
+            }
+        }
+
+        img {
+            height: 200px;
+            width: 100%;
+            border-radius: 30px 30px 0 0;
+        }
     }
 }
