@@ -457,7 +457,7 @@ body footer .footer__link:hover {
 }
 .blog__card--details {
   display: grid;
-  grid-template-rows: 1fr 1fr 4fr 1fr;
+  grid-template-rows: 1.3fr 1fr 2fr 1fr;
   padding: 0.5rem 1rem;
 }
 .blog__card--date {
@@ -585,6 +585,18 @@ body footer .footer__link:hover {
 .blog__content img {
   padding: 2rem 0;
   max-width: 100%;
+}
+.blog__content--icon img {
+  filter: brightness(1.4);
+  text-decoration: none;
+  transition-duration: 120ms;
+}
+.blog__content--icon img img {
+  height: 25px;
+  width: 25px;
+}
+.blog__content--icon img:hover {
+  filter: brightness(1);
 }
 
 .books__cards {

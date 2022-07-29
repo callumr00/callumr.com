@@ -38,7 +38,7 @@
 
     &--details {
         display: grid;
-        grid-template-rows: 1fr 1fr 4fr 1fr;
+        grid-template-rows: 1.3fr 1fr 2fr 1fr;
         padding: 0.5rem 1rem;
     }
 
@@ -104,8 +104,6 @@
     &--text {
         margin: auto;
         max-width: 600px;
-
-
     }
 
     h2 {
@@ -138,5 +136,22 @@
     img {
         padding: 2rem 0;
         max-width: 100%;
+    }
+
+    &--icon {
+        img {
+            filter: brightness(1.4);
+            text-decoration: none;
+            transition-duration: duration(fast);
+
+            img {
+                height: 25px;
+                width: 25px;
+            }
+
+            &:hover {
+                filter: brightness(1);
+            }
+        }
     }
 }
