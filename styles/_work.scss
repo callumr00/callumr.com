@@ -1,6 +1,6 @@
-// Blog page
+// Work page
 
-.blog__cards {
+.work__cards {
     display: grid;
     grid-gap: 2rem;
     margin: 5rem 0;
@@ -11,34 +11,34 @@
 }
 
 @for $i from 1 through 10 {
-    .blog__link:nth-child(#{$i}) {
+    .work__link:nth-child(#{$i}) {
         animation-delay: (0.075 * $i) + 0.2s;
     }
 } 
 
-.blog__link {
+.work__link {
     opacity: 0;
     animation: fadein--body 1.2s forwards;
 }
 
-.blog__card {
+.work__card {
     border-radius: 30px;
     transition-duration: duration(fast);
     display: grid;
     box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
 
     &:hover {
-        .blog__card--title {
+        .work__card--title {
             color: colour(accent);
         }
-        .blog__card--title::after {
+        .work__card--title::after {
             transform: translateX(10px);
         }
     }
 
     &--details {
         display: grid;
-        grid-template-rows: 1.3fr 1fr 2fr 1fr;
+        grid-template-rows: 1.25fr auto auto 1fr;
         padding: 0.5rem 1rem;
     }
 
@@ -55,6 +55,7 @@
         font-weight: weight(medium);
         margin: auto 0;
         height: 42px;
+        padding: 0.75rem 0;
 
         &::after {
             content: "->";
@@ -86,15 +87,15 @@
 }
 
 
-// Blog posts
+// Work posts
 
 @for $i from 1 through 10 {
-    .blog__content:nth-child(#{$i}) {
+    .work__content:nth-child(#{$i}) {
         animation-delay: (0.075 * $i) + 0.2s;
     }
 } 
 
-.blog__content {
+.work__content {
     max-width: 800px;
     margin: 0 auto;
 

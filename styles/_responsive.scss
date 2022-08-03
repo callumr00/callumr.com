@@ -22,19 +22,20 @@
             }
         }
 
-        .blog__cards {
+        .work__cards {
             grid-template-columns: repeat(2, 1fr);
+            height: 0;
         }
 
         .books__cards {
             grid-gap: 2em;
         }
 
-        .books__cards, .blog__cards {
+        .books__cards, .work__cards {
             justify-content: center;
         }
 
-        .books__card, .blog__cards {
+        .books__card, .work__cards {
             flex-direction:row;
             align-items: initial;
 
@@ -83,8 +84,8 @@
 
             &__item {
                 transform: none;
-                margin: auto 0;
-                padding: 0 0 0.5rem 1.5rem;
+                margin: auto 0 auto 1.5rem;
+                padding: 0 0 0.5rem 0;
             }
 
             &__link {
@@ -137,12 +138,15 @@
             display: none;
         }
 
-        header, .nav, .container {
+        .nav, .container {
             margin: 0 8%;
         }
 
         header {
             border: none;
+            margin: auto;
+            width: auto;
+            z-index: 10;
         }
         
 
@@ -151,7 +155,7 @@
             grid-gap: 3rem;
         }
 
-        .blog__cards {
+        .work__cards {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -169,24 +173,31 @@
         align-items: center;
         flex-direction: column;
 
-        .nav {
-            right: auto;
+        header-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        header, .nav, .container {
-            margin: 0 8%;
+        .nav {
+            right: auto;
         }
 
         .index__pages--cards, .index__work--cards {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .blog__cards {
+        .work__cards {
             grid-template-columns: repeat(3, 1fr);
         }
 
         .books__cards {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        footer-container {
+            width: 100%;
         }
     }
 }

@@ -20,7 +20,7 @@
     <!-- Page Description -->
     <meta
     name="description"
-    content="Callum Rafter's personal website to share essays written, photos taken and books read"
+    content="Callum Rafter's personal website to share work, photos taken and books read"
     />
 
     <!-- Import CSS -->
@@ -43,52 +43,20 @@
 </head>
 
 <body>
-
-    <header>
-        <a href="index" class="nav__home"><h1>CR</h1></a>
-    </header>
-
-    <div class="burger">
-        <span class="burger__menu"></span>
-    </div>
-
-    <nav class="nav">
-        <div class="nav__icons">
-            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
-            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
-                <img src="./img/svg/hourglass.svg" alt="Hourglass">
-                <img src="./img/svg/skull.svg" alt="Skull">
-            </a>
-        </div>
-        <ul class="nav__menu">
-            <li class="nav__item">
-                <a href="blog" class="nav__link link--colour">Blog</a>
-            </li>
-            <li class="nav__item">
-                <a href="books" class="nav__link link--colour">Books</a>
-            </li>
-            <li class="nav__item">
-                <a href="photos" class="nav__link link--colour">Photos</a>
-            </li>
-        </ul>
-        <div class="nav__icons">
-            <a class="nav__icon" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
-            <a class="nav__icon" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-        </div>
-    </nav>
+    <header-container></header-container>
 
     <main class="container">
-        <img class="index__portrait" src="./img/index/featureImage-min.jpg" alt="">
+        <img class="index__portrait" src="img/index/featureImage-min.jpg" alt="">
 
         <h2 class="index__bio"><span class="index__bio--bold">I’m Callum — a financial analyst based in the UK.</span><br>I started as a web developer and have since broadened my horizons to include data analysis, with a focus towards finance and Bitcoin.</h2>
 
         <div class="index__pages">
             <h3 class="index__pages--head">Pages</h3>
             <div class="index__pages--cards">
-                <a href="blog">
+                <a href="work">
                     <div class="index__pages--card">
-                        <h4>Blog</h4>
-                        <p>I share insights on various topics of interest.</p>
+                        <h4>Work</h4>
+                        <p>A place to showcase my projects, whether in progress or completed.</p>
                     </div>
                 </a>
                 <a href="books">
@@ -110,32 +78,38 @@
             <h3 class="index__work--head">Work</h3>
             <div class="index__work--cards">
 
-                <a href="./blog/bitcoin-blockchain-analysis" class="index__work--link">
-                    <div class="index__work--card">
-                        <img src="./img/blog/Bitcoin Blockchain Analysis/cover-min.jpg" alt="Chart showing Bitcoin's block length">
-                        <div class="index__work--details">
-                            <h4>Bitcoin Blockchain Analysis</h4>
-                            <p>A showcase of visualizations detailing various different aspects of the Bitcoin network.</p>
+                <a href="btc" class="work__link">
+                    <div class="work__card">
+                        <img class="work__card--img" rel="preload" src="/img/work/btc/cover-min.jpg" alt="Chart showing Bitcoin's block length">
+                        <div class="work__card--details">
+                            <h3 class="work__card--date"><strong>June 22, 2022</strong><br>Last Updated: July 29, 2022</h3>
+                            <h2 class="work__card--title">Bitcoin Blockchain Analysis</h2>
+                            <h3 class="work__card--summary">A showcase of visualizations detailing various different aspects of the Bitcoin network.</h3>
+                            <p class="work__card--tags">Bitcoin</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="./blog/vanguard-investor-summary" class="index__work--link">
-                    <div class="index__work--card">
-                        <img src="./img/blog/Vanguard Investor Summary/cover-min.jpg" alt="Chart showing Vanguard Investor fund performance">
-                        <div class="index__work--details">
-                            <h4>Vanguard Investor Summary</h4>
-                            <p>A summary of all funds available through Vanguard Investor, ranked by highest average annualized return.</p>
+                <a href="cws" class="work__link">
+                    <div class="work__card">
+                        <img class="work__card--img" rel="preload" src="/img/work/cws/cover-min.jpg" alt="Terminal output from project's program">
+                        <div class="work__card--details">
+                            <h3 class="work__card--date"><strong>May 17, 2022</strong><br>Last Updated: May 17, 2022</h3>
+                            <h2 class="work__card--title">CardMarket Web Scraper</h2>
+                            <h3 class="work__card--summary">A web scraping script to output and aggregate the price of all items in a specified collection(s).</h3>
+                            <p class="work__card--tags">Web Scraping</p>
                         </div>
                     </div>
                 </a>
 
-                <a href="./blog/cardmarket-web-scraper" class="index__work--link">
-                    <div class="index__work--card">
-                        <img src="./img/blog/CardMarket Web Scraper/cover-min.jpg" alt="Terminal output from project's program">
-                        <div class="index__work--details">
-                            <h4>CardMarket Web Scraper</h4>
-                            <p>A web scraping script to output and aggregate the price of all items in a specified collection(s).</p>
+                <a href="vis" class="work__link">
+                    <div class="work__card">
+                        <img class="work__card--img" rel="preload" src="/img/work/vis/cover-min.jpg" alt="Chart showing Vanguard Investor fund performance">
+                        <div class="work__card--details">
+                            <h3 class="work__card--date"><strong>July 28,2021</strong><br>Last Updated: May 24, 2022</h3>
+                            <h2 class="work__card--title">Vanguard Investor Summary</h2>
+                            <h3 class="work__card--summary">A summary of all funds available through Vanguard Investor, ranked by highest average annualized return.</h3>
+                            <p class="work__card--tags">Finance, Investing</p>
                         </div>
                     </div>
                 </a>
@@ -143,15 +117,10 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer__links">        
-            <a class="footer__link" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
-            <a class="footer__link" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-            <a class="footer__link" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
-        </div>
-    </footer>
+    <footer-container></footer-container>
 
-    <script src="./scripts/nav.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/nav.js"></script>
 </body>
 
 </html>

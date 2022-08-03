@@ -31,51 +31,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#202020">
 </head>
 
 <body>
-
-    <header>
-        <a href="index" class="nav__home"><h1>CR</h1></a>
-    </header>
-
-    <div class="burger">
-        <span class="burger__menu"></span>
-    </div>
-
-    <nav class="nav">
-        <div class="nav__icons">
-            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
-            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
-                <img src="./img/svg/hourglass.svg" alt="Hourglass">
-                <img src="./img/svg/skull.svg" alt="Skull">
-            </a>
-        </div>
-        <ul class="nav__menu">
-            <li class="nav__item">
-                <a href="blog" class="nav__link">Blog</a>
-            </li>
-            <li class="nav__item">
-                <a href="books" class="nav__link disabled">Books</a>
-            </li>
-            <li class="nav__item">
-                <a href="photos" class="nav__link">Photos</a>
-            </li>
-        </ul>
-        <div class="nav__icons">
-            <a class="nav__icon" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
-            <a class="nav__icon" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-        </div>
-    </nav>
+    <header-container></header-container>
 
     <main class="container">
         <div class="books__cards">
@@ -84,18 +52,18 @@
                 <div class="books__card--details">
                     <h3 class="books__card--date">Jun 20, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">The Price of Tomorrow</h2>
                         <h3 class="books__card--author">Jeff Booth</h3>
                         <h3 class="books__card--summary">An excellent explanation as to how our economies function today and changes that will have to be made due to rapidly advancing technological influence on our daily lives.</h3>
                         <p class="books__card--tags">Economics</p>
                 </div>
-                <img class="books__card--img" rel="preload" src="/img/books/ThePriceOfTomorrow-min.jpg" alt="Book cover for 'The Price of Tomorrow'">
+                <img class="books__card--img" rel="preload" src="img/books/ThePriceOfTomorrow-min.jpg" alt="Book cover for 'The Price of Tomorrow'">
             </div>
 
             <!-- Layered Money - Nik Bhatia -->
@@ -103,18 +71,18 @@
                 <div class="books__card--details">
                     <h3 class="books__card--date">May 26, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star2.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star2.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">Layered Money</h2>
                         <h3 class="books__card--author">Nik Bhatia</h3>
                         <h3 class="books__card--summary">A walkthrough of the history and evolution of monetary technology. Giving a developed framework for understanding with applications to the situation both today and going forward.</h3>
                         <p class="books__card--tags">Bitcoin</p>
                 </div>
-                <img class="books__card--img" rel="preload" src="/img/books/LayeredMoney-min.jpg" alt="Book cover for 'Layered Money'">
+                <img class="books__card--img" rel="preload" src="img/books/LayeredMoney-min.jpg" alt="Book cover for 'Layered Money'">
             </div>
 
             <!-- Inventing Bitcoin - Yan Pritzker -->
@@ -122,18 +90,18 @@
                 <div class="books__card--details">
                     <h3 class="books__card--date">May 20, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">Inventing Bitcoin</h2>
                         <h3 class="books__card--author">Yan Pritzker</h3>
                         <h3 class="books__card--summary">A walkthrough of what Bitcoin aims to solve and how it achieves this, going step by step to think through the best possible methods of achieving this goal.</h3>
                         <p class="books__card--tags">Bitcoin</p>
                 </div>
-                <img class="books__card--img" rel="preload" src="/img/books/InventingBitcoin-min.jpg" alt="Book cover for 'Inventing Bitcoin'">
+                <img class="books__card--img" rel="preload" src="img/books/InventingBitcoin-min.jpg" alt="Book cover for 'Inventing Bitcoin'">
             </div>
 
             <!-- The Psychology of Money - Morgan Housel -->
@@ -141,18 +109,18 @@
                 <div class="books__card--details">
                     <h3 class="books__card--date">May 19, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">The Psychology of Money</h2>
                         <h3 class="books__card--author">Morgan Housel</h3>
                         <h3 class="books__card--summary">A guide on how best to think about and manage your money so that you are able to achieve your financial goals, whatever they may be.</h3>
                         <p class="books__card--tags">Personal Finance</p>
                 </div>
-                <img class="books__card--img" rel="preload" src="/img/books/ThePsychologyOfMoney-min.jpg" alt="Book cover for 'What Money Can't Buy'">
+                <img class="books__card--img" rel="preload" src="img/books/ThePsychologyOfMoney-min.jpg" alt="Book cover for 'What Money Can't Buy'">
             </div>
 
             <!-- What Money Can't Buy - Michael Sandel -->
@@ -160,18 +128,18 @@
                 <div class="books__card--details">
                         <h3 class="books__card--date">Apr 27, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">What Money Can't Buy</h2>
                         <h3 class="books__card--author">Michael Sandel</h3>
                         <h3 class="books__card--summary">A questioning of the current trend of monetizing all aspects of life and the implications it brings, with countless thought provoking examples.</h3>
                         <p class="books__card--tags">Economics, Philosophy</p>
                 </div>
-                <img class="books__card--img" rel="preload" src="/img/books/WhatMoneyCantBuy-min.jpg" alt="Book cover for 'What Money Can't Buy'">
+                <img class="books__card--img" rel="preload" src="img/books/WhatMoneyCantBuy-min.jpg" alt="Book cover for 'What Money Can't Buy'">
             </div>
             
             <!-- The Bullish Case For Bitcoin - Vijay Boyapati -->
@@ -179,18 +147,18 @@
                 <div class="books__card--details">
                         <h3 class="books__card--date">Apr 5, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star2.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star2.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">The Bullish Case for Bitcoin</h2>
                         <h3 class="books__card--author">Vijay Boyapati</h3>
                         <h3 class="books__card--summary">An in depth analysis on what makes a good money, how money is established and how it evolves while explaining how Bitcoin is the next step in the evolution of monetary technology.</h3>
                         <p class="books__card--tags">Bitcoin</p>
                 </div>
-                <img class="books__card--img" rel="preload" src="/img/books/TheBullishCaseForBitcoin-min.jpg" alt="Book cover for 'The Bullish Case for Bitcoin'">
+                <img class="books__card--img" rel="preload" src="img/books/TheBullishCaseForBitcoin-min.jpg" alt="Book cover for 'The Bullish Case for Bitcoin'">
             </div>
 
             <!-- The Little Bitcoin Book - A Collaborative Effort -->
@@ -198,18 +166,18 @@
                 <div class="books__card--details">
                         <h3 class="books__card--date">Mar 20, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">The Little Bitcoin Book</h2>
                         <h3 class="books__card--author">A Collaborative Effort</h3>
                         <h3 class="books__card--summary">An introduction to the importance and necessity of Bitcoin with answers to many questions a beginner may ask. A great place to start.</h3>
                         <p class="books__card--tags">Bitcoin</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/TheLittleBitcoinBook-min.jpg" alt="Book cover for 'The Little Bitcoin Book'">
+                <img class="books__card--img" loading="lazy" src="img/books/TheLittleBitcoinBook-min.jpg" alt="Book cover for 'The Little Bitcoin Book'">
             </div>
 
             <!-- 21 Lessons - Gigi -->
@@ -217,18 +185,18 @@
                 <div class="books__card--details">
                         <h3 class="books__card--date">Mar 12, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">21 Lessons</h2>
                         <h3 class="books__card--author">Gigi</h3>
                         <h3 class="books__card--summary">A brief but broad discussion of the impact of Bitcoin and surrounding topics, philosophically, enconomically and technologically.</h3>
                         <p class="books__card--tags">Bitcoin</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/21LessonsBTC-min.jpg" alt="Book cover for '21 Lessons'">
+                <img class="books__card--img" loading="lazy" src="img/books/21LessonsBTC-min.jpg" alt="Book cover for '21 Lessons'">
             </div>
 
             <!-- Thank God For Bitcoin - A Collaborative Effort -->
@@ -236,193 +204,188 @@
                 <div class="books__card--details">
                         <h3 class="books__card--date">Mar 12, 2022</h3>
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">Thank God for Bitcoin</h2>
                         <h3 class="books__card--author">A Collaborative Effort</h3>
                         <h3 class="books__card--summary">An overview of the history of money, the current situation and what an incorruptible money can mean for society at large after many failed attempts.</h3>
                         <p class="books__card--tags">Bitcoin</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/ThankGodForBitcoin-min.jpg" alt="Book cover for 'Thank God for Bitcoin'">
+                <img class="books__card--img" loading="lazy" src="img/books/ThankGodForBitcoin-min.jpg" alt="Book cover for 'Thank God for Bitcoin'">
             </div>
 
             <!-- How To Drink - Vincent Obsopoeus -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star2.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">How To Drink</h2>
                         <h3 class="books__card--author">Vincent Obsopoeus</h3>
                         <h3 class="books__card--summary">Guidance on how best to enjoy alcohol without over-consumpion, with large applications to any vice.</h3>
                         <p class="books__card--tags">Philosophy</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/HowToDrink-min.jpg" alt="Book cover for 'How To Drink'">
+                <img class="books__card--img" loading="lazy" src="img/books/HowToDrink-min.jpg" alt="Book cover for 'How To Drink'">
             </div>
 
             <!-- How To Be A Leader - Plutarch -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">How To Be A Leader</h2>
                         <h3 class="books__card--author">Plutarch</h3>
                         <h3 class="books__card--summary">Advice on how best to perform in any role relating to leadership, initially aimed to be for politicians but has large applications in business, for the benefit of the leader and their constituents.</h3>
                         <p class="books__card--tags">Business, Philosophy</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/HowToBeALeader-min.jpg" alt="Book cover for 'How To Be A Leader'">
+                <img class="books__card--img" loading="lazy" src="img/books/HowToBeALeader-min.jpg" alt="Book cover for 'How To Be A Leader'">
             </div>
 
             <!-- Why We Sleep - Matthew Walker -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">Why We Sleep</h2>
                         <h3 class="books__card--author">Matthew Walker</h3>
                         <h3 class="books__card--summary">Necessary education on one of the most important and under-appreciated aspects of life with actionable take aways to improve performance universally.</h3>
                         <p class="books__card--tags">Science</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/WhyWeSleep-min.jpg" alt="Book cover for 'Why We Sleep'">
+                <img class="books__card--img" loading="lazy" src="img/books/WhyWeSleep-min.jpg" alt="Book cover for 'Why We Sleep'">
             </div>
 
             <!-- The Art of War - Sun Tzu -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star3.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star2.svg" alt="Yellow star #4">
+                            <img src="img/svg/star3.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">The Art of War</h2>
                         <h3 class="books__card--author">Sun Tzu</h3>
                         <h3 class="books__card--summary">A short book on how to maximize success against opposition, which largely relates to its intended topic of war and battle but can also be applied to business.</h3>
                         <p class="books__card--tags">Business, Philosophy</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/TheArtOfWar-min.jpg" alt="Book cover for 'The Art of War'">
+                <img class="books__card--img" loading="lazy" src="img/books/TheArtOfWar-min.jpg" alt="Book cover for 'The Art of War'">
             </div>
 
             <!-- Meditations - Marcus Aurelius -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">Meditations</h2>
                         <h3 class="books__card--author">Marcus Aurelius</h3>
                         <h3 class="books__card--summary">The insights of an introspective Roman Emperor, one of the most powerful people in the world at his time, most of which are still largely relevant and well worth adoption.</h3>
                         <p class="books__card--tags">Philosophy</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/Meditations-min.jpg" alt="Book cover for 'Meditations'">
+                <img class="books__card--img" loading="lazy" src="img/books/Meditations-min.jpg" alt="Book cover for 'Meditations'">
             </div>
 
             <!-- Managing Oneself - Peter F. Drucker -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">Managing Oneself</h2>
                         <h3 class="books__card--author">Peter F. Drucker</h3>
                         <h3 class="books__card--summary">A short guide on how to perform your best through the knowledge of one's personal capabilities and further, the capabilities of peers.</h3>
                         <p class="books__card--tags">Business</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/ManagingOneself-min.jpg" alt="Book cover for 'Managing Oneself'">
+                <img class="books__card--img" loading="lazy" src="img/books/ManagingOneself-min.jpg" alt="Book cover for 'Managing Oneself'">
             </div>
 
             <!-- How To Change Your Mind - Michael Pollan -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">How To Change Your Mind</h2>
                         <h3 class="books__card--author">Michael Pollan</h3>
                         <h3 class="books__card--summary">An introductory guide to psychedelics, their history, effects, guidance and potential for wider use in society with some entertaining trip reports from a first-timers perspective.</h3>
                         <p class="books__card--tags">Science, Philosophy</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/HowToChangeYourMind-min.jpg" alt="Book cover for 'How To Change Your Mind'">
+                <img class="books__card--img" loading="lazy" src="img/books/HowToChangeYourMind-min.jpg" alt="Book cover for 'How To Change Your Mind'">
             </div>
 
             <!-- How To Die - Seneca -->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">How To Die</h2>
                         <h3 class="books__card--author">Seneca</h3>
                         <h3 class="books__card--summary">An important perspective on the idea and inevitability of death and how acceptance of this grants freedom in all other aspects of life.</h3>
                         <p class="books__card--tags">Philosophy</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/HowToDie-min.jpg" alt="Book cover for 'How To Die">
+                <img class="books__card--img" loading="lazy" src="img/books/HowToDie-min.jpg" alt="Book cover for 'How To Die">
             </div>
 
             <!-- How To Win Friends and Influence People - Dale Carnegie-->
             <div class="books__card">
                 <div class="books__card--details">
                         <div class="books__card--rating">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="./img/svg/star1.svg" alt="Yellow star #5">
+                            <img src="img/svg/star1.svg" alt="Yellow star #1">
+                            <img src="img/svg/star1.svg" alt="Yellow star #2">
+                            <img src="img/svg/star1.svg" alt="Yellow star #3">
+                            <img src="img/svg/star1.svg" alt="Yellow star #4">
+                            <img src="img/svg/star1.svg" alt="Yellow star #5">
                         </div>
                         <h2 class="books__card--title">How To Win Friends and Influence People</h2>
                         <h3 class="books__card--author">Dale Carnegie</h3>
                         <h3 class="books__card--summary">Foundational knowledge for building and maintaining relationships with those around you in both casual and professional settings.</h3>
                         <p class="books__card--tags">Business, Relationships</p>
                 </div>
-                <img class="books__card--img" loading="lazy" src="/img/books/HowToWinFriendAndInfluencePeople-min.jpg" alt="Book cover for 'How To Win Friends and Influence People'">
+                <img class="books__card--img" loading="lazy" src="img/books/HowToWinFriendAndInfluencePeople-min.jpg" alt="Book cover for 'How To Win Friends and Influence People'">
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="footer__links">        
-            <a class="footer__link" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
-            <a class="footer__link" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-            <a class="footer__link" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
-        </div>
-    </footer>
+    <footer-container></footer-container>
 
-    <script src="./scripts/nav.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/nav.js"></script>
 </body>
 
 </html>

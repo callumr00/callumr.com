@@ -43,39 +43,7 @@
 </head>
 
 <body>
-
-    <header>
-        <a href="index" class="nav__home"><h1>CR</h1></a>
-    </header>
-
-    <div class="burger">
-        <span class="burger__menu"></span>
-    </div>
-
-    <nav class="nav">
-        <div class="nav__icons">
-            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Ankh" target="_blank"><img src="./img/svg/ankh.svg" alt="Ankh"></a>
-            <a class="nav__icon" href="https://en.wikipedia.org/wiki/Memento_mori" target="_blank">
-                <img src="./img/svg/hourglass.svg" alt="Hourglass">
-                <img src="./img/svg/skull.svg" alt="Skull">
-            </a>
-        </div>
-        <ul class="nav__menu">
-            <li class="nav__item">
-                <a href="blog" class="nav__link">Blog</a>
-            </li>
-            <li class="nav__item">
-                <a href="books" class="nav__link">Books</a>
-            </li>
-            <li class="nav__item">
-                <a href="photos" class="nav__link disabled">Photos</a>
-            </li>
-        </ul>
-        <div class="nav__icons">
-            <a class="nav__icon" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
-            <a class="nav__icon" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-        </div>
-    </nav>
+    <header-container></header-container>
 
     <main class="container">
         <div class="photos__cards">
@@ -215,15 +183,10 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer__links">        
-            <a class="footer__link" href="https://twitter.com/callumr00_" target="_blank"><img src="./img/svg/twitter.svg" alt="Twitter Logo"></a>
-            <a class="footer__link" href="https://github.com/callumr00" target="_blank"><img src="./img/svg/github.svg" alt="Github Logo"></a>
-            <a class="footer__link" href="https://www.linkedin.com/in/callum-rafter" target="_blank"><img src="./img/svg/linkedin.svg" alt="LinkedIn Logo"></a>
-        </div>
-    </footer>
+    <footer-container></footer-container>
 
-    <script src="./scripts/nav.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/nav.js"></script>
 </body>
 
 </html>

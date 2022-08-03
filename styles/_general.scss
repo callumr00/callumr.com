@@ -11,9 +11,15 @@ body {
         min-height: 100vh;
     }
 
+    header-container {
+        display: flex;
+        align-items: center;
+    }
+
     // Header
     header {
         margin: 0 5%;
+        width: 100%;
         max-width: 1200px;
         padding: 1rem 0;
         border-bottom: 1px solid colour(tertiary);
@@ -22,7 +28,7 @@ body {
         display: flex;
         height: 6rem;
         justify-content: center;
-        z-index: 5;
+        position: relative;
 
         opacity: 0;
         animation: fadein--nav 0.4s forwards;
@@ -189,14 +195,14 @@ body {
             justify-content: center;
             align-items: center;
 
-            &__links {
+            &__icons {
                 justify-content: center;
                 align-items: center;
                 max-width: 1200px;
                 margin: auto;
             }
 
-            &__link{
+            &__icon{
                 padding-left: 0.5em;
                 transition-duration: duration(fast);
 
