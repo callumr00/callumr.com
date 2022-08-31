@@ -141,6 +141,13 @@
             margin: 0 8%;
         }
 
+        header-container, header-container-sub {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         header {
             border: none;
             margin: auto;
@@ -148,6 +155,9 @@
             z-index: 10;
         }
         
+        footer-container, footer-container-sub {
+            width: 100%;
+        }
 
         .index__work--cards {
             grid-template-columns: repeat(2, 1fr);
@@ -172,12 +182,7 @@
         align-items: center;
         flex-direction: column;
 
-        header-container, header-container-sub {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+
 
         .nav {
             right: auto;
@@ -195,9 +200,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        footer-container, footer-container-sub {
-            width: 100%;
-        }
+
     }
 }
 

@@ -1190,11 +1190,20 @@ body footer .footer__icon:hover {
   body .nav, body .container {
     margin: 0 8%;
   }
+  body header-container, body header-container-sub {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   body header {
     border: none;
     margin: auto;
     width: auto;
     z-index: 10;
+  }
+  body footer-container, body footer-container-sub {
+    width: 100%;
   }
   body .index__work--cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1214,12 +1223,6 @@ body footer .footer__icon:hover {
     align-items: center;
     flex-direction: column;
   }
-  body header-container, body header-container-sub {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   body .nav {
     right: auto;
   }
@@ -1231,8 +1234,5 @@ body footer .footer__icon:hover {
   }
   body .books__cards {
     grid-template-columns: repeat(2, 1fr);
-  }
-  body footer-container, body footer-container-sub {
-    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
