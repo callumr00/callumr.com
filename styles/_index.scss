@@ -25,6 +25,13 @@
             color: colour(primary);
             font-weight: 600;
         }
+
+        &--btc {
+            transition-duration: duration(fast);
+            &:hover{
+                color: #FF9900;
+            }
+        }
     }
 
     &__pages {
@@ -104,9 +111,9 @@
         }
 
         img {
-            height: 200px;
             width: 100%;
             border-radius: 30px 30px 0 0;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
         }
     }
 }

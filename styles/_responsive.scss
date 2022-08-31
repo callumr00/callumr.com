@@ -24,7 +24,6 @@
 
         .work__cards {
             grid-template-columns: repeat(2, 1fr);
-            height: 0;
         }
 
         .books__cards {
@@ -173,7 +172,7 @@
         align-items: center;
         flex-direction: column;
 
-        header-container {
+        header-container, header-container-sub {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -196,7 +195,7 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        footer-container {
+        footer-container, footer-container-sub {
             width: 100%;
         }
     }

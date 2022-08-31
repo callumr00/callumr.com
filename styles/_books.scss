@@ -1,14 +1,48 @@
+// Books page
+
 .books__cards {
-        display: grid;
-        grid-gap: 4rem;
-        margin: 5rem 0;
+    display: grid;
+    grid-gap: 4rem;
+    margin: 5rem 0;
+
+    a {
+        text-decoration: none;
     }
+}
 
 @for $i from 1 through 20 {
-    .books__card:nth-child(#{$i}) {
+    .books__link:nth-child(#{$i}) {
         animation-delay: (0.075 * $i) + 0.2s;
     }
 } 
+
+.books__link {
+    opacity: 0;
+    animation: fadein--body 1.2s forwards;
+
+    pointer-events: none;
+
+    &--active {
+        pointer-events: all;
+
+        .books__card--title::after {
+            content: "->";
+            display: inline-block;
+            padding-left: 0.5rem;
+            transition-duration: duration(medium);
+        }
+
+        &:hover {
+            .books__card--title {
+                color: colour(accent);
+            }
+    
+            .books__card--title::after {
+                transform: translateX(10px);
+            } 
+        }
+    }
+}
 
 .books__card {
     max-width: 600px;
@@ -91,5 +125,59 @@
         transform: scale(110%) translateY(-4%);
         border-bottom: 10px solid colour(secondary);
         flex-shrink: 0;
+    }
+}
+
+
+// Books posts
+
+.books__content {
+    max-width: 800px;
+    margin: 0 auto 5rem auto;
+
+    opacity: 0;
+    animation: fadein--body 1.2s 0.4s forwards;
+
+    &--text {
+        margin: auto;
+        max-width: 600px;
+        
+    }
+
+    &--quote {
+        border-left: solid 2px colour(secondary);
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 5rem 0;
+        font-size: clamp(1.5rem, 6.25vw, 2.2rem);
+        line-height: 1.4em;
+        letter-spacing: -0.02em;
+        color: colour(secondary);
+        font-weight: 400;
+    }
+
+    h3 {
+        margin: 2rem 0 1rem 0;
+        font-size: clamp(1.3rem, 6.25vw, 1.6rem);
+        line-height: 1.4em;
+        letter-spacing: -0.02em;
+        color: colour(secondary);
+        font-weight: 400;
+    }
+
+    p, li {
+        font-size: 18px;
+        color: colour(primary);
+        font-weight: 500;
+        line-height: height(1);
+        margin-bottom: 0.4rem;
+    }
+
+    li {
+        margin: 2rem 0;
     }
 }

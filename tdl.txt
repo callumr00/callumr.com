@@ -1,5 +1,7 @@
 Implement
     Contact form on index.html
+    Filter by topic and rating on books.html
+    Book summaries
 ------------------------------------------------
 Improve
     Update sitemap
