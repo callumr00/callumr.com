@@ -45,60 +45,82 @@
 <body>
     <header-container-sub></header-container-sub>
 
-    <main class="container">
-        <div class="work__content">
-            <h2>Bitcoin Blockchain Data</h2>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Inflation Rate</h3>
-                    <p>The below chart shows the issuance schedule of the Bitcoin network and the resulting annualized inflation rate, with a vertical line indicating current progress.
-                    </p>
-                    <p>Existing Coins: 19,106,850.0</p>
-                    <p>Annualised Inflation Rate: 1.7193%</p>
-                    <p>Remaining Supply Inflation: 9.9082%</p>
-                </div>
-                <img src="../img/work/btcdata/inflation-min.jpg" alt="">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Issuance Schedule</h3>
-                    <p>Showing the amount of coins in circulation over time, this chart compares the targetted issuance schedule of the Bitcoin network (black) to the actual issuance (orange).</p>
-                    <p>Existing Coins: 19,106,850.0</p>
-                </div>
-                <img src="../img/work/btcdata/issuance-min.jpg" alt="">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Block Difficulty</h3>
-                    <p>The difficulty to mine a block in the Bitcoin network over time, as a multiple of the initial difficulty.</p>
-                    <p>Current Difficulty: 27,692,567,959,233.59</p>
-                </div>
-                <img src="../img/work/btcdata/blockDifficulty-min.jpg" alt="">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Time To Mine</h3>
-                    <p>The below chart shows the time to mine each Bitcoin block, with a dashed black line showing the target time and a solid black line showing the average time of the previous 2016 blocks.</p>
-                    <p>Target Time: 600 seconds / 10 minutes</p>
-                </div>
-                <img src="../img/work/btcdata/blockLength-min.jpg" alt="">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Block Weight</h3>
-                    <p>Here are the weights of each block in the Bitcoin network, with an average of the last 2016 blocks.</p>
-                    <p>Maximum Weight: 4,000,000</p>
-                </div>
-                <img src="../img/work/btcdata/blockWeight-min.jpg" alt="">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Transactions Per Block</h3>
-                    <p>Shown is the number of transactions included in each block in the Bitcoin network, with an average of the last 2016 blocks.</p>
-                </div>
-                <img src="../img/work/btcdata/nTx-min.jpg" alt="">
-            </div>
+    <main class="container container__content">
+        <h2 class="content__heading">Bitcoin Blockchain Data</h2>
+
+        <div class="content__text">
+            <h3 class="content__subheading">Inflation Rate</h3>
+            <ul class="content__notes">
+                <li>Data created from the defined issuance schedule of the Bitcoin network and downloadable in csv format <a class="content__source" href="../work/data/BTC Inflation.csv">here</a></li>
+                <li>The issuance schedule of the Bitcoin network and the resulting annualized inflation rate, with a vertical line indicating the current block height.</li>
+                <li>Existing Coins: 19,106,850.0</li>
+                <li>Annualised Inflation Rate: 1.7193%</li>
+                <li>Remaining Supply Inflation: 9.9082%</li>
+            </ul>
         </div>
+        <img class="content__img" src="../img/work/btcdata/inflation-min.jpg" alt="Bitcoin inflation rate">
+
+        <div class="content__text">
+            <h3 class="content__subheading">Issuance Schedule</h3>
+            <ul class="content__notes">
+                <li>Data sourced from the Bitcoin blockchain on 29/07/2022 and downloadable in csv format <a class="content__source" href="../work/data/Block Issuance.csv">here</a></li>
+                <li>A comparison between the targetted issuance schedule of the Bitcoin network (black) and the actual issuance (orange).</li>
+                <li>Existing Coins: 19,106,850.0</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/btcdata/issuance-min.jpg" alt="Bitcoin issuance schedule">
+
+        <div class="content__text">
+            <h3 class="content__subheading">Time To Mine</h3>
+            <ul class="content__notes">
+                <li>Data sourced from the Bitcoin blockchain on 29/07/2022 and downloadable in csv format <a class="content__source" href="../work/data/Block Time.csv">here</a></li>
+                <li>The time to mine each Bitcoin block, with a dashed black line showing the target time and a solid black line showing the rolling average of the previous 2016 blocks.</li>
+                <li>Target Time: 600 seconds / 10 minutes</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/btcdata/blockLength-min.jpg" alt="Bitcoin block length">
+
+
+        <div class="content__text">
+            <h3 class="content__subheading">Block Difficulty</h3>
+            <ul class="content__notes">
+                <li>Data sourced from the Bitcoin blockchain on 29/07/2022 and downloadable in csv format <a class="content__source" href="../work/data/Block Difficulty.csv">here</a></li>
+                <li>The difficulty to mine a block in the Bitcoin network over time, as a multiple of the initial difficulty.</li>
+                <li>Current Difficulty: 27,692,567,959,233.59</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/btcdata/blockDifficulty-min.jpg" alt="Bitcoin block difficulty">
+
+        <div class="content__text">
+            <h3 class="content__subheading">Transactions Per Block</h3>
+            <ul class="content__notes">
+                <li>Data sourced from the Bitcoin blockchain on 29/07/2022 and downloadable in csv format <a class="content__source" href="../work/data/Block Transactions.csv">here</a></li>
+                <li>The number of transactions included in each block in the Bitcoin network, with a rolling average of the last 2016 blocks.</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/btcdata/nTx-min.jpg" alt="Bitcoin transactions per block">
+
+        <div class="content__text">
+            <h3 class="content__subheading">Block Size</h3>
+            <ul class="content__notes">
+                <li>Data sourced from the Bitcoin blockchain on 29/07/2022 and downloadable in csv format <a class="content__source" href="../work/data/Block Size.csv">here</a></li>
+                <li>The weights of each block in the Bitcoin network, with a rolling average of the last 2016 blocks.</li>
+                <li>Smallest Block: 0.000176 MB</li>
+                <li>Largest Block: 2.424027 MB</li>
+                <li>Total Size: 419.04 GB</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/btcdata/blockSize-min.jpg" alt="Bitcoin block weight">
+
+        <div class="content__text">
+            <h3 class="content__subheading">Block Weight</h3>
+            <ul class="content__notes">
+                <li>Data sourced from the Bitcoin blockchain on 29/07/2022 and downloadable in csv format <a class="content__source" href="../work/data/Block Weight.csv">here</a></li>
+                <li>The size of each block in the Bitcoin network, with a rolling average of the last 2016 blocks.</li>
+                <li>Maximum Weight: 4,000,000</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/btcdata/blockWeight-min.jpg" alt="Bitcoin block weight">
     </main>
 
     <footer-container-sub></footer-container-sub>

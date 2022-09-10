@@ -45,39 +45,33 @@
 <body>
     <header-container-sub></header-container-sub>
 
-    <main class="container">
-        <div class="work__content">
-            <h2>CPI Data</h2>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>USD Loss of Purchasing Power</h3>
-                    <ul class="work__content--notes">
-                        <li>Data sourced from <a href="https://data.bls.gov/cgi-bin/surveymost?cu">here</a> (U.S. city average, All items - CUUR0000SA0) on 28/08/2022 and downloadable in csv format <a href="../work/data/CPI US.csv">here</a></li>
-                        <li>Data points used are a Year over Year change between the ratio of the average annual CPI value for a given year and the first stated CPI value.</li>
-                    </ul>
-                    <p>Average YoY Change in Purchasing Power: -2.95%</p>
-                </div>
-                <img src="../img/work/cpidata/USDValueChange-min.jpg" alt="USD Value Change">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <p>USD Value is down -96.61% since 1913</p>
-                </div>
-                <img src="../img/work/cpidata/USDValue-min.jpg" alt="">
-            </div>
-            <div class="work__content--section">
-                <div class="work__content--text">
-                    <h3>Average Annual CPI Increase Across All Countries</h3>
-                    <ul class="work__content--notes">
-                        <li>Data sourced from <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG">here</a> on 28/08/2022 and downloadable in csv format <a href="../work/data/CPI All.csv">here</a></li>
-                        <li>Data points used are a Year over Year change between the ratio of the average annual CPI value for a given year and the first stated CPI value.</li>
-                    </ul>
-                    <p>Median: 6.76% YoY</p>
-                    <p>Mean: 21.47% YoY</p>
-                </div>
-                <img src="../img/work/cpidata/CPI All-min.jpg" alt="">
-            </div>
+    <main class="container container__content">
+        <h2 class="content__heading">CPI Data</h2>
+        <div class="content__text">
+            <h3 class="content__subheading">USD Loss of Purchasing Power</h3>
+            <ul class="content__notes">
+                <li>Data sourced from <a class="content__source" href="https://data.bls.gov/cgi-bin/surveymost?cu">here</a> (U.S. city average, All items - CUUR0000SA0) on 28/08/2022 and downloadable in csv format <a class="content__source" href="../work/data/CPI US.csv">here</a></li>
+                <li>Data points used are a Year over Year change between the ratio of the average annual CPI value for a given year and the first stated CPI value.</li>
+                <li>Average YoY Change in Purchasing Power: -2.95%</li>
+            </ul>
         </div>
+        <img class="content__img" src="../img/work/cpidata/USDValueChange-min.jpg" alt="USD Value Change">
+        <div class="content__text">
+            <ul class="content__notes">
+                <li>USD Value is down -96.61% since 1913</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/cpidata/USDValue-min.jpg" alt="Bitcoin issuance schedule">
+        <div class="content__text">
+            <h3 class="content__subheading">Average Annual CPI Increase Across All Countries</h3>
+            <ul class="content__notes">
+                <li>Data sourced from <a class="content__source" href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG">here</a> on 28/08/2022 and downloadable in csv format <a class="content__source" href="../work/data/CPI All.csv">here</a></li>
+                <li>Data points used are a Year over Year change between the ratio of the average annual CPI value for a given year and the first stated CPI value.</li>
+                <li>Median: 6.76% YoY</li>
+                <li>Mean: 21.47% YoY</li>
+            </ul>
+        </div>
+        <img class="content__img" src="../img/work/cpidata/CPI All-min.jpg" alt="CPI data across all countries">
     </main>
 
     <footer-container-sub></footer-container-sub>
