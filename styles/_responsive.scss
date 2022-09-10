@@ -11,47 +11,50 @@
 // Tablet - >= 600px
 @include media-sm {
     body {
-        .index {
-            &__portrait {
+        .container__index {
+            .index__image {
                 margin: 5rem 0;
             }
 
-            &__pages--cards, &__work--cards {
+            .section__cards {
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 3rem;
             }
         }
 
-        .work__cards {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .books__cards {
-            grid-gap: 2em;
-        }
-
-        .books__cards, .work__cards {
-            justify-content: center;
-        }
-
-        .books__card, .work__cards {
-            flex-direction:row;
-            align-items: initial;
-
-            &--details {
-                border: none
-            }
-            &--img {
-                align-items: flex-end;
-                width: 40%;
-                border-radius: 0 30px 30px 0;
-                border-bottom: none;
-                transform: none;
+        .container__work {
+            .section__cards {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        .photos__details--info {
-            font-size: 18px;
+        .container__books {
+            .section__cards {
+                grid-gap: 2em;
+                justify-content: center;
+            }
+
+            .section__card {
+                flex-direction: row;
+                align-items: initial;
+    
+                &--text {
+                    border: none
+                }
+                &--img {
+                    align-items: flex-end;
+                    width: 40%;
+                    border-radius: 0 30px 30px 0;
+                    border-bottom: none;
+                    transform: none;
+                }
+            }
+        }
+
+        .container__photos {
+            .photos__details--info {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -159,17 +162,16 @@
             width: 100%;
         }
 
-        .index__work--cards {
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 3rem;
+        .container__books {
+            .section__cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .work__cards {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .photos__cards {
-            grid-template-columns: repeat(2, 1fr);
+        .container__photos {
+            .section__cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     }
 }
@@ -182,25 +184,27 @@
         align-items: center;
         flex-direction: column;
 
-
-
         .nav {
             right: auto;
         }
 
-        .index__pages--cards, .index__work--cards {
-            grid-template-columns: repeat(3, 1fr);
+        .container__index {
+            .section__cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
-        .work__cards {
-            grid-template-columns: repeat(3, 1fr);
+        .container__work {
+            .section__cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
-        .books__cards {
-            grid-template-columns: repeat(2, 1fr);
+        .container__books {
+            .section__cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
-
-
     }
 }
 

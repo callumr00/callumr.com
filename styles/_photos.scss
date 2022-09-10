@@ -1,104 +1,94 @@
-.photos__cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2em;
-    margin: 5rem 0;
-}
+.container__photos {
+    .section {
+        &__card {
+            margin: 0 auto;
+            max-width: 600px;
+            @include flexCenter (column);
+            background: colour(body);
+            position: relative;
+            box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
+            opacity: 0;
+            animation: fadein--body 1.2s forwards;
 
-@for $i from 1 through 10 {
-    .photos__card:nth-child(#{$i}) {
-        animation-delay: (0.075 * $i) + 0.2s;
-    }
-} 
+            &--img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                border: none;
+                border-radius: 0;
+            }
 
-.photos__card {
-    margin: 0 auto;
-    max-width: 600px;
-    @include flexCenter (column);
-    background: colour(body);
-    position: relative;
-    box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
-    opacity: 0;
-    animation: fadein--body 1.2s forwards;
+            &--location {
+                font-size: 20px;
+                color: colour(body);
+                font-weight: 400;
+                line-height: height(1);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: auto;
+                opacity: 0;
+                position: absolute;
+                top: 5%;
+            }
 
-    &:hover {
-        img {
-            filter: brightness(20%);
-        }
-        h2, p, a {
-            animation-delay: 1s;
-            transition-duration: duration(medium);
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
+            &--visit {
+                font-size: 18px;
+                color: colour(body);
+                font-weight: 400;
+                text-decoration: none;
+                opacity: 0;
+                position: absolute;
+                top: 82%;
+                padding: 0.2em 0;
 
-    &--img {
-        display: block;
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    &--location {
-        font-size: 24px;
-        color: colour(body);
-        font-weight: weight(medium);
-        line-height: height(1.125);
-        margin-bottom: auto;
-        opacity: 0;
-        position: absolute;
-        top: 5%;
-    }
-    &--visit {
-        font-size: 18px;
-        color: colour(body);
-        font-weight: weight(medium);
-        text-decoration: none;
-        opacity: 0;
-        position: absolute;
-        top: 82%;
-        padding: 0.2em 0;
+                &::after {
+                    content: "->";
+                    display: inline-block;
+                    padding-left: 0.5rem;
+                    transition-duration: duration(medium);
+                }
+            
+                &:hover {
+                    color: colour(accent);
 
-        &:after {
-            content:'';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: 0;
-            left: 0;
-            background-color: colour(body);
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.2s;
-        }
-    
-        &:hover {
-            &:after {
-                transform-origin: bottom left;
-                transform: scaleX(1);
+                    &:after {
+                        transform: translate(10px);
+
+                    }
+                }
+            }
+
+            &:hover {
+                img {
+                    filter: brightness(20%);
+                }
+                h2, p, a {
+                    animation-delay: 1s;
+                    transition-duration: duration(medium);
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            &--text {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                position: absolute;
+                transition-duration: duration(slow);
             }
         }
-    }
 
-    &--location, &--visit{
-        transform: translateY(60px);
-    }
-}
-
-.photos__details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    position: absolute;
-    transition-duration: duration(slow);
-
-    &--info {
-        font-size: 14px;
-        color: colour(body--secondary);
-        text-decoration: none;
-        opacity: 0;
-        transition-duration: duration(medium);
-        padding: 0 0.8em;
-        transform: translateY(100px);
+        &__text {
+            &--desc {
+                font-size: 14px;
+                color: colour(body--secondary);
+                text-decoration: none;
+                opacity: 0;
+                transition-duration: duration(medium);
+                padding: 0 0.8em;
+                transform: translateY(100px);
+            }
+        }
     }
 }
