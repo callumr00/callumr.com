@@ -307,7 +307,6 @@ body .section__text--heading {
   color: #2b3035;
   font-weight: 500;
   margin: auto 0;
-  height: 42px;
 }
 body .section__text--desc {
   color: #9da6af;
@@ -596,7 +595,7 @@ body .container__content .content__source {
 .container__books .section__card--text {
   display: grid;
   grid-template-areas: "timestamp rating" "heading heading" "author author" "desc desc" "tags tags";
-  grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr;
   grid-template-columns: 2fr 3fr;
   padding: 0.5rem 1rem;
   border-top: 2px solid #697582;
@@ -852,9 +851,6 @@ body .container__content .content__source {
   }
   body footer-container, body footer-container-sub {
     width: 100%;
-  }
-  body .container__books .section__cards {
-    grid-template-columns: repeat(2, 1fr);
   }
   body .container__photos .section__cards {
     grid-template-columns: repeat(2, 1fr);
