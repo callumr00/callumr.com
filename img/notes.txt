@@ -1,0 +1,7 @@
+Image Dimensions
+
+    Feature Image: 1200x900
+    Work Covers: 600x338
+        BTC Data: 2400x1200
+    Book Covers: 400x600
+    Photos (LQ): 600x400
