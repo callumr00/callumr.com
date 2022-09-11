@@ -728,6 +728,51 @@ body .container__content .content__source {
   transform: translateY(100px);
 }
 
+.container__about .section__card:nth-child(1) {
+  -webkit-animation-delay: 0.275s;
+          animation-delay: 0.275s;
+}
+.container__about .section__card:nth-child(2) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.container__about .section__card:nth-child(3) {
+  -webkit-animation-delay: 0.425s;
+          animation-delay: 0.425s;
+}
+.container__about .section__card:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.container__about .section__card:nth-child(5) {
+  -webkit-animation-delay: 0.575s;
+          animation-delay: 0.575s;
+}
+.container__about .section__card:nth-child(6) {
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
+}
+.container__about .section__card:nth-child(7) {
+  -webkit-animation-delay: 0.725s;
+          animation-delay: 0.725s;
+}
+.container__about .section__card:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.container__about .section__card:nth-child(9) {
+  -webkit-animation-delay: 0.875s;
+          animation-delay: 0.875s;
+}
+.container__about .section__card:nth-child(10) {
+  -webkit-animation-delay: 0.95s;
+          animation-delay: 0.95s;
+}
+.container__about .section__card {
+  opacity: 0;
+  -webkit-animation: fadein--body 1.2s forwards;
+          animation: fadein--body 1.2s forwards;
+}
 .container__about .section__heading {
   text-align: center;
   font-size: clamp(1.5rem, 6.25vw, 2.2rem);
@@ -765,11 +810,16 @@ body .container__content .content__source {
   max-width: 600px;
   width: 100%;
   border-radius: 30px;
-  transition-duration: 120ms;
+  transition-duration: 200ms;
   box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border: solid 0px white;
 }
-.container__about .section__card:hover {
-  transform: translateY(-10px);
+.container__about .section__card:nth-child(1), .container__about .section__card:nth-child(2) {
+  box-shadow: none;
+}
+.container__about .section__card:nth-child(1):hover, .container__about .section__card:nth-child(2):hover {
+  transform: none;
 }
 .container__about .section__card:hover .section__text--heading {
   color: #2b3035;

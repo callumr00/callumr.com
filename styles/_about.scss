@@ -1,4 +1,15 @@
 .container__about {
+    @for $i from 1 through 10 {
+        .section__card:nth-child(#{$i}) {
+            animation-delay: (0.075 * $i) + 0.2s;
+        }
+    } 
+    
+    .section__card {
+        opacity: 0;
+        animation: fadein--body 1.2s forwards;
+    }
+
     .section {
         &__heading {
             text-align: center;
@@ -44,12 +55,20 @@
             max-width: 600px;
             width: 100%;
             border-radius: 30px;
-            transition-duration: duration(fast);
+            transition-duration: 200ms;
             box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
+            padding: 1rem;
+            border: solid 0px white;
+
+            &:nth-child(1), &:nth-child(2) {
+                box-shadow: none;
+
+                &:hover {
+                    transform: none;
+                }
+            }
 
             &:hover {
-                transform: translateY(-10px);
-
                 .section__text--heading {
                     color: colour(primary);
                 }
