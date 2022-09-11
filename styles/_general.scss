@@ -374,13 +374,14 @@ body {
                 margin-bottom: 0.4rem;
                 margin: auto;
                 max-width: 600px;
+                width: 100%;
 
                 li {
                     margin: 2rem 0;
                 }
 
 
-                ul > li {
+                ul > li, ol > li {
                     margin-left: 2rem;
                 }
             }

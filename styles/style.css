@@ -373,11 +373,12 @@ body .container__content .content__text {
   margin-bottom: 0.4rem;
   margin: auto;
   max-width: 600px;
+  width: 100%;
 }
 body .container__content .content__text li {
   margin: 2rem 0;
 }
-body .container__content .content__text ul > li {
+body .container__content .content__text ul > li, body .container__content .content__text ol > li {
   margin-left: 2rem;
 }
 body .container__content .content__quote {
@@ -572,9 +573,6 @@ body .container__content .content__source {
   transition-duration: 160ms;
 }
 
-.container__books .section__cards {
-  grid-gap: 4rem;
-}
 .container__books .section__card {
   max-width: 600px;
   border-radius: 30px;
@@ -588,7 +586,6 @@ body .container__content .content__source {
   align-items: flex-end;
   width: 40%;
   border-radius: 30px 30px 0 0;
-  transform: scale(110%) translateY(-4%);
   border-bottom: 10px solid #697582;
   flex-shrink: 0;
 }
