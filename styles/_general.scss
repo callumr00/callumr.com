@@ -236,7 +236,6 @@ body {
             margin: 2rem 0 5rem 0;
             height: fit-content;
     
-    
             &--heading {
                 font-size: 12px;
                 color: colour(secondary);
@@ -341,7 +340,7 @@ body {
         .content {
             &__heading {
                 text-align: center;
-                margin: 5rem 0;
+                margin: 2rem 0;
                 font-size: clamp(1.5rem, 6.25vw, 2.2rem);
                 line-height: 1.4em;
                 letter-spacing: -0.02em;
