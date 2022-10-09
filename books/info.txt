@@ -1,0 +1,43 @@
+CATEGORIES
+
+Biography & Memoir
+Career & Success
+Communication Skills
+Corporate Culture
+Creativity
+Economics
+Education
+Entrepreneurship
+Health & Nutrition
+History
+Management & Leadership
+Marketing & Sales
+Mindfulness & Happiness
+Money & Investments
+Motivation & Inspiration
+Nature & the Environment
+Parenting
+Personal Development
+Philosophy
+Politics
+Productivity
+Psychology
+Religion & Spirituality
+Science
+Sex & Relationships
+Society & Culture
+Technology & the Future
+
+
+RATING 
+
+1 : Very Poor
+2 : Poor
+3 : Mediocre
+4 : OK
+5 : Good
+6 : Better than Good
+7 : Very Good
+8 : Extremely Good
+9 : Excellent
+10: Top 3
