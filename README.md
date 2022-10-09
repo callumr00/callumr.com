@@ -6,6 +6,8 @@ Personal website used to give insight to my interests and expertise; showing wor
 
 ## Images
 
+Note: Photos used may not reflect recent changes in design
+
 [Homepage](https://callumr.com)
 ![home page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/index.png)
 
