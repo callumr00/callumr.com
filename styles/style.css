@@ -353,7 +353,7 @@ body .container__content .content__subheading {
   color: #697582;
   font-weight: 400;
   padding-top: 1.8rem;
-  border-top: 2px solid #9da6af;
+  border-top: 2px solid #697582;
 }
 body .container__content .content__title {
   margin: 2rem 0 1rem 0;
@@ -503,6 +503,10 @@ body .container__content .section__text--rating p {
   opacity: 0;
   -webkit-animation: fadein--body 1.2s 0.25s forwards;
           animation: fadein--body 1.2s 0.25s forwards;
+}
+.index__image:hover {
+  border: 2px solid black;
+  transition-duration: 120ms;
 }
 .index__heading {
   margin-bottom: 5rem;

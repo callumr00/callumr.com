@@ -8,6 +8,11 @@
 
         opacity: 0;
         animation: fadein--body 1.2s 0.25s forwards;
+
+        &:hover {
+            border: 2px solid black;
+            transition-duration: duration(fast);
+        }
     }
 
     &__heading {

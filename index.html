@@ -40,13 +40,18 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#FFFFFF">
+
+    <script defer src="scripts/fade.js"></script>
+    <script defer src="scripts/nav.js"></script>
+    <script defer src="scripts/components.js"></script>
+    <script defer src="scripts/index.js"></script>
 </head>
 
 <body>
     <header-container></header-container>
 
     <main class="container container__index">
-        <img class="index__image" src="img/index/featureImage-min.jpg" alt="">
+        <img class="index__image" id="img" src="img/index/featureImage-min.jpg" alt="">
 
         <h2 class="index__heading">I’m Callum — a financial analyst based in the UK.
         <br><span class="index__subheading">I started as a web developer and have since broadened my horizons to include data analysis, with a focus towards finance and <span class="index__heading--hover">Bitcoin.</span></span></h2>
@@ -88,6 +93,13 @@
                 </a>
             </div>
         </section>
+
+        <!-- <div class="container__content">
+            <div class="content__quote">
+                <p class="content__quote--text">Which do you think more fair, I ask you: that you obey Nature, or that Nature obey you? What difference does it make how fast you depart a place that must, without doubt, be departed? We ought to take care that we live not a long time, but enough; for we need Fate to help us live long, but our own minds, to live enough.</p>
+                <p class="content__quote--attrib">Seneca</p>
+            </div>
+        </div> -->
 
         <section class="section">
             <h3 class="section__cards--heading">Highlighted Work</h3>
@@ -180,23 +192,9 @@
                 </a>
             </div>
         </section>
-
-        <!-- <section class="section">
-            <h3 class="section__cards--heading">Favourite Photos</h3>
-            <div class="section__cards">
-                <img class="section__card--img" rel="preload" src="/img/photos/LQ/mal1LQ-min.jpg" alt="Sunny pier">
-
-                <img class="section__card--img" rel="preload" src="/img/photos/LQ/mcr1LQ-min.jpg" alt="City at night">
-
-                <img class="section__card--img" rel="preload" src="/img/photos/LQ/ver1LQ-min.jpg" alt="Snowy mountainse">
-            </div>
-        </section> -->
     </main>
 
     <footer-container></footer-container>
-
-    <script src="scripts/components.js"></script>
-    <script src="scripts/nav.js"></script>
 </body>
 
 </html>
