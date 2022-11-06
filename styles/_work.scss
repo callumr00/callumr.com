@@ -1,13 +1,54 @@
-.container__work {
-    .section {
+.container--work {
+    .cards {
+        display: grid;
+        grid-gap: 2rem;
+        height: fit-content;
+    }
+    
+    .card {
+        text-decoration: none;
+        border-radius: 30px;
+        box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.1);
+
+        &__img {
+            width: 100%;
+            border-radius: 30px 30px 0 0;
+        }
+
         &__text {
-            &--heading {
-                &::after {
-                    content: "->";
-                    display: inline-block;
-                    padding-left: 0.5rem;
-                    transition-duration: duration(medium);
+            padding: 1rem;
+        }
+
+        &__heading {
+            font-size: 18px;
+            color: colour(primary);
+            font-weight: weight(medium);
+            margin: auto 0;
+        }
+
+        &__desc {
+                color: colour(tertiary);
+                font-size: 16px;
+                font-weight: weight(regular);
+                padding: 0.5em 0;
+        }
+
+        &--link {
+            .card__heading::after {
+                content: "->";
+                display: inline-block;
+                padding-left: 0.5rem;
+                transition-duration: duration(medium);
+            }
+            
+            &:hover {
+                .card__heading {
+                    color: colour(accent);
                 }
+    
+                .card__heading::after {
+                    transform: translateX(10px);
+                } 
             }
         }
     }

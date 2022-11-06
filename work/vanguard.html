@@ -39,36 +39,38 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#202020">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Import Javascript -->
+    <script defer src="../scripts/fade.js"></script>
+    <script defer src="../scripts/components.js"></script>
+    <script defer src="../scripts/nav.js"></script>
 </head>
 
 <body>
     <header-container-sub></header-container-sub>
 
-    <main class="container container__content">
+    <main class="container container--workpages">
         <h2 class="content__heading">Vanguard Investor Summary</h2>
 
         <div class="content__text">
-            <h3 class="section__text--desc">Shown is the summary of all data provided by Vanguard Investor regarding each of their funds. Each have been ranked based on the average annual performance of the given data.</h3>
+            <h3 class="content__desc">Shown is the summary of all data provided by Vanguard Investor regarding each of their funds. Each have been ranked based on the average annual performance of the given data.</h3>
         </div>
         
         <div class="content__text">
             <h3 class="content__subheading">Highest Performers</h3>
             <ul class="content__notes">
-                <li>Data sourced from <a class="content__source" href="https://www.vanguardinvestor.co.uk/what-we-offer/all-products">here</a> on 24/05/2022</li><br>
+                <li>Data sourced from <a class="content__link" href="https://www.vanguardinvestor.co.uk/what-we-offer/all-products">here</a> on 24/05/2022.</li>
+                <li>Shown as an average of annualized performance.</li>
+            </ul>
             <ol class="content__notes">
                 <li>U.S. Equity Index Fund - 15.62%</li>
                 <li>S&P 500 UCITS ETF - 13.52%</li>
                 <li>FTSE Developed World ex-U.K. Equity Index Fund - 12.79%</li>
             </ol>
         </div>
-        <img class="content__img" src="../img/work/vanguard/vanguardSummary-min.jpg" alt="">
+        <img class="content__img" loading="lazy" src="../img/work/vanguard/vanguardSummary-min.jpg" alt="">
     </main>
-
     <footer-container-sub></footer-container-sub>
-    
-    <script src="../scripts/components.js"></script>
-    <script src="../scripts/nav.js"></script>
 </body>
-
 </html>

@@ -39,36 +39,40 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#202020">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Import Javascript -->
+    <script defer src="../scripts/fade.js"></script>
+    <script defer src="../scripts/components.js"></script>
+    <script defer src="../scripts/nav.js"></script>
 </head>
 
 <body>
     <header-container-sub></header-container-sub>
-
-    <main class="container container__content">
-        <div class="content__text">
-            <h2 class="content__heading">The Four Hour Work Week by Timothy Ferriss</h2>
-            
-            <div class="section__text">
-                <h3 class="section__text--desc">A guide focused on giving you tools to enact maximal productivity and freedom, allowing you to lead the life you desire without a total commitment to spending time working and  increasing wealth unecessarily.</h3>
-                <p class="section__text--tags">Career & Success, Entrepreneurship, Productivity</p>
-                <div class="section__text--rating">
-                    <p class="rating__desc">Very Good</p>
-                    <div class="rating__stars">
-                        <img src="../img/svg/star1.svg" alt="Yellow star #1">
-                        <img src="../img/svg/star1.svg" alt="Yellow star #2">
-                        <img src="../img/svg/star1.svg" alt="Yellow star #3">
-                        <img src="../img/svg/star2.svg" alt="Yellow star #4">
-                        <img src="../img/svg/star3.svg" alt="Yellow star #5">
-                    </div>
+    <main class="container container--bookspages">
+        <section>
+            <h2 class="hero__heading">The Four Hour Work Week by Timothy Ferriss</h2>
+            <h3 class="hero__desc">A guide focused on giving you tools to enact maximal productivity and freedom, allowing you to lead the life you desire without a total commitment to spending time working and  increasing wealth unecessarily.</h3>
+            <p class="hero__tags">Career & Success, Entrepreneurship, Productivity</p>
+            <div class="hero__rating">
+                <p class="rating__desc">Very Good</p>
+                <div class="rating__stars">
+                    <img src="../img/svg/star1.svg" alt="Yellow star #1">
+                    <img src="../img/svg/star1.svg" alt="Yellow star #2">
+                    <img src="../img/svg/star1.svg" alt="Yellow star #3">
+                    <img src="../img/svg/star2.svg" alt="Yellow star #4">
+                    <img src="../img/svg/star3.svg" alt="Yellow star #5">
                 </div>
             </div>
-
-            <h3 class="content__subheading">Summary</h3>
-
-            <p>The Four Hour Work Week is about defining your goals and making action towards them. Maximise productivity by trimming the excess and focusing on what has the highest value output. Free your time by detaching it from income so that you are able to lead the life you desire without restraint.<br><br>It defines the process of Definition (Define your wants) → Elimination (Remove that which is unnecessary) → Automation (Create a self sufficient, revenue generating machine) → Liberation.<br><br>Identify that which is most beneficial so that you can give it complete focus, disregarding the rest. By limiting the activities you engage in and the people you associate with, you can spend more time with what matters most. This produces the best overall results.</p>
-
-            <h3 class="content__subheading">Actionable Takeaways</h3>
+        </section>
+        <section>
+            <h3 class="section__heading">Summary</h3>
+            <p>The Four Hour Work Week is about defining your goals and making action towards them. Maximise productivity by trimming the excess and focusing on what has the highest value output. Free your time by detaching it from income so that you are able to lead the life you desire without restraint.
+            <p>It defines the process of Definition (Define your wants) → Elimination (Remove that which is unnecessary) → Automation (Create a self sufficient, revenue generating machine) → Liberation.</p>
+            <p>Identify that which is most beneficial so that you can give it complete focus, disregarding the rest. By limiting the activities you engage in and the people you associate with, you can spend more time with what matters most. This produces the best overall results.</p>
+        </section>
+        <section>
+            <h3 class="section__heading">Actionable Takeaways</h3>
             <ol>
                 <li>Define your goals and what your dream life would look like, so that you have a grasp of what you’re aiming for.</li>
                 <li>Play to your strengths and maximise any inherent advantages</li>
@@ -77,48 +81,49 @@
                 <li>Look towards your interests and knowledge base for organic business ideas, where you are aware of a problem and would yourself benefit from its creation, as you are then certain that there is a need to be filled.</li>
                 <li>Make a business that is self sufficient, so that you are able to provide value to the world with minimal time input, affording you the time to pursue whatever you desire.</li>
             </ol>
-
-            <h3 class="content__subheading">Favourite Quotes</h3>
-
-            <h4 class="content__title">By Others</h4>
-            <div class="content__quote">
-                <p class="content__quote--text">Action may not always bring happiness, but there is no happiness without action.</p>
-                <p class="content__quote--attrib">Benjamin Disraeli</p>
+        </section>
+        <section>
+            <h3 class="section__heading">Favourite Quotes</h3>
+            <h4 class="section__subheading">By Others</h4>
+            <div class="quote">
+                <p class="quote__text">Action may not always bring happiness, but there is no happiness without action.</p>
+                <p class="quote__attrib">Benjamin Disraeli</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">Perfection is not when there is no more to add, but no more to take away.</p>
-                <p class="content__quote--attrib">Antoine De Saint-Exupery</p>
+            <div class="quote">
+                <p class="quote__text">Perfection is not when there is no more to add, but no more to take away.</p>
+                <p class="quote__attrib">Antoine De Saint-Exupery</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">What information consumes is rather obvious: it consumes the attention of it’s recipients. Hence, a wealth of information creates a poverty of attention and a need to allocate that attention efficiently among the overabundance of information sources that might consume it.</p>
-                <p class="content__quote--attrib">Herbert Simon</p>
+            <div class="quote">
+                <p class="quote__text">What information consumes is rather obvious: it consumes the attention of it’s recipients. Hence, a wealth of information creates a poverty of attention and a need to allocate that attention efficiently among the overabundance of information sources that might consume it.</p>
+                <p class="quote__attrib">Herbert Simon</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">Nobody can give you freedom. Nobody can give you equality or justice or anything. If you are a man, you take it.</p>
-                <p class="content__quote--attrib">Malcolm X</p>
+            <div class="quote">
+                <p class="quote__text">Nobody can give you freedom. Nobody can give you equality or justice or anything. If you are a man, you take it.</p>
+                <p class="quote__attrib">Malcolm X</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">All courses of action are risky, so prudence is not in avoiding danger (it’s impossible), but calculating risk and acting decisively. Make mistakes of ambition and not mistakes of sloth. Develop the strength to do bold things, not the strength to suffer.</p>
-                <p class="content__quote--attrib">Niccolo Machiavelli</p>
+            <div class="quote">
+                <p class="quote__text">All courses of action are risky, so prudence is not in avoiding danger (it’s impossible), but calculating risk and acting decisively. Make mistakes of ambition and not mistakes of sloth. Develop the strength to do bold things, not the strength to suffer.</p>
+                <p class="quote__attrib">Niccolo Machiavelli</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">Would you like me to give you the formula for success? It’s quite simple, really. Double your rate of failure.</p>
-                <p class="content__quote--attrib">Thomas J. Watson</p>
+            <div class="quote">
+                <p class="quote__text">Would you like me to give you the formula for success? It’s quite simple, really. Double your rate of failure.</p>
+                <p class="quote__attrib">Thomas J. Watson</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">To be free, to be happy and fruitful, can only be attained through sacrifice of many common but overestimated things.</p>
-                <p class="content__quote--attrib">Robert Henri</p>
+            <div class="quote">
+                <p class="quote__text">To be free, to be happy and fruitful, can only be attained through sacrifice of many common but overestimated things.</p>
+                <p class="quote__attrib">Robert Henri</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">What man actually needs is not a tensionless state, but rather the striving and struggling for a worthwhile goal, a freely chosen task.</p>
-                <p class="content__quote--attrib">Victor E. Frankl</p>
+            <div class="quote">
+                <p class="quote__text">What man actually needs is not a tensionless state, but rather the striving and struggling for a worthwhile goal, a freely chosen task.</p>
+                <p class="quote__attrib">Victor E. Frankl</p>
             </div>
-            <div class="content__quote">
-                <p class="content__quote--text">If you don’t make mistakes, you’re not working on hard enough problems. And that’s a big mistake.</p>
-                <p class="content__quote--attrib">Frank Wilczek</p>
+            <div class="quote">
+                <p class="quote__text">If you don’t make mistakes, you’re not working on hard enough problems. And that’s a big mistake.</p>
+                <p class="quote__attrib">Frank Wilczek</p>
             </div>
-
-            <h3 class="content__subheading">Further Reading</h3>
+        </section>
+        <section>
+            <h3 class="section__heading">Further Reading</h3>
             <ul>
                 <li>The Magic of Thinking Big - David Schwartz</li>
                 <li>How to Make Millions with Your Ideas - Dan S. Kennedy</li>
@@ -133,13 +138,8 @@
                 <li>Small Giants - Bo Burlingham</li>
                 <li>Six Months Off - A Collaborative Effort</li>
             </ul>
-        </div>
+        </section>
     </main>
-
     <footer-container-sub></footer-container-sub>
-    
-    <script src="../scripts/components.js"></script>
-    <script src="../scripts/nav.js"></script>
 </body>
-
 </html>

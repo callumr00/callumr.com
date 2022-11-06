@@ -39,174 +39,286 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#202020">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Import Javascript -->
+    <script defer src="scripts/fade.js"></script>
+    <script defer src="scripts/components.js"></script>
+    <script defer src="scripts/nav.js"></script>
 </head>
 
 <body>
     <header-container></header-container>
 
-    <main class="container container__photos">
-        <div class="section__cards">
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/mal4LQ-min.jpg" alt="Colourful buildings">
-                <h2 class="section__card--location">Malaga, Spain</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6250x4168</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/280 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/5.7</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">48.4 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">160</p>
+    <main class="container container--photos">
+        <div class="cards">
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/13.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Riyadh, Saudi Arabia</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/150 s</p>
+                    <p>Aperture</p>
+                    <p>f/4.9</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/mal4-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/13.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/mal3LQ-min.jpg" alt="Pink flower">
-                <h2 class="section__card--location">Malaga, Spain</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6250x4168</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/90 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/4.4</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">50.5 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">160</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/12.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Riyadh, Saudi Arabia</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/140 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/mal3-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/12.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/mal2LQ-min.jpg" alt="Sunny walkway">
-                <h2 class="section__card--location">Malaga, Spain</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6250x4168</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/120 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/4.4</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">55.0 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">160</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/11.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Malaga, Spain</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6250x4168</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/1250 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>46.3 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/mal2-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/11.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/mal1LQ-min.jpg" alt="Sunny pier">
-                <h2 class="section__card--location">Malaga, Spain</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6250x4168</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/1250 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/5.7</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">46.3 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">160</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/10.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Malaga, Spain</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6250x4168</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/120 s</p>
+                    <p>Aperture</p>
+                    <p>f/4.4</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/mal1-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/10.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/ver1LQ-min.jpg" alt="Snowy mountains">
-                <h2 class="section__card--location">Verbier, Switzerland</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6250x4168</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/21.9</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">55.0 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">5000</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/9.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Malaga, Spain</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6250x4168</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/90 s</p>
+                    <p>Aperture</p>
+                    <p>f/4.4</p>
+                    <p>Focal Length</p>
+                    <p>50.5 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/ver1-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/9.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="/img/photos/LQ/mcr1LQ-min.jpg" alt="City at night">
-                <h2 class="section__card--location">Manchester, England</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6240x4160</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/120 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/4.9</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">55.0 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">10000</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/8.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Malaga, Spain</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6250x4168</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/280 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>48.4 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="/img/photos/HQ/mcr1-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/8.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/sno1LQ-min.jpg" alt="Rocky mountains">
-                <h2 class="section__card--location">Snowdonia, Wales</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6240x4160</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/180 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/18.0</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">34.3 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">160</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/7.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Verbier, Switzerland</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6250x4168</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1 s</p>
+                    <p>Aperture</p>
+                    <p>f/21.9</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>5000</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/sno1-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/7.jpg" target="_blank">HQ Version</a>
             </div>
-            <div class="section__card section__card--link">
-                <img class="section__card--img" rel="preload" src="./img/photos/LQ/abe1LQ-min.jpg" alt="Quiet beach">
-                <h2 class="section__card--location">Abersoch, Wales</h2>
-                <div class="section__card--text">
-                    <p class="section__text--desc">Resolution</p>
-                    <p class="section__text--desc">6240x4160</p>
-                    <p class="section__text--desc">Device</p>
-                    <p class="section__text--desc">Fujifilm X-T3</p>
-                    <p class="section__text--desc">Exposure Time</p>
-                    <p class="section__text--desc">1/80 s</p>
-                    <p class="section__text--desc">Aperture</p>
-                    <p class="section__text--desc">f/21.9</p>
-                    <p class="section__text--desc">Focal Length</p>
-                    <p class="section__text--desc">55.0 mm</p>
-                    <p class="section__text--desc">ISO</p>
-                    <p class="section__text--desc">640</p>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/6.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">London, England</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6250x4168</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/450 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
                 </div>
-                <a  class="section__card--visit" href="./img/photos/HQ/abe1-min.jpg" target="_blank">HQ Version</a>
+                <a  class="card__link" href="/img/photos/HQ/6.jpg" target="_blank">HQ Version</a>
             </div>
-        </div>
-        <h3 class="section__footernote">All photos are unedited to maximize authenticity.</h3>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/5.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Abersoch, Wales</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/680 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
+                </div>
+                <a  class="card__link" href="/img/photos/HQ/5.jpg" target="_blank">HQ Version</a>
+            </div>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/4.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Aviemore, Scotland</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/60 s</p>
+                    <p>Aperture</p>
+                    <p>f/3.2</p>
+                    <p>Focal Length</p>
+                    <p>18.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
+                </div>
+                <a  class="card__link" href="/img/photos/HQ/4.jpg" target="_blank">HQ Version</a>
+            </div>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/3.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Aviemore, Scotland</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/170 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>20.5 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
+                </div>
+                <a  class="card__link" href="/img/photos/HQ/3.jpg" target="_blank">HQ Version</a>
+            </div>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/2.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Snowdonia, Wales</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/180 s</p>
+                    <p>Aperture</p>
+                    <p>f/5.7</p>
+                    <p>Focal Length</p>
+                    <p>18.0 mm</p>
+                    <p>ISO</p>
+                    <p>160</p>
+                </div>
+                <a  class="card__link" href="/img/photos/HQ/2.jpg" target="_blank">HQ Version</a>
+            </div>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/1.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Snowdonia, Wales</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/80 s</p>
+                    <p>Aperture</p>
+                    <p>f/21.9</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>500</p>
+                </div>
+                <a  class="card__link" href="/img/photos/HQ/1.jpg" target="_blank">HQ Version</a>
+            </div>
+            <div class="card hidden">
+                <img class="card__img" loading="lazy" src="/img/photos/LQ/0.jpg" alt="Colourful buildings">
+                <h2 class="card__heading">Abersoch, Wales</h2>
+                <div class="card__desc">
+                    <p>Resolution</p>
+                    <p>6240x4160</p>
+                    <p>Device</p>
+                    <p>Fujifilm X-T3</p>
+                    <p>Exposure Time</p>
+                    <p>1/80 s</p>
+                    <p>Aperture</p>
+                    <p>f/21.9</p>
+                    <p>Focal Length</p>
+                    <p>55.0 mm</p>
+                    <p>ISO</p>
+                    <p>640</p>
+                </div>
+                <a  class="card__link" href="/img/photos/HQ/0.jpg" target="_blank">HQ Version</a>
+            </div>
     </main>
-
     <footer-container></footer-container>
-
-    <script src="scripts/components.js"></script>
-    <script src="scripts/nav.js"></script>
 </body>
-
 </html>

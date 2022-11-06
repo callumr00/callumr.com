@@ -39,51 +39,51 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#202020">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Import Javascript -->
+    <script defer src="scripts/fade.js"></script>
+    <script defer src="scripts/components.js"></script>
+    <script defer src="scripts/nav.js"></script>
 </head>
 
 <body>
     <header-container></header-container>
     
-    <main class="container container__work">
-        <div class="section__cards">
-            <a href="./work/cpidata" class="section__card--link">
+    <main class="container container--work">
+        <div class="cards">
+            <a href="./work/cpidata" class="card hidden card--link">
                 <div class="section__card section__card--border">
-                    <img class="section__card--img" rel="preload" src="/img/work/cpidata/cover-min.jpg" alt="CPI basket and loss of purchasing power">
-                    <div class="section__card--text">
-                        <h2 class="section__text--heading">CPI Data</h2>
-                        <h3 class="section__text--desc">Shown is the effect of CPI over time of the devaluation of a currency's purchasing power, namely the USD as it is the world reserve currency.</h3>
+                    <img class="card__img" loading="lazy" src="/img/work/cpidata/cover-min.jpg" alt="CPI basket and loss of purchasing power">
+                    <div class="card__text">
+                        <h2 class="card__heading">CPI Data</h2>
+                        <h3 class="card__desc">Shown is the effect of CPI over time of the devaluation of a currency's purchasing power, namely the USD as it is the world reserve currency.</h3>
                     </div>
                 </div>
             </a>
 
-            <a href="./work/btcdata" class="section__card--link">
+            <a href="./work/btcdata" class="card hidden card--link">
                 <div class="section__card section__card--border">
-                    <img class="section__card--img" rel="preload" src="/img/work/btcdata/cover-min.jpg" alt="Bitcoin blockchain metrics">
-                    <div class="section__card--text">
-                        <h2 class="section__text--heading">Bitcoin Blockchain Data</h2>
-                        <h3 class="section__text--desc">Shown are visualizations of various aspects of the Bitcoin blockchain, where general performance, protocol adherence and evolution are shown over it's lifespan thus far.</h3>
+                    <img class="card__img" loading="lazy" src="/img/work/btcdata/cover-min.jpg" alt="Bitcoin blockchain metrics">
+                    <div class="card__text">
+                        <h2 class="card__heading">Bitcoin Blockchain Data</h2>
+                        <h3 class="card__desc">Shown are visualizations of various aspects of the Bitcoin blockchain, where general performance, protocol adherence and evolution are shown over it's lifespan thus far.</h3>
                     </div>
                 </div>
             </a>
 
-            <a href="./work/vanguard" class="section__card--link">
+            <a href="./work/vanguard" class="card hidden card--link">
                 <div class="section__card section__card--border">
-                    <img class="section__card--img" rel="preload" src="/img/work/vanguard/cover-min.jpg" alt="Vanguard Investor fund performance">
-                    <div class="section__card--text">
-                        <h2 class="section__text--heading">Vanguard Investor Summary</h2>
-                        <h3 class="section__text--desc">Shown is the summary of all data provided by Vanguard Investor regarding each of their funds. Each have been ranked based on the average annual performance of the given data.
+                    <img class="card__img" loading="lazy" src="/img/work/vanguard/cover-min.jpg" alt="Vanguard Investor fund performance">
+                    <div class="card__text">
+                        <h2 class="card__heading">Vanguard Investor Summary</h2>
+                        <h3 class="card__desc">Shown is the summary of all data provided by Vanguard Investor regarding each of their funds. Each have been ranked based on the average annual performance of the given data.
                         </h3>
                     </div>
                 </div>
             </a>
         </div>
     </main>
-
     <footer-container></footer-container>
-
-    <script src="scripts/components.js"></script>
-    <script src="scripts/nav.js"></script>
 </body>
-
 </html>

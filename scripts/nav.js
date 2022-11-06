@@ -1,5 +1,3 @@
-// -- Mobile Nav Menu --
-
 // Nav Menu Elements
 const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger__menu');

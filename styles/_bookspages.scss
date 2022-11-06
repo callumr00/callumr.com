@@ -1,0 +1,125 @@
+.container--bookspages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section {
+        width: 100%;
+        max-width: 600px;
+
+        .section__heading {
+            margin: 2rem 0 1rem 0;
+            font-size: 24px;
+            color: colour(secondary);
+            font-weight: weight(regular);
+            padding-top: 1.8rem;
+            border-top: 2px solid colour(secondary);
+        }
+
+        .section__subheading {
+            margin: 2rem 0 1rem 0;
+            font-size: 18px;
+            color: colour(secondary);
+            font-weight: weight(medium);
+
+        }
+
+        p, li {
+            font-size: 18px;
+            color: colour(primary);
+            font-weight: weight(regular);
+            line-height: 1.45;
+        }
+
+        li {
+            margin-left: 2rem;
+        }
+    }
+
+    // Hero
+    section:nth-child(1) {
+        display: grid;
+        grid-template-areas: 
+        "heading heading"
+        "desc desc"
+        "tags rating";
+
+        .hero {
+            &__heading {
+                grid-area: heading;
+                text-align: center;
+                margin-bottom: 2rem;
+                font-size: 32px;
+                color: colour(primary);
+                font-weight: weight(regular);
+            }
+
+            &__desc {
+                grid-area: desc;
+                font-size: 20px;
+                color: colour(secondary);
+                font-weight: weight(regular);
+                padding: 0.5em 0;
+            }
+
+            &__tags {
+                grid-area: tags;
+                font-size: 14px;
+                color: colour(secondary);
+                font-weight: weight(regular);
+                margin: auto 0;
+            }
+
+            &__rating {
+                grid-area: rating;
+                margin: auto 0 auto auto;
+
+                p {
+                    font-size: 14px;
+                    color: colour(tertiary);
+                    font-weight: weight(regular);
+                    text-align: center;
+                }
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    // Summary
+    section:nth-child(2) {
+        p {
+            margin-top: 2rem;
+        }
+    }
+
+    // Actionable Takeaways
+    section:nth-child(3) {
+        li {
+            margin-top: 2rem;
+        }
+    }
+
+    // Favourite Quotes
+    section:nth-child(4) {
+        .quote {            
+            border-left: solid 2px colour(secondary);
+            padding: 1rem;
+            margin: 2rem 0;
+
+            &__attrib {
+                color: colour(secondary);
+                font-weight: weight(medium);
+            }
+        }
+    }
+
+    // Further Reading
+    section:nth-child(5) {
+        li {
+            padding: 0.5rem 0
+        }
+    }
+}

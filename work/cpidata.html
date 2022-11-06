@@ -39,46 +39,46 @@
     <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#202020">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Import Javascript -->
+    <script defer src="../scripts/fade.js"></script>
+    <script defer src="../scripts/components.js"></script>
+    <script defer src="../scripts/nav.js"></script>
 </head>
 
 <body>
     <header-container-sub></header-container-sub>
 
-    <main class="container container__content">
+    <main class="container container--workpages">
         <h2 class="content__heading">CPI Data</h2>
 
         <div class="content__text">
-            <h3 class="section__text--desc">Shown is the effect of CPI over time of the devaluation of a currency's purchasing power, namely the USD as it is the world reserve currency.</h3>
+            <h3 class="content__desc">Shown is the effect of CPI over time of the devaluation of a currency's purchasing power, namely the USD as it is the world reserve currency.</h3>
         </div>
 
         <div class="content__text">
             <h3 class="content__subheading">USD Loss of Purchasing Power</h3>
             <ul class="content__notes">
-                <li>Data sourced from <a class="content__source" href="https://data.bls.gov/cgi-bin/surveymost?cu">here</a> (U.S. city average, All items - CUUR0000SA0) on 28/08/2022 and downloadable in CSV format <a class="content__source" href="../work/data/CPI US.csv">here</a></li>
+                <li>Data sourced from <a class="content__link" href="https://data.bls.gov/cgi-bin/surveymost?cu">here</a> (U.S. city average, All items - CUUR0000SA0) on 28/08/2022 and downloadable in CSV format <a class="content__link" href="../work/data/CPI US.csv">here</a>.</li>
                 <li>Data points used are from a Year over Year change between the ratio of the average annual CPI value for a given year and the first stated CPI value.</li>
                 <li>Mean YoY Change in Purchasing Power: -2.95%</li>
                 <li>USD Value is down -96.61% since 1913</li>
             </ul>
         </div>
-        <img class="content__img" src="../img/work/cpidata/USDValueChange-min.jpg" alt="USD Value Change">
-        <img class="content__img" src="../img/work/cpidata/USDValue-min.jpg" alt="Bitcoin issuance schedule">
+        <img class="content__img" loading="lazy" src="../img/work/cpidata/USDValueChange-min.jpg" alt="USD Value Change">
+        <img class="content__img" loading="lazy" src="../img/work/cpidata/USDValue-min.jpg" alt="Bitcoin issuance schedule">
         <div class="content__text">
             <h3 class="content__subheading">Average Annual CPI Increase Across All Countries</h3>
             <ul class="content__notes">
-                <li>Data sourced from <a class="content__source" href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG">here</a> on 28/08/2022 and downloadable in CSV format <a class="content__source" href="../work/data/CPI All.csv">here</a></li>
+                <li>Data sourced from <a class="content__link" href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG">here</a> on 28/08/2022 and downloadable in CSV format <a class="content__link" href="../work/data/CPI All.csv">here</a>.</li>
                 <li>Data points used are from a Year over Year change between the ratio of the average annual CPI value for a given year and the first stated CPI value.</li>
                 <li>Median: 6.76% YoY</li>
                 <li>Mean: 21.47% YoY</li>
             </ul>
         </div>
-        <img class="content__img" src="../img/work/cpidata/CPI All-min.jpg" alt="CPI data across all countries">
+        <img class="content__img" loading="lazy" src="../img/work/cpidata/CPI All-min.jpg" alt="CPI data across all countries">
     </main>
-
     <footer-container-sub></footer-container-sub>
-    
-    <script src="../scripts/components.js"></script>
-    <script src="../scripts/nav.js"></script>
 </body>
-
 </html>

@@ -31,682 +31,674 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#202020">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Import Javascript -->
+    <script defer src="scripts/fade.js"></script>
+    <script defer src="scripts/components.js"></script>
+    <script defer src="scripts/nav.js"></script>
+    <script defer src="scripts/books.js"></script>
 </head>
 
 <body>
     <header-container></header-container>
+    <main class="container container--books">
 
-    <main class="container container__books">
-        <div class="section__cards">
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Oct 9, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star2.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Be Free</h2>
-                        <h3 class="section__text--author">Epictetus</h3>
-                        <h3 class="section__text--desc">A condensed rendition of Epictetus' teachings. Containing The Encheiridion and selected excerpts from his Discourses. A necessity to live a life unfazed by what you are unable to control, freeing the mind.
-                        </h3>
-                        <p class="section__text--tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
-                    </div>
-                    <img class="section__card--img" rel="preload" src="img/books/HowToBeFree-min.jpg" alt="Book cover for 'How To Be Free'">
+        <p class="count"></p>
+        <section class="filters">
+            <div class="filter">
+                <select name="tagsInput" id="tagsInput">
+                    <option value=""></option>
+                    <option value="Biography & Memoir">Biography & Memoir</option>
+                    <option value="Career & Success">Career & Success</option>
+                    <option value="Communication Skills">Communication Skills</option>
+                    <option value="Corporate Culture">Corporate Culture</option>
+                    <option value="Creativity">Creativity</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Education">Education</option>
+                    <option value="Entrepreneurship">Entrepreneurship</option>
+                    <option value="Health & Nutrition">Health & Nutrition</option>
+                    <option value="History">History</option>
+                    <option value="Management & Leadership">Management & Leadership</option>
+                    <option value="Marketing & Sales">Marketing & Sales</option>
+                    <option value="Mindfulness & Happiness">Mindfulness & Happiness</option>
+                    <option value="Money & Investments">Money & Investments</option>
+                    <option value="Motivation & Inspiration">Motivation & Inspiration</option>
+                    <option value="Nature & the Environment">Nature & the Environment</option>
+                    <option value="Parenting">Parenting</option>
+                    <option value="Personal Development">Personal Development</option>
+                    <option value="Philosophy">Philosophy</option>
+                    <option value="Politics">Politics</option>
+                    <option value="Productivity">Productivity</option>
+                    <option value="Psychology">Psychology</option>
+                    <option value="Religion & Spirituality">Religion & Spirituality</option>
+                    <option value="Science">Science</option>
+                    <option value="Sex & Relationships">Sex & Relationships</option>
+                    <option value="Society & Culture">Society & Culture</option>
+                    <option value="Technology & the Future">Technology & the Future</option>
+                </select>
+                <label for="tagsInput">Filter By Tags</label>
+            </div>
+            <div class="filter">
+                <input type="checkbox" id="summaryInput" name="summaryInput"">
+                <label for="summaryInput">Only Book Summaries</label>
+            </div>
+            <div class="filter">
+                <label>Min. Rating</label>
+                <div>
+                    <input class="rating__input" type="checkbox" id="st1" value="1">
+                    <label class="rating__label" for="st1"></label>
+                    <input class="rating__input" type="checkbox" id="st2" value="2">
+                    <label class="rating__label" for="st2"></label></label>
+                    <input class="rating__input" type="checkbox" id="st3" value="3">
+                    <label class="rating__label" for="st3"></label></label>
+                    <input class="rating__input" type="checkbox" id="st4" value="4">
+                    <label class="rating__label" for="st4"></label></label>
+                    <input class="rating__input" type="checkbox" id="st5" value="5">
+                    <label class="rating__label" for="st5"></label></label>
                 </div>
-            </a> 
+            </div>
+        </section>
 
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Oct 4, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Way of the Superior Man</h2>
-                        <h3 class="section__text--author">David Deida</h3>
-                        <h3 class="section__text--desc">A guide for how you are able to have the highest level of impact, in micro levels like personal relationships and macro levels like your effect on the world. David Deida teaches about personality essence and how you can use yours to guide and enhance your pursuits.
-                        </h3>
-                        <p class="section__text--tags">Career & Success, Sex & Relationships</p>
+        <section class="cards">
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Oct 9, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">9</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img" rel="preload" src="img/books/SuperiorMan-min.jpg" alt="Book cover for 'The Way of the Superior Man'">
+                    <h2 class="card__heading">How To Be Free</h2>
+                    <h3 class="card__subheading">Epictetus</h3>
+                    <h3 class="card__desc">A condensed rendition of Epictetus' teachings. Containing The Encheiridion and selected excerpts from his Discourses. A necessity to live a life unfazed by what you are unable to control, freeing the mind.
+                    </h3>
+                    <p class="card__tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
                 </div>
-            </a> 
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Sep 28, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Give</h2>
-                        <h3 class="section__text--author">Seneca</h3>
-                        <h3 class="section__text--desc">From Seneca's 'On Benefits', How To Give is constructed to give the reader Seneca's beliefs around the art of giving and receiving, gratitude and ingratitude, and how you are to be selfless in action for the benefit of your peers.
-                        </h3>
-                        <p class="section__text--tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/HowToBeFree-min.jpg" alt="Book cover for 'How To Be Free'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Oct 4, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">8</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img" rel="preload" src="img/books/HowToGive-min.jpg" alt="Book cover for 'How To Give'">
+                    <h2 class="card__heading">The Way of the Superior Man</h2>
+                    <h3 class="card__subheading">David Deida</h3>
+                    <h3 class="card__desc">A guide for how you are able to have the highest level of impact, in micro levels like personal relationships and macro levels like your effect on the world. David Deida teaches about personality essence and how you can use yours to guide and enhance your pursuits.
+                    </h3>
+                    <p class="card__tags">Career & Success, Sex & Relationships</p>
                 </div>
-            </a> 
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Sep 22, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Keep Your Cool</h2>
-                        <h3 class="section__text--author">Seneca</h3>
-                        <h3 class="section__text--desc">This book contains excerpts from Seneca's 'On Anger' and details the nature of anger and why it should be avoided as well as how to do so. Allowing you to lead a better, more controlled and peaceful life.</h3>
-                        <p class="section__text--tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/SuperiorMan-min.jpg" alt="Book cover for 'The Way of the Superior Man'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Sep 28, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img" rel="preload" src="img/books/HowToKeepYourCool-min.jpg" alt="Book cover for 'How To Keep Your Cool'">
+                    <h2 class="card__heading">How To Give</h2>
+                    <h3 class="card__subheading">Seneca</h3>
+                    <h3 class="card__desc">From Seneca's 'On Benefits', How To Give is constructed to give the reader Seneca's beliefs around the art of giving and receiving, gratitude and ingratitude, and how you are to be selfless in action for the benefit of your peers.
+                    </h3>
+                    <p class="card__tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/HowToGive-min.jpg" alt="Book cover for 'How To Give'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Sep 22, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
+                    </div>
+                    <h2 class="card__heading">How To Keep Your Cool</h2>
+                    <h3 class="card__subheading">Seneca</h3>
+                    <h3 class="card__desc">This book contains excerpts from Seneca's 'On Anger' and details the nature of anger and why it should be avoided as well as how to do so. Allowing you to lead a better, more controlled and peaceful life.</h3>
+                    <p class="card__tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
+                </div>
+                <img class="card__img" loading="lazy" src="/img/books/HowToKeepYourCool-min.jpg" alt="Book cover for 'How To Keep Your Cool'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Sep 19, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
+                    </div>
+                    <h2 class="card__heading">The Circadian Code</h2>
+                    <h3 class="card__subheading">Satchin Panda</h3>
+                    <h3 class="card__desc">Satchin Panda goes over the idea of Time Restricted Eating, its benefits and how you are able to implement it into your life so that you are able to live more in accordance with your biology and reap its associated rewards.</h3>
+                    <p class="card__tags">Health & Nutrition, Science</p>
+                </div>
+                <img class="card__img" loading="lazy" src="/img/books/CircadianCode-min.jpg" alt="Book cover for 'The Circadian Code'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Sep 10, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
+                    </div>
+                    <h2 class="card__heading">Deep Work</h2>
+                    <h3 class="card__subheading">Cal Newport</h3>
+                    <h3 class="card__desc">Cal Newport highlights the importance of 'deep work' - focused work free from distraction - and discusses various implementations and accessory inclusions to improve productivity and performance.</h3>
+                    <p class="card__tags">Career & Success, Productivity</p>
+                </div>
+                <img class="card__img" loading="lazy" src="/img/books/DeepWork-min.jpg" alt="Book cover for 'Deep Work'">
+            </div>
+            <a href="/books/slightedge" class="card hidden card--link">
+                <div class="card__text">
+                    <h3 class="card__date">Aug 29, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">5</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
+                    </div>
+                    <h2 class="card__heading">The Slight Edge</h2>
+                    <h3 class="card__subheading">Jeff Olson</h3>
+                    <h3 class="card__desc">A guide on how you can increase success in all aspects of your life through partaking in more activities that result in delayed gratification and through consistency in these actions.</h3>
+                    <p class="card__tags">Career & Success, Productivity</p>
+                </div>
+                <img class="card__img" loading="lazy" src="/img/books/SlightEdge-min.jpg" alt="Book cover for 'The Slight Edge'">
             </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Sep 19, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Circadian Code</h2>
-                        <h3 class="section__text--author">Satchin Panda</h3>
-                        <h3 class="section__text--desc">Satchin Panda goes over the idea of Time Restricted Eating, its benefits and how you are able to implement it into your life so that you are able to live more in accordance with your biology and reap its associated rewards.</h3>
-                        <p class="section__text--tags">Health & Nutrition, Science</p>
+            <a href="/books/compoundeffect" class="card hidden card--link">
+                <div class="card__text">
+                    <h3 class="card__date">Aug 24, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img" rel="preload" src="img/books/CircadianCode-min.jpg" alt="Book cover for 'The Circadian Code'">
+                    <h2 class="card__heading">The Compound Effect</h2>
+                    <h3 class="card__subheading">Darren Hardy</h3>
+                    <h3 class="card__desc">A look at how you are able to cultivate the life that you wish to achieve by defining your goals and consistently performing actions that enable progress towards them.</h3>
+                    <p class="card__tags">Career & Success, Productivity</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/CompoundEffect-min.jpg" alt="Book cover for 'The Compound Effect'">
             </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Sep 10, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Deep Work</h2>
-                        <h3 class="section__text--author">Cal Newport</h3>
-                        <h3 class="section__text--desc">Cal Newport highlights the importance of 'deep work' - focused work free from distraction - and discusses various implementations and accessory inclusions to improve productivity and performance.</h3>
-                        <p class="section__text--tags">Career & Success, Productivity</p>
+            <a href="/books/millionairefastlane" class="card hidden card--link">
+                <div class="card__text">
+                    <h3 class="card__date">Aug 21, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">8</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img" rel="preload" src="img/books/DeepWork-min.jpg" alt="Book cover for 'Deep Work'">
+                    <h2 class="card__heading">The Millionaire Fastlane</h2>
+                    <h3 class="card__subheading">MJ DeMarco</h3>
+                    <h3 class="card__desc">A depiction of various paths that you can lead your life with a spotlight on 'The Fastlane' - a route to wealth that is more rapidly attainable and preferable so that you are able to live out the life you desire for an extended period of time.</h3>
+                    <p class="card__tags">Career & Success, Entrepreneurship, Money & Investments</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/MillionaireFastlane-min.jpg" alt="Book cover for 'The Millionaire Fastlane'">
             </a>
-
-            <a href="./books/slightedge" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Aug 29, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star2.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Slight Edge</h2>
-                        <h3 class="section__text--author">Jeff Olson</h3>
-                        <h3 class="section__text--desc">A guide on how you can increase success in all aspects of your life through partaking in more activities that result in delayed gratification and through consistency in these actions.</h3>
-                        <p class="section__text--tags">Career & Success, Productivity</p>
+            <a href="/books/fourhourworkweek" class="card hidden card--link">
+                <div class="card__text">
+                    <h3 class="card__date">Aug 17, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img" rel="preload" src="img/books/SlightEdge-min.jpg" alt="Book cover for 'The Slight Edge'">
+                    <h2 class="card__heading">The 4-Hour Work Week</h2>
+                    <h3 class="card__subheading">Timothy Ferriss</h3>
+                    <h3 class="card__desc">A guide focused on giving you tools to enact maximal productivity and freedom, allowing you to lead the life you desire without a total commitment to spending time working and  increasing wealth unecessarily.</h3>
+                    <p class="card__tags">Career & Success, Entrepreneurship, Productivity</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/4HWW-min.jpg" alt="Book cover for 'The 4-Hour Work Week'">
             </a>
-            
-            <a href="./books/compoundeffect" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Aug 24, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Compound Effect</h2>
-                        <h3 class="section__text--author">Darren Hardy</h3>
-                        <h3 class="section__text--desc">A look at how you are able to cultivate the life that you wish to achieve by defining your goals and consistently performing actions that enable progress towards them.</h3>
-                        <p class="section__text--tags">Career & Success, Productivity</p>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Aug 11, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">9</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/CompoundEffect-min.jpg" alt="Book cover for 'The Compound Effect'">
+                    <h2 class="card__heading">The Almanack of Naval Ravikant</h2>
+                    <h3 class="card__subheading">Eric Jorgenson</h3>
+                    <h3 class="card__desc">A collection of pieces from Naval Ravikant's appearances and contributions to social media, with insights concerning wealth, health, happiness and business.</h3>
+                    <p class="card__tags">Career & Success, Health & Nutrition, Mindfulness & Happiness, Personal Development</p>
                 </div>
-            </a>
-            
-            <a href="./books/millionairefastlane" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Aug 21, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Millionaire Fastlane</h2>
-                        <h3 class="section__text--author">MJ DeMarco</h3>
-                        <h3 class="section__text--desc">A depiction of various paths that you can lead your life with a spotlight on 'The Fastlane' - a route to wealth that is more rapidly attainable and preferable so that you are able to live out the life you desire for an extended period of time.</h3>
-                        <p class="section__text--tags">Career & Success, Entrepreneurship, Money & Investments</p>
+                <img class="card__img" loading="lazy" src="/img/books/Navalmanack-min.jpg" alt="Book cover for 'The Almanack of Naval Ravikant'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Aug 3, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">5</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/MillionaireFastlane-min.jpg" alt="Book cover for 'The Millionaire Fastlane'">
+                    <h2 class="card__heading">Being Logical</h2>
+                    <h3 class="card__subheading">D. Q. McInerny</h3>
+                    <h3 class="card__desc">A walkthrough of logical thinking and its constituents so that you are able to dissect thought processes and arguments to ensure they are sound in nature.</h3>
+                    <p class="card__tags">Communication Skills</p>
                 </div>
-            </a>
-            
-            <a href="./books/fourhourworkweek" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Aug 17, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The 4-Hour Work Week</h2>
-                        <h3 class="section__text--author">Timothy Ferriss</h3>
-                        <h3 class="section__text--desc">A guide focused on giving you tools to enact maximal productivity and freedom, allowing you to lead the life you desire without a total commitment to spending time working and  increasing wealth unecessarily.</h3>
-                        <p class="section__text--tags">Career & Success, Entrepreneurship, Productivity</p>
+                <img class="card__img" loading="lazy" src="/img/books/BeingLogical-min.jpg" alt="Book cover for 'Being Logical'">
+            </div>
+            <a href="/books/essentialism" class="card hidden card--link">
+                <div class="card__text">
+                    <h3 class="card__date">Jul 30, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/4HWW-min.jpg" alt="Book cover for 'The 4-Hour Work Week'">
+                    <h2 class="card__heading">Essentialism</h2>
+                    <h3 class="card__subheading">Greg McKeown</h3>
+                    <h3 class="card__desc">Ideas and methods to ensure you adequately prioritise that which is most important within your life so that you are able to achieve excellence in those defined areas.</h3>
+                    <p class="card__tags">Career & Success, Productivity</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/Essentialism-min.jpg" alt="Book cover for 'Essentialism'">
             </a>
-            
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Aug 11, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star2.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Almanack of Naval Ravikant</h2>
-                        <h3 class="section__text--author">Eric Jorgenson</h3>
-                        <h3 class="section__text--desc">A collection of pieces from Naval Ravikant's appearances and contributions to social media, with insights concerning wealth, health, happiness and business.</h3>
-                        <p class="section__text--tags">Career & Success, Health & Nutrition, Mindfulness & Happiness, Personal Development</p>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Jul 19, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/Navalmanack-min.jpg" alt="Book cover for 'The Almanack of Naval Ravikant'">
+                    <h2 class="card__heading">Bitcoin and Exponential Freedom</h2>
+                    <h3 class="card__subheading">Jake Leary</h3>
+                    <h3 class="card__desc">Jake Leary covers the basis of a money and the implications of using Bitcoin as money opposed to the one's that are more readily available to us today--fiat currencies and gold.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-            
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Aug 3, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star2.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Being Logical</h2>
-                        <h3 class="section__text--author">D. Q. McInerny</h3>
-                        <h3 class="section__text--desc">A walkthrough of logical thinking and its constituents so that you are able to dissect thought processes and arguments to ensure they are sound in nature.</h3>
-                        <p class="section__text--tags">Communication Skills</p>
+                <img class="card__img" loading="lazy" src="/img/books/Bitcoin&EF-min.jpg" alt="Book cover for 'Bitcoin and Exponential Freedom'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Jul 8, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/BeingLogical-min.jpg" alt="Book cover for 'Being Logical'">
+                    <h2 class="card__heading">Being Mortal</h2>
+                    <h3 class="card__subheading">Atul Gawande</h3>
+                    <h3 class="card__desc">A look at what matter most towards the end of one's life and how to live out your final days in the best way possible, with a history of what is likely to happen and the actuality.</h3>
+                    <p class="card__tags">Philosophy</p>
                 </div>
-            </a>
-            
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Jul 30, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Essentialism</h2>
-                        <h3 class="section__text--author">Greg McKeown</h3>
-                        <h3 class="section__text--desc">Ideas and methods to ensure you adequately prioritise that which is most important within your life so that you are able to achieve excellence in those defined areas.</h3>
-                        <p class="section__text--tags">Career & Success, Productivity</p>
+                <img class="card__img" loading="lazy" src="/img/books/BeingMortal-min.jpg" alt="Book cover for 'Being Mortal'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Jun 20, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">8</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/Essentialism-min.jpg" alt="Book cover for 'Essentialism'">
+                    <h2 class="card__heading">The Price of Tomorrow</h2>
+                    <h3 class="card__subheading">Jeff Booth</h3>
+                    <h3 class="card__desc">An excellent explanation as to how our economies function today and changes that will have to be made due to rapidly advancing technological influence on our daily lives.</h3>
+                    <p class="card__tags">Economics, Technology & the Future</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Jul 19, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Bitcoin and Exponential Freedom</h2>
-                        <h3 class="section__text--author">Jake Leary</h3>
-                        <h3 class="section__text--desc">Jake Leary covers the basis of a money and the implications of using Bitcoin as money opposed to the one's that are more readily available to us today--fiat currencies and gold.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/ThePriceOfTomorrow-min.jpg" alt="Book cover for 'The Price of Tomorrow'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">May 26, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/Bitcoin&EF-min.jpg" alt="Book cover for 'Bitcoin and Exponential Freedom'">
+                    <h2 class="card__heading">Layered Money</h2>
+                    <h3 class="card__subheading">Nik Bhatia</h3>
+                    <h3 class="card__desc">A walkthrough of the history and evolution of monetary technology. Giving a developmental framework for understanding with applications to the situation both today and going forward.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Jul 8, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Being Mortal</h2>
-                        <h3 class="section__text--author">Atul Gawande</h3>
-                        <h3 class="section__text--desc">A look at what matter most towards the end of one's life and how to live out your final days in the best way possible, with a history of what is likely to happen and the actuality.</h3>
-                        <p class="section__text--tags">Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/LayeredMoney-min.jpg" alt="Book cover for 'Layered Money'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">May 20, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/BeingMortal-min.jpg" alt="Book cover for 'Being Mortal'">
+                    <h2 class="card__heading">Inventing Bitcoin</h2>
+                    <h3 class="card__subheading">Yan Pritzker</h3>
+                    <h3 class="card__desc">A walkthrough of what Bitcoin aims to solve and how it achieves this, going step by step to think through the best possible methods of achieving this goal.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Jun 20, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Price of Tomorrow</h2>
-                        <h3 class="section__text--author">Jeff Booth</h3>
-                        <h3 class="section__text--desc">An excellent explanation as to how our economies function today and changes that will have to be made due to rapidly advancing technological influence on our daily lives.</h3>
-                        <p class="section__text--tags">Economics, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/InventingBitcoin-min.jpg" alt="Book cover for 'Inventing Bitcoin'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">May 19, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/ThePriceOfTomorrow-min.jpg" alt="Book cover for 'The Price of Tomorrow'">
+                    <h2 class="card__heading">The Psychology of Money</h2>
+                    <h3 class="card__subheading">Morgan Housel</h3>
+                    <h3 class="card__desc">A guide on how best to think about and manage your money so that you are able to achieve your financial goals, whatever they may be.</h3>
+                    <p class="card__tags">Money & Investments</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">May 26, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Layered Money</h2>
-                        <h3 class="section__text--author">Nik Bhatia</h3>
-                        <h3 class="section__text--desc">A walkthrough of the history and evolution of monetary technology. Giving a developmental framework for understanding with applications to the situation both today and going forward.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/ThePsychologyOfMoney-min.jpg" alt="Book cover for 'What Money Can't Buy'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Apr 27, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">9</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/LayeredMoney-min.jpg" alt="Book cover for 'Layered Money'">
+                    <h2 class="card__heading">What Money Can't Buy</h2>
+                    <h3 class="card__subheading">Michael Sandel</h3>
+                    <h3 class="card__desc">A questioning of the current trend of monetizing all aspects of life and the implications it brings, with countless thought provoking examples.</h3>
+                    <p class="card__tags">Economics, Philosophy</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">May 20, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Inventing Bitcoin</h2>
-                        <h3 class="section__text--author">Yan Pritzker</h3>
-                        <h3 class="section__text--desc">A walkthrough of what Bitcoin aims to solve and how it achieves this, going step by step to think through the best possible methods of achieving this goal.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/WhatMoneyCantBuy-min.jpg" alt="Book cover for 'What Money Can't Buy'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Apr 5, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/InventingBitcoin-min.jpg" alt="Book cover for 'Inventing Bitcoin'">
+                    <h2 class="card__heading">The Bullish Case for Bitcoin</h2>
+                    <h3 class="card__subheading">Vijay Boyapati</h3>
+                    <h3 class="card__desc">An in depth analysis on what makes a good money, how money is established and how it evolves while explaining how Bitcoin is the next step in the evolution of monetary technology.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">May 19, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star2.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Psychology of Money</h2>
-                        <h3 class="section__text--author">Morgan Housel</h3>
-                        <h3 class="section__text--desc">A guide on how best to think about and manage your money so that you are able to achieve your financial goals, whatever they may be.</h3>
-                        <p class="section__text--tags">Money & Investments</p>
+                <img class="card__img" loading="lazy" src="/img/books/TheBullishCaseForBitcoin-min.jpg" alt="Book cover for 'The Bullish Case for Bitcoin'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Mar 20, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/ThePsychologyOfMoney-min.jpg" alt="Book cover for 'What Money Can't Buy'">
+                    <h2 class="card__heading">The Little Bitcoin Book</h2>
+                    <h3 class="card__subheading">A Collaborative Effort</h3>
+                    <h3 class="card__desc">An introduction to the importance and necessity of Bitcoin with answers to many questions a beginner may ask. A great place to start.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Apr 27, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">What Money Can't Buy</h2>
-                        <h3 class="section__text--author">Michael Sandel</h3>
-                        <h3 class="section__text--desc">A questioning of the current trend of monetizing all aspects of life and the implications it brings, with countless thought provoking examples.</h3>
-                        <p class="section__text--tags">Economics, Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/TheLittleBitcoinBook-min.jpg" alt="Book cover for 'The Little Bitcoin Book'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Mar 12, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/WhatMoneyCantBuy-min.jpg" alt="Book cover for 'What Money Can't Buy'">
+                    <h2 class="card__heading">21 Lessons</h2>
+                    <h3 class="card__subheading">Gigi</h3>
+                    <h3 class="card__desc">A brief but broad discussion of the impact of Bitcoin and surrounding topics, philosophically, economically and technologically.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-            
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Apr 5, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Bullish Case for Bitcoin</h2>
-                        <h3 class="section__text--author">Vijay Boyapati</h3>
-                        <h3 class="section__text--desc">An in depth analysis on what makes a good money, how money is established and how it evolves while explaining how Bitcoin is the next step in the evolution of monetary technology.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/21LessonsBTC-min.jpg" alt="Book cover for '21 Lessons'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <h3 class="card__date">Mar 12, 2022</h3>
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img rel="preload" src="img/books/TheBullishCaseForBitcoin-min.jpg" alt="Book cover for 'The Bullish Case for Bitcoin'">
+                    <h2 class="card__heading">Thank God for Bitcoin</h2>
+                    <h3 class="card__subheading">A Collaborative Effort</h3>
+                    <h3 class="card__desc">An overview of the history of money, the current situation and what an incorruptible money can mean for society at large after many failed attempts.</h3>
+                    <p class="card__tags">Economics, Money & Investments, Technology & the Future</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Mar 20, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Little Bitcoin Book</h2>
-                        <h3 class="section__text--author">A Collaborative Effort</h3>
-                        <h3 class="section__text--desc">An introduction to the importance and necessity of Bitcoin with answers to many questions a beginner may ask. A great place to start.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/ThankGodForBitcoin-min.jpg" alt="Book cover for 'Thank God for Bitcoin'">
+            </div>
+            <a href="/books/howtodrink" class="card hidden card--link">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">4</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/TheLittleBitcoinBook-min.jpg" alt="Book cover for 'The Little Bitcoin Book'">
+                    <h2 class="card__heading">How To Drink</h2>
+                    <h3 class="card__subheading">Vincent Obsopoeus</h3>
+                    <h3 class="card__desc">Guidance on how best to enjoy alcohol without over-consumption, with large applications to any vice.</h3>
+                    <p class="card__tags">Personal Development, Philosophy</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/HowToDrink-min.jpg" alt="Book cover for 'How To Drink'">
             </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Mar 12, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">21 Lessons</h2>
-                        <h3 class="section__text--author">Gigi</h3>
-                        <h3 class="section__text--desc">A brief but broad discussion of the impact of Bitcoin and surrounding topics, philosophically, economically and technologically.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+            <div class="card hidden">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/21LessonsBTC-min.jpg" alt="Book cover for '21 Lessons'">
+                    <h2 class="card__heading">How To Be A Leader</h2>
+                    <h3 class="card__subheading">Plutarch</h3>
+                    <h3 class="card__desc">Advice on how best to perform in any role relating to leadership, initially aimed to be for politicians, but has large applications in business, for the benefit of the leader and their constituents.</h3>
+                    <p class="card__tags">Management & Leadership, Personal Development, Philosophy</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <h3 class="section__text--timestamp">Mar 12, 2022</h3>
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Thank God for Bitcoin</h2>
-                        <h3 class="section__text--author">A Collaborative Effort</h3>
-                        <h3 class="section__text--desc">An overview of the history of money, the current situation and what an incorruptible money can mean for society at large after many failed attempts.</h3>
-                        <p class="section__text--tags">Economics, Money & Investments, Technology & the Future</p>
+                <img class="card__img" loading="lazy" src="/img/books/HowToBeALeader-min.jpg" alt="Book cover for 'How To Be A Leader'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">9</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/ThankGodForBitcoin-min.jpg" alt="Book cover for 'Thank God for Bitcoin'">
+                    <h2 class="card__heading">Why We Sleep</h2>
+                    <h3 class="card__subheading">Matthew Walker</h3>
+                    <h3 class="card__desc">Necessary education on one of the most important and under-appreciated aspects of life with actionable takeaways to improve performance universally.</h3>
+                    <p class="card__tags">Health & Nutrition, Science</p>
                 </div>
-            </a>
-
-            <a href="./books/howtodrink" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star3.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Drink</h2>
-                        <h3 class="section__text--author">Vincent Obsopoeus</h3>
-                        <h3 class="section__text--desc">Guidance on how best to enjoy alcohol without over-consumption, with large applications to any vice.</h3>
-                        <p class="section__text--tags">Personal Development, Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/WhyWeSleep-min.jpg" alt="Book cover for 'Why We Sleep'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">5</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/HowToDrink-min.jpg" alt="Book cover for 'How To Drink'">
+                    <h2 class="card__heading">The Art of War</h2>
+                    <h3 class="card__subheading">Sun Tzu</h3>
+                    <h3 class="card__desc">A short book on how to maximize success against the opposition, which largely relates to its intended topic of war and battle but can also be applied to business.</h3>
+                    <p class="card__tags">Career & Success</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Be A Leader</h2>
-                        <h3 class="section__text--author">Plutarch</h3>
-                        <h3 class="section__text--desc">Advice on how best to perform in any role relating to leadership, initially aimed to be for politicians, but has large applications in business, for the benefit of the leader and their constituents.</h3>
-                        <p class="section__text--tags">Management & Leadership, Personal Development, Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/TheArtOfWar-min.jpg" alt="Book cover for 'The Art of War'">
+            </div>
+            <div class="card hidden">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">10</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/HowToBeALeader-min.jpg" alt="Book cover for 'How To Be A Leader'">
+                    <h2 class="card__heading">Meditations</h2>
+                    <h3 class="card__subheading">Marcus Aurelius</h3>
+                    <h3 class="card__desc">The insights of an introspective Roman Emperor, one of the most powerful people in the world at his time, most of which are still largely relevant and well worth adopting.</h3>
+                    <p class="card__tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star2.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Why We Sleep</h2>
-                        <h3 class="section__text--author">Matthew Walker</h3>
-                        <h3 class="section__text--desc">Necessary education on one of the most important and under-appreciated aspects of life with actionable takeaways to improve performance universally.</h3>
-                        <p class="section__text--tags">Health & Nutrition, Science</p>
+                <img class="card__img" loading="lazy" src="/img/books/Meditations-min.jpg" alt="Book cover for 'Meditations'">
+            </div>
+            <a href="/books/managingoneself" class="card hidden card--link">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">6</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/WhyWeSleep-min.jpg" alt="Book cover for 'Why We Sleep'">
+                    <h2 class="card__heading">Managing Oneself</h2>
+                    <h3 class="card__subheading">Peter F. Drucker</h3>
+                    <h3 class="card__desc">A short guide on how to perform your best through the knowledge of one's personal capabilities and further, the capabilities of peers.</h3>
+                    <p class="card__tags">Career & Success, Personal Development</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/ManagingOneself-min.jpg" alt="Book cover for 'Managing Oneself'">
             </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star2.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">The Art of War</h2>
-                        <h3 class="section__text--author">Sun Tzu</h3>
-                        <h3 class="section__text--desc">A short book on how to maximize success against the opposition, which largely relates to its intended topic of war and battle but can also be applied to business.</h3>
-                        <p class="section__text--tags">Career & Success</p>
+            <div class="card hidden">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">7</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star3.svg"3.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/TheArtOfWar-min.jpg" alt="Book cover for 'The Art of War'">
+                    <h2 class="card__heading">How To Change Your Mind</h2>
+                    <h3 class="card__subheading">Michael Pollan</h3>
+                    <h3 class="card__desc">An introductory guide to psychedelics, their history, effects, guidance and potential for wider use in society with some entertaining trip reports from a first-timers perspective.</h3>
+                    <p class="card__tags">Mindfulness & Happiness, Philosophy</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star1.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Meditations</h2>
-                        <h3 class="section__text--author">Marcus Aurelius</h3>
-                        <h3 class="section__text--desc">The insights of an introspective Roman Emperor, one of the most powerful people in the world at his time, most of which are still largely relevant and well worth adopting.</h3>
-                        <p class="section__text--tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
+                <img class="card__img" loading="lazy" src="/img/books/HowToChangeYourMind-min.jpg" alt="Book cover for 'How To Change Your Mind'">
+            </div>
+            <a href="/books/howtodie" class="card hidden card--link">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">10</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/Meditations-min.jpg" alt="Book cover for 'Meditations'">
+                    <h2 class="card__heading">How To Die</h2>
+                    <h3 class="card__subheading">Seneca</h3>
+                    <h3 class="card__desc">An important perspective on the idea and the inevitability of death and how acceptance of this grants freedom in all other aspects of life.</h3>
+                    <p class="card__tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
                 </div>
+                <img class="card__img" loading="lazy" src="/img/books/HowToDie-min.jpg" alt="Book cover for 'How To Die">
             </a>
-
-            <a href="./books/managingoneself" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star3.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">Managing Oneself</h2>
-                        <h3 class="section__text--author">Peter F. Drucker</h3>
-                        <h3 class="section__text--desc">A short guide on how to perform your best through the knowledge of one's personal capabilities and further, the capabilities of peers.</h3>
-                        <p class="section__text--tags">Career & Success, Personal Development</p>
+            <div class="card hidden">
+                <div class="card__text">
+                    <div class="card__rating">
+                        <p class="rating__value">9</p>
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #1">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #2">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #3">
+                        <img loading="lazy" src="/img/svg/star1.svg" alt="Yellow star #4">
+                        <img loading="lazy" src="/img/svg/star2.svg"2.svg" alt="Yellow star #5">
                     </div>
-                    <img class="section__card--img loading="lazy" src="img/books/ManagingOneself-min.jpg" alt="Book cover for 'Managing Oneself'">
+                    <h2 class="card__heading">How To Win Friends and Influence People</h2>
+                    <h3 class="card__subheading">Dale Carnegie</h3>
+                    <h3 class="card__desc">Foundational knowledge for building and maintaining relationships with those around you in both casual and professional settings.</h3>
+                    <p class="card__tags">Career & Success, Communication Skills, Management & Leadership, Personal Development</p>
                 </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star2.svg" alt="Yellow star #4">
-                            <img src="img/svg/star3.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Change Your Mind</h2>
-                        <h3 class="section__text--author">Michael Pollan</h3>
-                        <h3 class="section__text--desc">An introductory guide to psychedelics, their history, effects, guidance and potential for wider use in society with some entertaining trip reports from a first-timers perspective.</h3>
-                        <p class="section__text--tags">Mindfulness & Happiness, Philosophy</p>
-                    </div>
-                    <img class="section__card--img loading="lazy" src="img/books/HowToChangeYourMind-min.jpg" alt="Book cover for 'How To Change Your Mind'">
-                </div>
-            </a>
-
-            <a href="./books/howtodie" class="section__card--link section__card--active">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star1.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Die</h2>
-                        <h3 class="section__text--author">Seneca</h3>
-                        <h3 class="section__text--desc">An important perspective on the idea and the inevitability of death and how acceptance of this grants freedom in all other aspects of life.</h3>
-                        <p class="section__text--tags">Mindfulness & Happiness, Personal Development, Philosophy</p>
-                    </div>
-                    <img class="section__card--img loading="lazy" src="img/books/HowToDie-min.jpg" alt="Book cover for 'How To Die">
-                </div>
-            </a>
-
-            <a href="" class="section__card--link">
-                <div class="section__card">
-                    <div class="section__card--text">
-                        <div class="section__text--rating">
-                            <img src="img/svg/star1.svg" alt="Yellow star #1">
-                            <img src="img/svg/star1.svg" alt="Yellow star #2">
-                            <img src="img/svg/star1.svg" alt="Yellow star #3">
-                            <img src="img/svg/star1.svg" alt="Yellow star #4">
-                            <img src="img/svg/star2.svg" alt="Yellow star #5">
-                        </div>
-                        <h2 class="section__text--heading">How To Win Friends and Influence People</h2>
-                        <h3 class="section__text--author">Dale Carnegie</h3>
-                        <h3 class="section__text--desc">Foundational knowledge for building and maintaining relationships with those around you in both casual and professional settings.</h3>
-                        <p class="section__text--tags">Career & Success, Communication Skills, Management & Leadership, Personal Development</p>
-                    </div>
-                    <img class="section__card--img loading="lazy" src="img/books/HowToWinFriendAndInfluencePeople-min.jpg" alt="Book cover for 'How To Win Friends and Influence People'">
-                </div>
-            </a>
-        </div>
+                <img class="card__img" loading="lazy" src="/img/books/HowToWinFriendAndInfluencePeople-min.jpg" alt="Book cover for 'How To Win Friends and Influence People'">
+            </div>
+        </section>
     </main>
-
     <footer-container></footer-container>
-
-    <script src="scripts/components.js"></script>
-    <script src="scripts/nav.js"></script>
 </body>
-
 </html>
