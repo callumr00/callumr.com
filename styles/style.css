@@ -225,13 +225,6 @@ footer .footer__icon:hover {
   color: #697582;
   font-weight: 400;
 }
-.container--index section:nth-child(1) .hero__subheading--highlight {
-  color: inherit;
-  transition-duration: 120ms;
-}
-.container--index section:nth-child(1) .hero__subheading--highlight:hover {
-  color: #FF9900;
-}
 .container--index section:nth-child(2) .cards,
 .container--index section:nth-child(3) .cards,
 .container--index section:nth-child(4) .cards {
@@ -812,10 +805,19 @@ footer .footer__icon:hover {
 .container--about section:nth-child(1) .list__heading,
 .container--about section:nth-child(2) .list__heading {
   text-align: center;
-  font-size: clamp(1.5rem, 6.25vw, 2.2rem);
-  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  font-size: 32px;
+  color: #2b3035;
+  font-weight: 400;
+}
+.container--about section:nth-child(1) .list__subheading,
+.container--about section:nth-child(2) .list__subheading {
+  margin: 2rem 0 1rem 0;
+  font-size: 24px;
   color: #697582;
   font-weight: 400;
+  padding-top: 1.8rem;
+  border-top: 2px solid #697582;
 }
 .container--about section:nth-child(1) .list,
 .container--about section:nth-child(2) .list {
@@ -829,7 +831,11 @@ footer .footer__icon:hover {
   color: #2b3035;
   font-weight: 500;
   line-height: 1.4em;
-  margin: 2rem 0;
+  margin: 2rem;
+}
+.container--about section:nth-child(1) .list__image,
+.container--about section:nth-child(2) .list__image {
+  width: 600px;
 }
 .container--about section:nth-child(1) .list__link,
 .container--about section:nth-child(2) .list__link {
