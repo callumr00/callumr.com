@@ -1,10 +1,4 @@
 .container--index {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-
-
     // Hero
     section:nth-child(1) {
         .hero {
@@ -34,14 +28,6 @@
             &__subheading {
                 color: colour(secondary);
                 font-weight: weight(regular);
-        
-                &--highlight {
-                    color: inherit;
-                    transition-duration: duration(fast);
-                    &:hover{
-                        color: #FF9900;
-                    }
-                }
             }
         }
     }
