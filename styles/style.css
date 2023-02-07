@@ -231,7 +231,6 @@ footer .footer__icon:hover {
   display: grid;
   grid-gap: 2rem;
   margin: 2rem 0 5rem 0;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -322,7 +321,6 @@ footer .footer__icon:hover {
 .container--work .cards {
   display: grid;
   grid-gap: 2rem;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -547,7 +545,6 @@ footer .footer__icon:hover {
 .container--books .cards {
   display: grid;
   grid-gap: 2rem;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -798,32 +795,15 @@ footer .footer__icon:hover {
   transform: none;
 }
 
-.container--about section:nth-child(1),
-.container--about section:nth-child(2) {
-  margin: 3rem;
-}
-.container--about section:nth-child(1) .list__heading,
-.container--about section:nth-child(2) .list__heading {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 32px;
-  color: #2b3035;
-  font-weight: 400;
-}
-.container--about section:nth-child(1) .list__subheading,
-.container--about section:nth-child(2) .list__subheading {
-  margin: 2rem 0 1rem 0;
-  font-size: 24px;
-  color: #697582;
-  font-weight: 400;
-  padding-top: 1.8rem;
-  border-top: 2px solid #697582;
+.container--about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container--about section:nth-child(1) .list,
 .container--about section:nth-child(2) .list {
+  width: 100%;
   max-width: 600px;
-  padding: 0 2rem;
-  margin: 0 auto;
 }
 .container--about section:nth-child(1) .list__item,
 .container--about section:nth-child(2) .list__item {
@@ -842,6 +822,23 @@ footer .footer__icon:hover {
   text-decoration: none;
   color: #0090ff;
 }
+.container--about section:nth-child(1) .list__heading,
+.container--about section:nth-child(2) .list__heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 32px;
+  color: #2b3035;
+  font-weight: 400;
+}
+.container--about section:nth-child(1) .list__subheading,
+.container--about section:nth-child(2) .list__subheading {
+  margin: 2rem 0 1rem 0;
+  font-size: 24px;
+  color: #697582;
+  font-weight: 400;
+  padding-top: 1.8rem;
+  border-top: 2px solid #697582;
+}
 
 .err404 {
   color: #2b3035;
@@ -853,8 +850,8 @@ footer .footer__icon:hover {
 
 @media screen and (min-width: 600px) {
   .container--index section:nth-child(2) .cards,
-.container--index section:nth-child(3) .cards,
-.container--index section:nth-child(4) .cards {
+  .container--index section:nth-child(3) .cards,
+  .container--index section:nth-child(4) .cards {
     grid-template-columns: repeat(2, 1fr);
   }
   .container--work .cards {
@@ -968,8 +965,8 @@ footer .footer__icon:hover {
     right: auto;
   }
   .container--index section:nth-child(2) .cards,
-.container--index section:nth-child(3) .cards,
-.container--index section:nth-child(4) .cards {
+  .container--index section:nth-child(3) .cards,
+  .container--index section:nth-child(4) .cards {
     grid-template-columns: repeat(3, 1fr);
   }
   .container--work .cards {
