@@ -7,7 +7,7 @@ function start() {
     intervalId = setInterval(() => {
         // img.setAttribute("src", `../img/index/DSCF2591-min.jpg`);
 
-        img.setAttribute("src", `../img/photos/MQ/${Math.floor(Math.random() * Math.floor(14))}.jpg`);
+        img.setAttribute("src", `../img/photos/MQ/${Math.floor(Math.random() * Math.floor(16))}.jpg`);
         img.style.objectPosition = `${Math.floor(Math.random() * Math.floor(100))}% ${Math.floor(Math.random() * Math.floor(100))}%`
     }, delay);
 }
