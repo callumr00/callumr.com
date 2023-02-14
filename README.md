@@ -1,27 +1,26 @@
-# callumr.com
+# README
 
 ## Description
+Callum Rafter's personal website to share work, photos taken and books read.
 
-Personal website used to give insight to my interests and expertise; showing work i've done, books i've read (with some having summaries of their best insights) and  photos i've taken.
+## Featured Pages
 
-## Images
+[About Me](https://callumr.com/about) → A page with some information about my values and aspirations.\
+[What I'm Doing](https://callumr.com/now) → What I'm currently devoting my time towards.\
+[What I Use](https://callumr.com/uses) → The hardware, software and services that I use.\
+[Certifications](https://callumr.com/certs) → A list of the online courses I've taken and certifications earned.\
+[Work I've Done](https://callumr.com/work) → A place to showcase what I've been working on.\
+[Book I've Read](https://callumr.com/books) → Here you can see a list of the books I've read and my thoughts on them.\
+[Photos I've Taken](https://callumr.com/photos) → I take photos in an effort to both create and preserve memories.\
 
-Note: Photos used may not reflect recent changes in design
+## PERFORMANCE
 
-[Homepage](https://callumr.com)
-![home page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/index.png)
+You can see the results of previously ran tests in [PERFORMANCE](https://github.com/callumr00/callumr.com/blob/main/PERFORMANCE.md).
 
-[Work I've Done](https://callumr.com/work)
-![work page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/work.png)
+## STANDARDS
 
-Example of Work → [CPI Data](https://callumr.com/work/cpidata)
-![cpi data page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/cpidata.png)
+You can see various standardisations in [STANDARDS](https://github.com/callumr00/callumr.com/blob/main/STANDARDS.md).
 
-[Books I've Read](https://callumr.com/books)
-![books page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/books.png)
+## TODO
 
-Example of Book Summary → [The Slight Edge](https://callumr.com/books/slightedge)
-![book summary page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/slightedge.png)
-
-[Photos I've Taken](https://callumr.com/photos)
-![photos page](https://github.com/callumr00/callumr.com/blob/main/img/screenshots/photos.png)
+You can find a list of planned changes in [TODO](https://github.com/callumr00/callumr.com/blob/main/TODO.md).

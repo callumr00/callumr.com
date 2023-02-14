@@ -2,8 +2,7 @@
 
 ### Implement
 * Contact form on index.html
-* More Book summaries
+* More book summaries
 
 ### Improve
-* Update sitemap
-* Update lighthouse test results
+* Update lighthouse test results in LIGHTHOUSE.md
