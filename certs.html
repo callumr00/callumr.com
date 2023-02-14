@@ -45,22 +45,25 @@
     <script defer src="scripts/fade.js"></script>
     <script defer src="scripts/components.js"></script>
     <script defer src="scripts/nav.js"></script>
+    <script defer src="scripts/collapsible.js"></script>
 </head>
 
 <body>
     <header-container></header-container>
     <main class="container container--about">
-        <section class="hidden">
-            <h2 class="list__heading">Certifications</h2>
-            <ul class="list">
-                <li class="list__item">Last Updated: Feb 7, 2023</li>
-                <h3 class="list__subheading"></h3>
-                <li class="list__item"><a class="list__link" href="/img/certs/1.pdf" target="_blank">Learning How to Learn</a> by <a class="list__link" href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank">Deep Teaching Solutions</a> </li>
-                <li class="list__item"><a class="list__link" href="/img/certs/2.pdf" target="_blank">AI For Everyone</a> by <a class="list__link" href="https://www.coursera.org/learn/ai-for-everyone" target="_blank">DeepLearning.AI</a> </li>
-                <li class="list__item"><a class="list__link" href="/img/certs/3.pdf" target="_blank">Supervised Machine Learning: Regression and
-                    Classification</a> by <a class="list__link" href="https://in.coursera.org/learn/machine-learning" target="_blank">DeepLearning.AI</a> </li>
-            </ul>
-        </section>
+        <h2 class="list__heading">Certifications</h2>
+        <ul class="list">
+            <li class="list__item">Last Updated: Feb 7, 2023</li>
+            <h3 class="list__subheading"></h3>
+            <li class="list__item"><a class="list__link" href="/img/certs/1.pdf" target="_blank">Learning How to Learn</a> by <a class="list__link" href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank">Deep Teaching Solutions</a> </li>
+            <li class="list__item"><a class="list__link" href="/img/certs/2.pdf" target="_blank">AI For Everyone</a> by <a class="list__link" href="https://www.coursera.org/learn/ai-for-everyone" target="_blank">DeepLearning.AI</a> </li>
+            <div class="disclosure">
+                <li class="list__item disclosure__title"><a class="list__link" href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">Machine Learning Specialization by DeepLearning.AI</a></li>
+                <div class="disclosure__content">
+                    <li class="list__item"><a class="list__link" href="/img/certs/3.pdf" target="_blank">Supervised Machine Learning: Regression and Classification</a></li>
+                </div>
+            </div>
+        </ul>
     </main>
     <footer-container></footer-container>
 </body>
