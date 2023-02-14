@@ -1,9 +1,0 @@
-Implement
-    Contact form on index.html
-    Book summaries
-------------------------------------------------
-Improve
-    Update sitemap
-    Update tests
-------------------------------------------------
-Bugs
