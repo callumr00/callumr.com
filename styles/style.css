@@ -800,44 +800,61 @@ footer .footer__icon:hover {
   flex-direction: column;
   align-items: center;
 }
-.container--about section:nth-child(1) .list,
-.container--about section:nth-child(2) .list {
+.container--about .list {
   width: 100%;
   max-width: 600px;
 }
-.container--about section:nth-child(1) .list__item,
-.container--about section:nth-child(2) .list__item {
-  font-size: 14px;
-  color: #2b3035;
-  font-weight: 500;
-  line-height: 1.4em;
-  margin: 2rem;
-}
-.container--about section:nth-child(1) .list__image,
-.container--about section:nth-child(2) .list__image {
-  width: 600px;
-}
-.container--about section:nth-child(1) .list__link,
-.container--about section:nth-child(2) .list__link {
-  text-decoration: none;
-  color: #0090ff;
-}
-.container--about section:nth-child(1) .list__heading,
-.container--about section:nth-child(2) .list__heading {
+.container--about .list__heading {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 32px;
   color: #2b3035;
   font-weight: 400;
 }
-.container--about section:nth-child(1) .list__subheading,
-.container--about section:nth-child(2) .list__subheading {
+.container--about .list__subheading {
   margin: 2rem 0 1rem 0;
   font-size: 24px;
   color: #697582;
   font-weight: 400;
   padding-top: 1.8rem;
   border-top: 2px solid #697582;
+}
+.container--about .list__item {
+  font-size: 14px;
+  color: #2b3035;
+  font-weight: 500;
+  line-height: 1.4em;
+  margin-left: 2rem;
+  padding: 1rem 0;
+  text-align: left;
+  list-style-position: outside;
+}
+.container--about .list__image {
+  width: 600px;
+}
+.container--about .list__link {
+  text-decoration: none;
+  color: #0090ff;
+}
+.container--about .disclosure {
+  cursor: pointer;
+}
+.container--about .disclosure__title {
+  margin: 0;
+  padding: 1rem;
+  list-style-type: disclosure-closed;
+  list-style-position: inside;
+  transition-duration: 120ms;
+}
+.container--about .disclosure__title--active {
+  list-style-type: disclosure-open;
+}
+.container--about .disclosure__title:hover {
+  background-color: rgb(238, 238, 238);
+}
+.container--about .disclosure__content {
+  margin-left: 1rem;
+  display: none;
 }
 
 .err404 {
@@ -963,6 +980,9 @@ footer .footer__icon:hover {
   }
   .nav {
     right: auto;
+  }
+  .container {
+    width: 100%;
   }
   .container--index section:nth-child(2) .cards,
   .container--index section:nth-child(3) .cards,
