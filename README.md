@@ -13,14 +13,14 @@ Callum Rafter's personal website to share work, photos taken and books read.
 [Book I've Read](https://callumr.com/books) → Here you can see a list of the books I've read and my thoughts on them.\
 [Photos I've Taken](https://callumr.com/photos) → I take photos in an effort to both create and preserve memories.\
 
-## PERFORMANCE
+## Performance
 
 You can see the results of previously ran tests in [PERFORMANCE](https://github.com/callumr00/callumr.com/blob/main/PERFORMANCE.md).
 
-## STANDARDS
+## Standards
 
 You can see various standardisations in [STANDARDS](https://github.com/callumr00/callumr.com/blob/main/STANDARDS.md).
 
-## TODO
+## To Do
 
 You can find a list of planned changes in [TODO](https://github.com/callumr00/callumr.com/blob/main/TODO.md).
