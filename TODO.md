@@ -5,4 +5,4 @@
 * More book summaries
 
 ### Improve
-* Update lighthouse test results in LIGHTHOUSE.md
+* Update test results in PERFORMANCE.md
