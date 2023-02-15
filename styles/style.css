@@ -981,7 +981,7 @@ footer .footer__icon:hover {
   .nav {
     right: auto;
   }
-  .container {
+  .container--about {
     width: 100%;
   }
   .container--index section:nth-child(2) .cards,
