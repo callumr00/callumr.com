@@ -19,9 +19,8 @@ body {
 
     // Set container rules
     .container {
-        margin: 4rem 5%;
+        margin: 5rem 5%;
         max-width: 1200px;
-        min-height: 100vh;
     }
 }
 
@@ -52,6 +51,16 @@ $colours: (
 @function colour($colour-name) {
     @return map-get($colours, $colour-name)
 };
+
+// Define link styling
+.link {
+    text-decoration: none;
+    color: colour(accent);
+
+    &:hover {
+        color: darken(colour(accent), 10%);
+    }
+}
 
 // Set weight variables
 $font-weights: (
