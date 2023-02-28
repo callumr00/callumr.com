@@ -33,23 +33,25 @@
                 padding: 0.5em 0;
         }
 
-        &--link {
-            .card__heading::after {
+        .card__heading {
+            color: colour(accent);
+
+            &::after {
                 content: "->";
                 display: inline-block;
                 padding-left: 0.5rem;
                 transition-duration: duration(medium);
             }
-            
-            &:hover {
-                .card__heading {
-                    color: colour(accent);
-                }
-    
-                .card__heading::after {
-                    transform: translateX(10px);
-                } 
+        }
+        
+        &:hover {
+            .card__heading {
+                color: darken(colour(accent), 10%);
             }
+
+            .card__heading::after {
+                transform: translateX(10px);
+            } 
         }
     }
 }
