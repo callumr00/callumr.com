@@ -29,7 +29,7 @@
         }
     }
 
-    .container--photos .card {
+    .container--photos .card, .container--index  section:nth-child(3) .card{
         &__heading, &__link {
             padding: 1rem;
         }
