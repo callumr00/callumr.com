@@ -585,7 +585,7 @@ header-container, header-container-sub {
 .container--articlespages section li {
   margin-left: 2rem;
 }
-.container--articlespages section .email {
+.container--articlespages section .email, .container--articlespages section .postscript {
   margin-top: 5rem;
 }
 .container--articlespages section:nth-child(1) .hero__heading {
