@@ -3,6 +3,66 @@
     flex-direction: column;
     align-items: center;
 
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        margin: 2rem 0 5rem 0;
+        height: fit-content;
+        max-width: 600px;
+    }
+
+    .cards__heading {
+        font-size: 16px;
+        color: colour(secondary);
+        font-weight: weight(medium);
+        line-height: height(1);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .card {
+        text-decoration: none;
+
+        &__heading {
+            font-size: 18px;
+            color: colour(primary);
+            font-weight: weight(medium);
+            margin: auto 0;
+        }
+
+        &__desc {
+                color: colour(tertiary);
+                font-size: 16px;
+                font-weight: weight(regular);
+                padding: 0.5em 0;
+        }
+
+        &--link {
+            .card__heading {
+                color: colour(accent);
+
+                &::after {
+                    content: "->";
+                    display: inline-block;
+                    padding-left: 0.5rem;
+                    transition-duration: duration(medium);
+                }
+            }
+            
+            &:hover {
+                .card__heading {
+                    color: darken(colour(accent), 10%);
+                }
+    
+                .card__heading::after {
+                    transform: translateX(10px);
+                } 
+            }
+        }
+    }
+
     .list {
         width: 100%;
         max-width: 600px;
