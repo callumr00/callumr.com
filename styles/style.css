@@ -318,6 +318,53 @@ header-container, header-container-sub {
   flex-direction: column;
   align-items: center;
 }
+.container--about .cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+  margin: 2rem 0 5rem 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 600px;
+}
+.container--about .cards__heading {
+  font-size: 16px;
+  color: #697582;
+  font-weight: 500;
+  line-height: height(1);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.container--about .card {
+  text-decoration: none;
+}
+.container--about .card__heading {
+  font-size: 18px;
+  color: #2b3035;
+  font-weight: 500;
+  margin: auto 0;
+}
+.container--about .card__desc {
+  color: #9da6af;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0.5em 0;
+}
+.container--about .card--link .card__heading {
+  color: #0090ff;
+}
+.container--about .card--link .card__heading::after {
+  content: "->";
+  display: inline-block;
+  padding-left: 0.5rem;
+  transition-duration: 160ms;
+}
+.container--about .card--link:hover .card__heading {
+  color: #0073cc;
+}
+.container--about .card--link:hover .card__heading::after {
+  transform: translateX(10px);
+}
 .container--about .list {
   width: 100%;
   max-width: 600px;
@@ -585,7 +632,7 @@ header-container, header-container-sub {
 .container--articlespages section li {
   margin-left: 2rem;
 }
-.container--articlespages section .email, .container--articlespages section .postscript {
+.container--articlespages section .email {
   margin-top: 5rem;
 }
 .container--articlespages section:nth-child(1) .hero__heading {
