@@ -635,6 +635,10 @@ header-container, header-container-sub {
 .container--articlespages section .email {
   margin-top: 5rem;
 }
+.container--articlespages section img {
+  max-width: 600px;
+  padding: 2rem 0;
+}
 .container--articlespages section:nth-child(1) .hero__heading {
   grid-area: heading;
   text-align: center;
