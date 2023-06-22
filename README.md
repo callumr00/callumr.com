@@ -9,11 +9,11 @@ Callum Rafter's personal website to share work, photos taken and books read.
 [About Me](https://callumr.com/about) → A page with some information about my values and aspirations.\
 [What I'm Doing](https://callumr.com/now) → What I'm currently devoting my time towards.\
 [What I Use](https://callumr.com/uses) → The hardware, software and services that I use.\
-[Certifications](https://callumr.com/certs) → A list of the online courses I've taken and certifications earned.\
 [Work I've Done](https://callumr.com/work) → A place to showcase what I've been working on.\
 [Photos I've Taken](https://callumr.com/photos) → I take photos in an effort to both create and preserve memories.\
 [Articles I've Written](https://callumr.com/articles) → A list of the articles I've written to condense my thoughts on different topics.\
-[Book I've Read](https://callumr.com/books) → Here you can see a list of the books I've read and my thoughts on them.\
+[Book Summaries I've Written](https://callumr.com/books#summaries) → A list of the book summaries I've written to condense my takeaways from what I've read.\
+[Books I've Read](https://callumr.com/books) → Here you can see a list of the books I've read and my thoughts on them.
 
 
 ## Performance
