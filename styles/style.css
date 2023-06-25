@@ -637,6 +637,7 @@ header-container, header-container-sub {
 }
 .container--articlespages section img {
   max-width: 600px;
+  width: 100%;
   padding: 2rem 0;
 }
 .container--articlespages section:nth-child(1) .hero__heading {
