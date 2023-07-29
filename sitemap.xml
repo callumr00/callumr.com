@@ -9,117 +9,117 @@
 
 <url>
   <loc>https://callumr.com/</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://callumr.com/about</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/now</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/uses</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/certs</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/work</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/books</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/photos</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/work/cpidata</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
+  <loc>https://callumr.com/articles</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/work/btcdata</loc>
-  <lastmod>2023-02-14T21:42:56+00:00</lastmod>
+  <loc>https://callumr.com/articles/workspace</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/work/vanguard</loc>
-  <lastmod>2023-02-14T21:42:57+00:00</lastmod>
+  <loc>https://callumr.com/articles/learning</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.com/articles/death</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.com/books</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.com/books/nomldegree</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.com/books/metalearning</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.com/books/aicareer</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/howtodie</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/img/certs/1.pdf</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://callumr.com/img/certs/2.pdf</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://callumr.com/img/certs/3.pdf</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://callumr.com/books/deepwork</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://callumr.com/books/slightedge</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/compoundeffect</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/books/slightedge</loc>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/millionairefastlane</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/fourhourworkweek</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/essentialism</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/howtodrink</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/books/managingoneself</loc>
-  <lastmod>2023-02-14T21:42:55+00:00</lastmod>
+  <lastmod>2023-06-25T10:15:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
