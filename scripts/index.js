@@ -1,6 +1,6 @@
 img = document.getElementById("img");
 
-const delay = 300;
+const delay = 600;
 let intervalId;
 
 function start() {
