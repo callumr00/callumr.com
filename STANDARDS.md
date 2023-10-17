@@ -52,7 +52,6 @@
 |-------------|-----------|
 |Feature Image|1200 x 800 |
 |Work Covers  |600  x 338 |
-|BTC Data     |2400 x 1200|
 |Book Covers  |400  x 600 |
 |Photos (LQ)  |600  x 400 |
 |Photos (MQ)  |1600 x 1067|
