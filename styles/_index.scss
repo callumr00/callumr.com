@@ -37,7 +37,8 @@
     section:nth-child(3),
     section:nth-child(4),
     section:nth-child(5),
-    section:nth-child(6)
+    section:nth-child(6),
+    section:nth-child(7)
     {
         .cards {
             display: grid;
@@ -205,8 +206,10 @@
         }
     }
 
-    // Latest Articles
-    section:nth-child(4) {
+    // Latest Notes & Latest Articles
+    section:nth-child(4),
+    section:nth-child(5)
+    {
         .card {
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
@@ -218,8 +221,8 @@
     }
 
     // Favourite Books & Latest Book Summaries
-    section:nth-child(5), 
-    section:nth-child(6) 
+    section:nth-child(6), 
+    section:nth-child(7) 
     {
         .card {
             border-radius: 10px;

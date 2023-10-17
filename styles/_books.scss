@@ -164,13 +164,13 @@
         &__text {
             display: grid;
             grid-template-areas: 
-                "date rating"
-                "heading heading"
-                "subheading subheading"
-                "desc desc"
-                "tags tags";
+                "date num rating"
+                "heading heading heading"
+                "subheading subheading subheading"
+                "desc desc desc"
+                "tags tags tags";
             grid-template-rows: 1fr 1fr 1fr 4fr auto;
-            grid-template-columns: 2fr 3fr;
+            grid-template-columns: 2fr 2fr 3fr;
             padding: 0.5rem 1rem;
             border-top: 2px solid colour(secondary);
         }
@@ -181,6 +181,15 @@
             color: colour(tertiary);
             font-weight: weight(regular);
             margin: auto 0;
+        }
+
+        &__num {
+            grid-area: num;
+            font-size: 14px;
+            color: colour(tertiary);
+            font-weight: weight(regular);
+            margin: auto 0;
+            text-align: center;
         }
 
         &__rating {

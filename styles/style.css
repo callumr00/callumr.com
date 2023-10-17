@@ -117,7 +117,8 @@ header-container, header-container-sub {
 .container--index section:nth-child(3) .cards,
 .container--index section:nth-child(4) .cards,
 .container--index section:nth-child(5) .cards,
-.container--index section:nth-child(6) .cards {
+.container--index section:nth-child(6) .cards,
+.container--index section:nth-child(7) .cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
@@ -129,7 +130,8 @@ header-container, header-container-sub {
 .container--index section:nth-child(3) .cards__heading,
 .container--index section:nth-child(4) .cards__heading,
 .container--index section:nth-child(5) .cards__heading,
-.container--index section:nth-child(6) .cards__heading {
+.container--index section:nth-child(6) .cards__heading,
+.container--index section:nth-child(7) .cards__heading {
   font-size: 16px;
   color: #697582;
   font-weight: 500;
@@ -141,14 +143,16 @@ header-container, header-container-sub {
 .container--index section:nth-child(3) .card,
 .container--index section:nth-child(4) .card,
 .container--index section:nth-child(5) .card,
-.container--index section:nth-child(6) .card {
+.container--index section:nth-child(6) .card,
+.container--index section:nth-child(7) .card {
   text-decoration: none;
 }
 .container--index section:nth-child(2) .card__heading,
 .container--index section:nth-child(3) .card__heading,
 .container--index section:nth-child(4) .card__heading,
 .container--index section:nth-child(5) .card__heading,
-.container--index section:nth-child(6) .card__heading {
+.container--index section:nth-child(6) .card__heading,
+.container--index section:nth-child(7) .card__heading {
   font-size: 18px;
   color: #2b3035;
   font-weight: 500;
@@ -158,7 +162,8 @@ header-container, header-container-sub {
 .container--index section:nth-child(3) .card__desc,
 .container--index section:nth-child(4) .card__desc,
 .container--index section:nth-child(5) .card__desc,
-.container--index section:nth-child(6) .card__desc {
+.container--index section:nth-child(6) .card__desc,
+.container--index section:nth-child(7) .card__desc {
   color: #9da6af;
   font-size: 16px;
   font-weight: 400;
@@ -168,14 +173,16 @@ header-container, header-container-sub {
 .container--index section:nth-child(3) .card--link .card__heading,
 .container--index section:nth-child(4) .card--link .card__heading,
 .container--index section:nth-child(5) .card--link .card__heading,
-.container--index section:nth-child(6) .card--link .card__heading {
+.container--index section:nth-child(6) .card--link .card__heading,
+.container--index section:nth-child(7) .card--link .card__heading {
   color: #0090ff;
 }
 .container--index section:nth-child(2) .card--link .card__heading::after,
 .container--index section:nth-child(3) .card--link .card__heading::after,
 .container--index section:nth-child(4) .card--link .card__heading::after,
 .container--index section:nth-child(5) .card--link .card__heading::after,
-.container--index section:nth-child(6) .card--link .card__heading::after {
+.container--index section:nth-child(6) .card--link .card__heading::after,
+.container--index section:nth-child(7) .card--link .card__heading::after {
   content: "->";
   display: inline-block;
   padding-left: 0.5rem;
@@ -185,14 +192,16 @@ header-container, header-container-sub {
 .container--index section:nth-child(3) .card--link:hover .card__heading,
 .container--index section:nth-child(4) .card--link:hover .card__heading,
 .container--index section:nth-child(5) .card--link:hover .card__heading,
-.container--index section:nth-child(6) .card--link:hover .card__heading {
+.container--index section:nth-child(6) .card--link:hover .card__heading,
+.container--index section:nth-child(7) .card--link:hover .card__heading {
   color: #0073cc;
 }
 .container--index section:nth-child(2) .card--link:hover .card__heading::after,
 .container--index section:nth-child(3) .card--link:hover .card__heading::after,
 .container--index section:nth-child(4) .card--link:hover .card__heading::after,
 .container--index section:nth-child(5) .card--link:hover .card__heading::after,
-.container--index section:nth-child(6) .card--link:hover .card__heading::after {
+.container--index section:nth-child(6) .card--link:hover .card__heading::after,
+.container--index section:nth-child(7) .card--link:hover .card__heading::after {
   transform: translateX(10px);
 }
 .container--index section:nth-child(2) .card {
@@ -278,38 +287,40 @@ header-container, header-container-sub {
   opacity: 1;
   transform: none;
 }
-.container--index section:nth-child(4) .card {
+.container--index section:nth-child(4) .card,
+.container--index section:nth-child(5) .card {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.container--index section:nth-child(4) .card__text {
+.container--index section:nth-child(4) .card__text,
+.container--index section:nth-child(5) .card__text {
   padding: 1rem;
 }
-.container--index section:nth-child(5) .card,
-.container--index section:nth-child(6) .card {
+.container--index section:nth-child(6) .card,
+.container--index section:nth-child(7) .card {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-.container--index section:nth-child(5) .card__img,
-.container--index section:nth-child(6) .card__img {
+.container--index section:nth-child(6) .card__img,
+.container--index section:nth-child(7) .card__img {
   width: 40%;
   border-radius: 0 10px 10px 0;
 }
-.container--index section:nth-child(5) .card__text,
-.container--index section:nth-child(6) .card__text {
+.container--index section:nth-child(6) .card__text,
+.container--index section:nth-child(7) .card__text {
   padding: 1rem;
 }
-.container--index section:nth-child(5) .card__rating,
-.container--index section:nth-child(6) .card__rating {
+.container--index section:nth-child(6) .card__rating,
+.container--index section:nth-child(7) .card__rating {
   position: absolute;
   bottom: 0;
   margin-bottom: 1rem;
 }
-.container--index section:nth-child(5) .card__rating img,
-.container--index section:nth-child(6) .card__rating img {
+.container--index section:nth-child(6) .card__rating img,
+.container--index section:nth-child(7) .card__rating img {
   height: 20px;
 }
 
@@ -641,6 +652,14 @@ header-container, header-container-sub {
   width: 100%;
   padding: 2rem 0;
 }
+.container--articlespages section table, .container--articlespages section th, .container--articlespages section td {
+  border: 1px solid black;
+  padding: 0.2rem;
+}
+.container--articlespages section table {
+  width: 100%;
+  border-collapse: collapse;
+}
 .container--articlespages section:nth-child(1) .hero__heading {
   grid-area: heading;
   text-align: center;
@@ -800,9 +819,9 @@ header-container, header-container-sub {
 }
 .container--books .card__text {
   display: grid;
-  grid-template-areas: "date rating" "heading heading" "subheading subheading" "desc desc" "tags tags";
+  grid-template-areas: "date num rating" "heading heading heading" "subheading subheading subheading" "desc desc desc" "tags tags tags";
   grid-template-rows: 1fr 1fr 1fr 4fr auto;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2fr 2fr 3fr;
   padding: 0.5rem 1rem;
   border-top: 2px solid #697582;
 }
@@ -812,6 +831,14 @@ header-container, header-container-sub {
   color: #9da6af;
   font-weight: 400;
   margin: auto 0;
+}
+.container--books .card__num {
+  grid-area: num;
+  font-size: 14px;
+  color: #9da6af;
+  font-weight: 400;
+  margin: auto 0;
+  text-align: center;
 }
 .container--books .card__rating {
   grid-area: rating;
@@ -976,7 +1003,8 @@ header-container, header-container-sub {
   .container--index section:nth-child(3) .cards,
   .container--index section:nth-child(4) .cards,
   .container--index section:nth-child(5) .cards,
-  .container--index section:nth-child(6) .cards {
+  .container--index section:nth-child(6) .cards,
+  .container--index section:nth-child(7) .cards {
     grid-template-columns: repeat(2, 1fr);
   }
   .container--work .cards {
@@ -999,7 +1027,8 @@ header-container, header-container-sub {
   .container--index section:nth-child(2) .cards,
   .container--index section:nth-child(4) .cards,
   .container--index section:nth-child(5) .cards,
-  .container--index section:nth-child(6) .cards {
+  .container--index section:nth-child(6) .cards,
+  .container--index section:nth-child(7) .cards {
     grid-template-columns: repeat(3, 1fr);
   }
   .container--work .cards {
