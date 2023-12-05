@@ -94,12 +94,15 @@
             font-size: 16px;
             color: colour(primary);
             font-weight: weight(medium);
-            line-height: 1.4em;
-            margin-left: 2rem;
             padding: 1rem 0;
+            line-height: 1.4em;
             text-align: left;
-            list-style-position: outside;
         }
+
+	li.list__item {
+            margin-left: 2rem;
+            list-style-position: outside;
+	}
 
         &__image {
             width: 600px;
