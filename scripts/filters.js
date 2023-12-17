@@ -40,21 +40,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update URL params with applied filters.
     function updateURL(selectedCategory, searchQuery) {
-        const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams();
 
         if (selectedCategory && selectedCategory !== 'all') {
             params.set('category', selectedCategory);
-        } else {
-            params.delete('category');
         }
 
         if (searchQuery) {
             params.set('search_query', searchQuery);
-        } else {
-            params.delete('search_query');
         }
 
-        const newURL = window.location.pathname + '?' + params.toString();
+        const queryString = params.toString();
+        const newURL = window.location.pathname + (queryString ? '?' + queryString : '');
         window.history.pushState({path: newURL}, '', newURL);
     }
 
