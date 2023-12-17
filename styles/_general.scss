@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: $element__size--14;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        transition-duration: 80ms;
+    }
+}
+
+.header {
+    height: $element__size--9;
+    border-bottom: 1px solid $text__colour--9;
+    margin-bottom: $element__size--9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__link {
+        color: $text__colour--1;
+        font-size: $text__size--8;
+        font-weight: $text__weight--3;
+        
+        &:hover {color: $text__colour--4}
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $element__size--9;
+    height: $element__size--9;
+
+    &__link {
+        font-size: $text__size--1;
+        color: $text__colour--4;
+        padding-bottom: $element__size--1;
+        border-bottom: 1px solid $text__colour--8;
+    
+        &:hover {border-bottom: 1px solid $text__colour--2}
+    }
+}

@@ -1,276 +1,293 @@
-<!-- 
-              _  _                         
-             | || |                        
-   ___  __ _ | || | _   _  _ __ ___   _ __ 
-  / __|/ _` || || || | | || '_ ` _ \ | '__|
- | (__| (_| || || || |_| || | | | | || |   
-  \___|\__,_||_||_| \__,_||_| |_| |_||_|   
-
-
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page Title -->
-    <title>Home - Callum Rafter</title>
-
-    <!-- Page Description -->
-    <meta
-    name="description"
-    content="Callum Rafter's personal website to share work, photos taken and books read."
-    />
-
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="styles/style.css">
-
-    <!-- Import Font Family 'Inter' from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#FFFFFF">
-
-    <!-- Import Javascript -->
-    <script defer src="scripts/fade.js"></script>
-    <script defer src="scripts/components.js"></script>
-    <script defer src="scripts/nav.js"></script>
-    <script defer src="scripts/index.js"></script>
+    <title>Callum Rafter</title>
+    <meta name="author" content="Callum Rafter">
+    <meta name="description" content="I'm Callum, a Machine Learning Engineer based in the UK.">
+    <meta name="theme-color" content="#F6F9FC">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
-
-<body>
-    <header-container></header-container>
-    <main class="container container--index">
-        <section class="hidden">
-            <img class="hero__image" id="img" src="/img/index/featureImage-min.jpg" alt="">
-            <h2 class="hero__heading">I’m Callum — a Machine Learning Engineer based in the UK.<br><span class="hero__subheading">Learn more <a class="link" href="about">About Me</a>, <a class="link" href="now">What I'm Doing</a> and <a class="link" href="uses">What I Use</a>.
-        </section>
-        <section class="hidden">
-            <h3 class="cards__heading">Latest <a class="link" href="work">Work</a></h3>
-            <div class="cards">
-                <a href="https://www.kaggle.com/code/callumrafter/optiver-trading-at-the-close-submission" class="card hidden card--link" target="_blank">
-                    <div class="section__card section__card--border">
-                        <img class="card__img" loading="lazy" src="/img/work/optiver.png" alt="Optiver - Trading at the Close: Submission">
-                        <div class="card__text">
-                            <h2 class="card__heading">Optiver - Trading at the Close Submission</h2>
-                            <p class="card__desc">A Kaggle Notebook for the ongoing Optiver - Trading at the Close competition.</p>
-                        </div>
+    <body>
+        <header class="header"></header>
+        <main class="main">
+            <section class="hero">
+                <h1 class="hero__title">I'm Callum, a Machine Learning Engineer in the UK.</h1>
+                <p class="hero__description">Learn more <a class="hero__link" href="/about">About Me</a>, <a class="hero__link" href="/now">What I'm Doing</a>, and <a class="hero__link" href="/uses">What I Use</a>, or have a look at the <a class="hero__link" href="/photos">Photos I've Taken</a>.</p>
+            </section>
+            <section class="filters">
+                <form class="filters__form filters__form--category">
+                    <select class="form__select" aria-label="Category Select">
+                        <option value="All">All</option>
+                        <option value="article">Articles</option>
+                        <option value="notes">Notes</option>
+                        <option value="project">Projects</option>
+                        <option value="summary">Summaries</option>
+                    </select>
+                </form>
+                <p class="filters__count"></p>
+                <form class="filters__form filters__form--title" aria-label="Title Search">
+                    <input class="form__input" type="text" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false">
+                </form>
+            </section>
+            <section class="feed">
+                <a target="_blank" href="https://callumr00.github.io/minimal-youtube-viewer/">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Minimal YouTube Viewer</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Dec 2023</p>
                     </div>
                 </a>
-                <a href="https://www.kaggle.com/code/callumrafter/k-means-clustering" class="card hidden card--link" target="_blank">
-                    <div class="section__card section__card--border">
-                        <img class="card__img" loading="lazy" src="/img/work/kmeans.png" alt="PS3.11 Submission">
-                        <div class="card__text">
-                            <h2 class="card__heading">K-Means Clustering</h2>
-                            <p class="card__desc">A Kaggle Notebook implementation of the K-Means Clustering algorithm that runs recursively to find centroids that result in minimal distortion.</p>
-                        </div>
+                <a target="_blank" href="https://github.com/callumr00/oura-daily-scores">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Oura Daily Scores</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Nov 2023</p>
                     </div>
                 </a>
-                <a href="https://www.kaggle.com/code/callumrafter/ps3-11-submission" class="card hidden card--link" target="_blank">
-                    <div class="section__card section__card--border">
-                        <img class="card__img" loading="lazy" src="/img/work/ps311.png" alt="PS3.11 Submission">
-                        <div class="card__text">
-                            <h2 class="card__heading">PS3.11 Submission</h2>
-                            <p class="card__desc">A Kaggle Notebook for the Playground Series - Season 3, Episode 11 competition that placed 222/952 with a score of 0.29379 (1st Place: 0.29322).</p>
-                        </div>
+                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/optiver-trading-at-the-close-submission">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Optiver - Trading at the Close Submission</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Oct 2023</p>
                     </div>
                 </a>
-            </div>
-        </section>
-        <section class="hidden">
-            <h3 class="cards__heading">Latest <a class="link" href="photos">Photos</a></h3>
-            <div class="cards">
-                <div class="card hidden">
-                    <img class="card__img" loading="lazy" src="/img/photos/LQ/15.jpg" alt="Courtyard">
-                    <h2 class="card__heading">Abu Dhabi, UAE</h2>
-                    <div class="card__desc">
-                        <p>Resolution</p>
-                        <p>6240x4160</p>
-                        <p>Device</p>
-                        <p>Fujifilm X-T3</p>
-                        <p>Exposure Time</p>
-                        <p>1/1100 s</p>
-                        <p>Aperture</p>
-                        <p>f/5.7</p>
-                        <p>Focal Length</p>
-                        <p>28.9 mm</p>
-                        <p>ISO</p>
-                        <p>160</p>
-                    </div>
-                    <a  class="card__link" href="/img/photos/HQ/15.jpg" target="_blank">HQ Version</a>
-                </div>
-                <div class="card hidden">
-                    <img class="card__img" loading="lazy" src="/img/photos/LQ/14.jpg" alt="Museum">
-                    <h2 class="card__heading">Abu Dhabi, UAE</h2>
-                    <div class="card__desc">
-                        <p>Resolution</p>
-                        <p>6240x4160</p>
-                        <p>Device</p>
-                        <p>Fujifilm X-T3</p>
-                        <p>Exposure Time</p>
-                        <p>1/85 s</p>
-                        <p>Aperture</p>
-                        <p>f/4.0</p>
-                        <p>Focal Length</p>
-                        <p>21.4 mm</p>
-                        <p>ISO</p>
-                        <p>160</p>
-                    </div>
-                    <a  class="card__link" href="/img/photos/HQ/14.jpg"target="_blank">HQ Version</a>
-                </div>
-            </div>
-        </section>
-        <section class="hidden">
-            <h3 class="cards__heading">Latest <a class="link" href="notes">Notes</a></h3>
-            <div class="cards">
-                <a href="https://winter-gas-0a9.notion.site/Notes-from-Machine-Learning-Specialization-6410c1e176b04b368c6dd220ce6bbf82?pvs=4" class="card card--link hidden" target="_blank">
-                    <div class="card__text">
-                        <h2 class="card__heading">Machine Learning Specialization</h2>
-                        <h3 class="card__desc">A beginner friendly course that teaches the fundamental concepts on Machine Learning.</h3>
+                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/k-means-clustering">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">K-Means Clustering</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2023</p>
                     </div>
                 </a>
-                <a href="https://winter-gas-0a9.notion.site/Notes-from-AI-For-Everyone-e090ce7dcb114d289fbe3c5c12277338?pvs=4" class="card card--link hidden" target="_blank">
-                    <div class="card__text">
-                        <h2 class="card__heading">AI For Everyone</h2>
-                        <h3 class="card__desc">An introduction to Artificial Intelligence terminologies, use cases and strategies.</h3>
+                <a target="_blank" href="https://winter-gas-0a9.notion.site/Notes-from-Machine-Learning-Specialization-6410c1e176b04b368c6dd220ce6bbf82?pvs=4">
+                    <div class="feed__item">
+                        <p class="feed__category">Notes</p>
+                        <p class="feed__title">Machine Learning Specialization</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Aug 2023</p>
                     </div>
                 </a>
-                <a href="https://winter-gas-0a9.notion.site/Notes-from-Learning-How-to-Learn-9091332f23694f80907f8e914c5dba91?pvs=4" class="card card--link hidden" target="_blank">
-                    <div class="card__text">
-                        <h2 class="card__heading">Learning How to Learn</h2>
-                        <h3 class="card__desc">An introduction to learning and memory, with best practices to learn effectively.</h3>
+                <a href="/articles/workspace">
+                    <div class="feed__item">
+                        <p class="feed__category">Article</p>
+                        <p class="feed__title">My Workspace</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Jun 2023</p>
                     </div>
                 </a>
-            </div>
-        </section>
-        <section class="hidden">
-            <h3 class="cards__heading">Latest <a class="link" href="articles">Articles</a></h3>
-            <div class="cards">
-                <a href="/articles/workspace" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">My Workspace</h2>
-                        <h3 class="card__desc">Increasing the enjoyability of your workspace reduces friction towards action, leading to greater achievement.</h3>
+                <a target="_blank" href="https://github.com/callumr00/microsoft-outlook-emailer">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Microsoft Outlook Emailer</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">May 2023</p>
                     </div>
                 </a>
-                <a href="/articles/learning" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">An Introduction to Effective Learning</h2>
-                        <h3 class="card__desc">An overview of the mechanics of memory, learning and the implementation of knowledge.</h3>
+                <a href="/articles/learning">
+                    <div class="feed__item">
+                        <p class="feed__category">Article</p>
+                        <p class="feed__title">An Introduction to Efficient Learning</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Apr 2023</p>
                     </div>
                 </a>
-                <a href="/articles/death" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">On Death, Finiteness and Subsequent Beauty</h2>
-                        <h3 class="card__desc">A perspective on the inevitability of death, the finiteness of life and the beauty that we experience as a result.</h3>
+                <a href="/summaries/nomldegree">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">No ML Degree</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Apr 2023</p>
                     </div>
                 </a>
-            </div>
-        </section>
-        <section class="hidden">
-            <h3 class="cards__heading">Latest <a class="link" href="books#summaries">Book Summaries</a></h3>
-            <div class="cards">
-                <a href="/books/nomldegree" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">No ML Degree</h2>
-                        <h3 class="card__desc">Emil Wallnér</h3>
-                        <div class="card__rating">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                        </div>
+                <a href="/summaries/metalearning">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">Meta Learning</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Apr 2023</p>
                     </div>
-                    <img class="card__img" loading="lazy" src="/img/books/NoMLDegree.jpg" alt="Book cover">
                 </a>
-                <a href="/books/metalearning" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">Meta Learning</h2>
-                        <h3 class="card__desc">Radek Osmulski</h3>
-                        <div class="card__rating">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star2.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                        </div>
+                <a href="/summaries/aicareer">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">How to Build Your Career in AI</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Apr 2023</p>
                     </div>
-                    <img class="card__img" loading="lazy" src="/img/books/MetaLearning.jpg" alt="Book cover">
                 </a>
-                <a href="/books/aicareer" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">How to Build Your Career in AI</h2>
-                        <h3 class="card__desc">Andrew Ng</h3>
-                        <div class="card__rating">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star2.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star3.svg" alt="Star">
-                        </div>
+                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/ps3-11-submission">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">PS3.11 Submission</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Apr 2023</p>
                     </div>
-                    <img class="card__img" loading="lazy" src="/img/books/HowToBuildYourCareerInAI.jpg" alt="Book cover">
                 </a>
-            </div>
-        </section>
-        <section class="hidden">
-            <h3 class="cards__heading">Favourite <a class="link" href="books">Books</a></h3>
-            <div class="cards">
-                <a href="/books/howtodie" class="card card--link hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">How To Die</h2>
-                        <h3 class="card__desc">Seneca</h3>
-                        <div class="card__rating">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                        </div>
+                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/vanguard-investor-fund-data-eda">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Vanguard Investor Fund Data EDA</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Mar 2023</p>
                     </div>
-                    <img class="card__img" loading="lazy" src="/img/books/HowToDie-min.jpg" alt="Book cover">
                 </a>
-                <div class="card hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">Meditations</h2>
-                        <h3 class="card__desc">Marcus Aurelius</h3>
-                        <div class="card__rating">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                        </div>
+                <a href="/articles/death">
+                    <div class="feed__item">
+                        <p class="feed__category">Article</p>
+                        <p class="feed__title">On Death, Finiteness, and Subsequent Beauty</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Feb 2023</p>
                     </div>
-                    <img class="card__img" loading="lazy" src="/img/books/Meditations-min.jpg" alt="Book cover">
-                </div>
-                <div class="card hidden">
-                    <div class="card__text">
-                        <h2 class="card__heading">How To Be Free</h2>
-                        <h3 class="card__desc">Epictetus</h3>
-                        <div class="card__rating">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                            <img loading="lazy" src="/img/svg/star1.svg" alt="Star">
-                        </div>
+                </a>
+                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/loop-multiplication-vs-vectorization">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Loop Multiplication vs. Vectorization</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Jan 2023</p>
                     </div>
-                    <img class="card__img" loading="lazy" src="/img/books/HowToBeFree-min.jpg"alt="Book cover">
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer-container></footer-container>
-</body>
+                </a>
+                <a target="_blank" href="https://winter-gas-0a9.notion.site/Notes-from-AI-For-Everyone-e090ce7dcb114d289fbe3c5c12277338?pvs=4">
+                    <div class="feed__item">
+                        <p class="feed__category">Notes</p>
+                        <p class="feed__title">AI For Everyone</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Jan 2023</p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://winter-gas-0a9.notion.site/Notes-from-Learning-How-to-Learn-9091332f23694f80907f8e914c5dba91?pvs=4">
+                    <div class="feed__item">
+                        <p class="feed__category">Notes</p>
+                        <p class="feed__title">Learning How to Learn</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Jan 2023</p>
+                    </div>
+                </a>
+                <a href="/summaries/deepwork">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">Deep Work</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Nov 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/essentialism">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">Essentialism</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Nov 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/howtodie">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">How to Die</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/howtodrink">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">How to Drink</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/callumr00/book-summary-quotes-scraper">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Book Summary Quotes Scraper</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/managingoneself">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">Managing Oneself</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/millionairefastlane">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">The Millionaire Fastlane</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/fourhourworkweek">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">The 4-Hour Work Week</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/callumr00/displaying-bitcoin-block-data">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Displaying Bitcoin Block Data</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/slightedge">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">The Slight Edge</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a href="/summaries/compoundeffect">
+                    <div class="feed__item">
+                        <p class="feed__category">Summary</p>
+                        <p class="feed__title">The Compound Effect</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Sep 2022</p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/callumr00/callumr.com">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">callumr.com</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">May 2022</p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/callumr00/cardmarket-price-scraper">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">CardMarket Price Scraper</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Jan 2022</p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/callumr00/dotfiles">
+                    <div class="feed__item">
+                        <p class="feed__category">Project</p>
+                        <p class="feed__title">Dotfiles</p>
+                        <div class="feed__spacer"></div>
+                        <p class="feed__date">Jan 2021</p>
+                    </div>
+                </a>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+        <script src="/scripts/components.js"></script>
+        <script src="/scripts/filters.js"></script>
+    </body>
 </html>

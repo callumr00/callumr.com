@@ -1,0 +1,107 @@
+.article {
+    &__header {
+        .header {
+            &__title {
+                color: $text__colour--1;
+                font-weight: $text__weight--2;
+                font-size: $text__size--7;
+                letter-spacing: -0.25px;
+            }
+        
+            &__subtitle {
+                display: block;
+                padding-top: $element__size--1;
+                color: $text__colour--5;
+                font-size: $text__size--6;
+                font-weight: $text__weight--1;
+            }
+        
+            &__description {
+                color: $text__colour--1;
+                font-weight: $text__weight--1;
+                font-size: $text__size--4;
+                line-height: 1.5;
+                margin: $element__size--6 0;
+            }
+        }
+    }
+
+    &__content {
+        .content {
+            &__heading {
+                color: $text__colour--1;
+                font-weight: $text__weight--2;
+                font-size: $text__size--6;
+                letter-spacing: -0.25px;
+                margin: $element__size--9 0 $element__size--6 0;
+            }
+        
+            &__subheading {}
+        
+            &__text {
+                color: $text__colour--1;
+                font-weight: $text__weight--1;
+                font-size: $text__size--4;
+                line-height: 1.5;
+                margin: $element__size--6 0;
+            }
+        
+            &__list {
+                margin: $element__size--6 0;
+        
+                &--ordered {}
+        
+                &--unordered {}
+    
+                .list__item {
+                    color: $text__colour--1;
+                    font-weight: $text__weight--1;
+                    font-size: $text__size--4;
+                    line-height: 1.5;
+                    margin: $element__size--4 0 $element__size--4 $element__size--5; 
+                }
+            }
+        
+            &__link {
+                color: $text__colour--4;
+                padding: $element__size--1 0;
+                border-bottom: 1px solid $text__colour--8;
+        
+                &:hover {border-bottom: 1px solid $text__colour--2}
+            }
+        
+            &__quote {
+                border-left: 2px solid $text__colour--7;
+                padding: $element__size--4 0 $element__size--4 $element__size--5;
+                margin: $element__size--6 0;
+    
+                .quote {
+                    &__text {
+                        color: $text__colour--1;
+                        font-weight: $text__weight--1;
+                        font-size: $text__size--4;
+                        line-height: 1.5;
+                        margin-bottom: $element__size--4;
+                    }
+            
+                    &__author {
+                        color: $text__colour--1;
+                        font-weight: $text__weight--2;
+                        font-size: $text__size--4;
+                    }
+                }
+            }
+        
+            &__code {
+                padding: 0;
+                margin: $element__size--6 0 $element__size--6 $element__size--5;
+            }
+        
+            &__image {
+                display: block;
+                width: 100%;
+                margin: $element__size--6 0;
+            }
+        }
+    }
+}

@@ -1,130 +1,53 @@
-// Remove default padding etc
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+//  Text font.
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+  @supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
 }
 
-// Set overflow rules
-html {
-    overflow-y: scroll;
-}
+// Text colours.
+$text__colour--1     : #102A43;
+$text__colour--2     : #243B53;
+$text__colour--3     : #334E68;
+$text__colour--4     : #486581;
+$text__colour--5     : #627D98;
+$text__colour--6     : #829AB1;
+$text__colour--7     : #9FB3C8;
+$text__colour--8     : #BCCCDC;
+$text__colour--9     : #D9E2EC;
+$text__colour--10    : #F6F9FC;
 
-body {
-    // Set font family
-    font-family: 'Inter', sans-serif;
+// Text weights.
+$text__weight--1     : 400;
+$text__weight--2     : 500;
+$text__weight--3     : 600;
 
-    // Set bg colour
-    background-color: colour(body);
+// Text sizes.
+$text__size--1       : 12px;
+$text__size--2       : 14px;
+$text__size--3       : 16px;
+$text__size--4       : 18px;
+$text__size--5       : 20px;
+$text__size--6       : 24px;
+$text__size--7       : 30px;
+$text__size--8       : 36px;
+$text__size--9       : 48px;
+$text__size--10      : 60px;
 
-    // Set container rules
-    .container {
-        margin: 5rem 5%;
-        max-width: 1200px;
-    }
-}
-
-// Fade In Animation
-.hidden {
-    opacity: 0;
-    transform: translateY(80px);
-    transition: all 0.6s;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-// Set colour variables
-$colours: (
-    'body'              : #FEFEFE,
-    'body--secondary'   : #bcc2c9,
-    'primary'           : #2b3035,
-    'secondary'         : #697582,
-    'tertiary'          : #9da6af,
-    'disabled'          : #7c7f83,
-    'accent'            : #0090ff,
-);
-
-// Define colour function
-@function colour($colour-name) {
-    @return map-get($colours, $colour-name)
-};
-
-// Define link styling
-.link {
-    text-decoration: none;
-    color: colour(accent);
-
-    &:hover {
-        color: darken(colour(accent), 10%);
-    }
-}
-
-// Set weight variables
-$font-weights: (
-    'regular': 400,
-    'medium' : 500,
-    'bold'   : 600
-);
-
-// Define weight function
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name)
-};
-
-// Set transition variables
-$duration: (
-    'slow': 200ms,
-    'medium': 160ms,
-    'fast': 120ms,
-);
-
-// Define transition function
-@function duration($TD-name) {
-    @return map-get($duration, $TD-name)
-};
-
-
-// Reduced Motion
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-}
-
-// Mobile
-@mixin media-xs {
-    @media screen and (max-width: 599px) {
-        @content;
-    }
-}
-
-// Tablet
-@mixin media-sm {
-    @media screen and (min-width: 600px) {
-        @content;
-    }
-}
-
-// Laptop
-@mixin media-md {
-    @media screen and (min-width: 900px) {
-        @content;
-    }
-}
-
-// Desktop
-@mixin media-lg {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
-}
-
-// Desktop (Large)
-@mixin media-xl {
-    @media screen and (min-width: 1800px) {
-        @content;
-    }
-}
+// Element sizes.
+$element__size--1    : 4px;
+$element__size--2    : 8px;
+$element__size--3    : 12px;
+$element__size--4    : 16px;
+$element__size--5    : 24px;
+$element__size--6    : 32px;
+$element__size--7    : 48px;
+$element__size--8    : 64px;
+$element__size--9    : 96px;
+$element__size--10   : 128px;
+$element__size--11   : 192px;
+$element__size--12   : 256px;
+$element__size--13   : 384px;
+$element__size--14   : 512px;

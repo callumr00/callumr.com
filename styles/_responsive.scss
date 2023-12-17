@@ -1,103 +1,26 @@
-// Tablet (>= 600px)
-@include media-sm {
-    .container--index {
-        section:nth-child(2),
-        section:nth-child(3),
-        section:nth-child(4),
-        section:nth-child(5),
-        section:nth-child(6),
-        section:nth-child(7)
-        {
-            .cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+// Mobile.
+@media screen and (max-width: 599px) {
+    body {margin: 0 $element__size--6}
+
+    .filters {
+        grid-template-columns: none;
+        grid-template-areas: "count" "category__select" "title__search";
+
+        &__form--category {grid-area: category__select}
+
+        &__count {grid-area: count}
+
+        &__form--title {grid-area: title__search}
     }
 
-    .container--work .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .container--books .card {
-        flex-direction: row;
-
-        &__text {
-            border: none;
+    .feed {
+        &__item {
+            display: grid;
+            flex-direction: column;
         }
 
-        &__img {
-            border-radius: 0 30px 30px 0;
-        }
-    }
+        &__category, &__title, &__date {padding: $element__size--1 0}
 
-    .container--photos .card, .container--index  section:nth-child(3) .card{
-        &__heading, &__link {
-            padding: 1rem;
-        }
-    }
-}
-
-// Laptop (>= 900px)
-@include media-md {
-
-    .container--index {
-        section:nth-child(2),
-        section:nth-child(4),
-        section:nth-child(5),
-        section:nth-child(6),
-        section:nth-child(7)
-        {
-            .cards {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    }
-
-    .container--work .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .container--photos .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-// Desktop (>= 1200px)
-@include media-lg {
-    body {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    header-container, header-container-sub {
-        width: 90%;
-    }
-
-    .container--about {
-        width: 100%;
-    }
-
-    .container--books {
-        .cards {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .filters {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-
-            .filter:nth-child(1), .filter:nth-child(2), .filter:nth-child(3) {
-                width: 350px;
-            }
-
-            .filter:nth-child(1) select {
-                left: 20%;
-                bottom: 0%;
-                top: auto;
-                transform: translate(0%, -35%);
-            }
-        }
+        &__spacer {display: none}
     }
 }

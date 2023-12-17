@@ -1,74 +1,49 @@
-<!-- 
-              _  _                         
-             | || |                        
-   ___  __ _ | || | _   _  _ __ ___   _ __ 
-  / __|/ _` || || || | | || '_ ` _ \ | '__|
- | (__| (_| || || || |_| || | | | | || |   
-  \___|\__,_||_||_| \__,_||_| |_| |_||_|   
-
-
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page Title-->
-    <title>Now - Callum Rafter</title>
-
-    <!-- Page Description -->
-    <meta
-    name="description"
-    content="What I'm currently devoting my time towards."
-    />
-
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="styles/style.css">
-
-    <!-- Import Font Family 'Inter' from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> 
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#FFFFFF">
-
-    <!-- Import Javascript -->
-    <script defer src="scripts/fade.js"></script>
-    <script defer src="scripts/components.js"></script>
-    <script defer src="scripts/nav.js"></script>
+    <title>What I'm Doing</title>
+    <meta name="author" content="Callum Rafter">
+    <meta name="description" content="I'm Callum, a Machine Learning Engineer based in the UK.">
+    <meta name="theme-color" content="#F6F9FC">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
-
-<body>
-    <header-container></header-container>
-    <main class="container container--about">
-        <h2 class="list__heading">What I'm Doing</h2>
-        <ul class="list">
-            <h3 class="list__updated">Last Updated: Dec 5, 2023</h3>
-	    <h3 class="list__subheading">Generally</h3>
-	    <li class="list__item">I'm studying, full-time, Artificial Intelligence and its surrounding topics: Maths, Software Engineering, Machine Learning, and Philosophy.</li>
-	    <li class="list__item">When studying, I try to go slowly and take <a class="link" href="notes">Notes</a> wherever possible to better think through, understand, and remember the content for later use. It is of course just as, if not more, important to practice what you learn. As such, I make sure to produce <a class="link" href="work">Work</a>.</li>
-	    <li class="list__item">I'm writing <a class="link" href="articles">Articles</a> and <a class="link" href="books#summaries">Book Summaries</a> to condense my thoughts and learnings on particular topics. Like my notes, these afford increased understanding and permanence of the information.</li>
-            <li class="list__item">I'm training Brazilian Jiu-Jitsu for personal development, fitness, and camaraderie, supplemented by weightlifting for health.</li>
-            <li class="list__item">I'm taking <a class="link" href="photos" target="_blank">Photos</a> in an effort to both create and preserve memories.</li>
-	    <li class="list__item">I'm reading <a href="books" target="_blank" class="link">Books</a> to gain the wisdom of others and satisfy curiosity.</li>
-	</ul>
-	<ul class="list">
-       	    <h3 class="list__subheading">Specifically</h3>
-	    <li class="list__item">I am studying how to better use the tools available to me, and to use better tools. I am currently studying The Linux Command Line. Planned follow ups are: How Linux Works, Practical Vim, and Modern Vim.</li>
-	    <li class="list__item">I am refining my thoughts on topics to write articles on Craftsmanship, Materialism, and Appreciation without Ownership, on Reclaiming Attention, and on Productive Effort.</li>
-	    <li class="list__item">I spend around 3 hours a week weightlifting and around 6 hours a week training Brazilian Jiu Jitsu.</li>
-	    <li class="list__item">I spend around 10 hours a week reading books (not including textbooks for study). This is often in the hours before I sleep but occasionally I will take a day off to read.</li>
-	</ul>
-    </main>
-    <footer-container></footer-container>
-</body>
+    <body>
+        <header class="header"></header>
+        <main class="main">
+            <article class="article">
+                <header class="article__header">
+                    <h1 class="header__title">What I'm Doing</h1>
+                    <p class="header__subtitle">Dec 5, 2023</p>
+                </header>
+                <section class="article__content">
+                    <h2 class="content__heading">Generally</h2>
+                    <ul class="content__list content__list--unordered">
+                        <li class="list__item">I'm studying, full-time, Artificial Intelligence and its surrounding topics: Maths, Software Engineering, Machine Learning, and Philosophy.</li>
+                        <li class="list__item">When studying, I try to go slowly and take <a class="content__link" href="/index?category=notes">Notes</a> wherever possible to better think through, understand, and remember the content for later use. It is of course just as, if not more, important to practice what you learn. As such, I make sure to create <a class="content__link" href="/index?category=project">Projects</a>.</li>
+                        <li class="list__item">I'm writing <a class="content__link" href="/index?category=article">Articles</a> and <a class="content__link" href="/index?category=summary">Book Summaries</a> to condense my thoughts and learnings on particular topics. Like my notes, these afford increased understanding and permanence of the information.</li>
+                        <li class="list__item">I'm training Brazilian Jiu-Jitsu for personal development, fitness, and camaraderie, supplemented by weightlifting for health.</li>
+                        <li class="list__item">I'm taking <a class="content__link" href="/photos">Photos</a> in an effort to both create and preserve memories.</li>
+                        <li class="list__item">I'm reading books to gain the wisdom of others and satisfy curiosity.</li>
+                    </ul>
+                </section>
+                <section class="article__content">
+                    <h2 class="content__heading">Specifically</h2>
+                    <ul class="content__list content__list--unordered">
+                        <li class="list__item">I am studying how to better use the tools available to me, and to use better tools. I am currently studying The Linux Command Line. Planned follow ups are: How Linux Works, Practical Vim, and Modern Vim.</li>
+                        <li class="list__item">I am refining my thoughts on topics to write articles on Craftsmanship, Materialism, and Appreciation without Ownership, on Reclaiming Attention, and on Productive Effort.</li>
+                        <li class="list__item">I spend around 3 hours a week weightlifting and around 6 hours a week training Brazilian Jiu Jitsu.</li>
+                        <li class="list__item">I spend around 10 hours a week reading books (not including textbooks for study). This is often in the hours before I sleep but occasionally I will take a day off to read.</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+        <footer class="footer"></footer>
+        <script src="/scripts/components.js"></script>
+    </body>
 </html>
