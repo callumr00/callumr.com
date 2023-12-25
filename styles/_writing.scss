@@ -1,5 +1,7 @@
 .article {
     &__header {
+        margin-bottom: $element__size--9;
+    
         .header {
             &__title {
                 color: $text__colour--1;
