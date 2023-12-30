@@ -62,7 +62,7 @@
 
     &__item {
         display: flex;
-        width: calc(100% + ($element__size--4 * 2));
+        width: calc(100% + (#{$element__size--4} * 2));
         margin: ($element__size--2) (-$element__size--4);
         padding: $element__size--4;
         line-height: 1.2;
@@ -99,7 +99,7 @@
             position: absolute;
             height: 1px;
             margin: 0 $element__size--3;
-            width: calc(100% - ($element__size--3 * 2));
+            width: calc(100% - (#{$element__size--3} * 2));
         }
     }
 
