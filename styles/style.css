@@ -143,13 +143,13 @@ body {
   .article__header .header__title {
     color: #102A43;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: -0.25px; }
   .article__header .header__subtitle {
     display: block;
     padding-top: 4px;
     color: #627D98;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400; }
   .article__header .header__description {
     color: #102A43;
@@ -161,7 +161,7 @@ body {
 .article__content .content__heading {
   color: #102A43;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: -0.25px;
   margin: 96px 0 32px 0; }
 
