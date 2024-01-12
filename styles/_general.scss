@@ -15,28 +15,38 @@ body {
 }
 
 .header {
-    height: $element__size--9;
-    border-bottom: 1px solid $text__colour--9;
-    margin-bottom: $element__size--9;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: $element__size--7 0 $element__size--9 0;
 
     &__link {
         color: $text__colour--1;
-        font-size: $text__size--8;
+        font-size: $text__size--5;
         font-weight: $text__weight--3;
         
         &:hover {color: $text__colour--4}
     }
+
+    .image__container {
+        display: flex;
+        justify-content: space-around;
+        width: $element__size--8;
+        padding-left: $element__size--3;
+    }
+
+    &__image {
+        height: $text__size--5;
+    }
 }
+
+.main {min-height: 100vh}
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: $element__size--9;
-    height: $element__size--9;
+    margin: $element__size--9 0 $element__size--7 0;
 
     &__link {
         font-size: $text__size--1;
@@ -46,4 +56,13 @@ body {
     
         &:hover {border-bottom: 1px solid $text__colour--2}
     }
+}
+
+.error {
+    font-size: $text__size--6;
+    font-weight: $text__weight--2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
