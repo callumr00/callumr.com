@@ -38,8 +38,6 @@
                 margin: $element__size--9 0 $element__size--6 0;
             }
         
-            &__subheading {}
-        
             &__text {
                 color: $text__colour--1;
                 font-weight: $text__weight--1;
@@ -51,10 +49,6 @@
             &__list {
                 margin: $element__size--6 0;
         
-                &--ordered {}
-        
-                &--unordered {}
-    
                 .list__item {
                     color: $text__colour--1;
                     font-weight: $text__weight--1;
@@ -95,14 +89,38 @@
             }
         
             &__code {
-                padding: 0;
-                margin: $element__size--6 0 $element__size--6 $element__size--5;
-            }
+                padding: $element__size--3 0 $element__size--5 $element__size--5;
+                background-color: $text__colour--10;
+                border: 1px solid $text__colour--9;
+                border-radius: 10px;
+             }
         
             &__image {
                 display: block;
                 width: 100%;
                 margin: $element__size--6 0;
+            }
+            
+            &__table {
+                border-collapse: collapse;
+
+                .table {
+                    &__row, &__header, &__data {
+                        border: 1px solid $text__colour--9;
+                        font-size: $text__size--2;
+                    }
+               
+                    &__header, &__data {
+                        font-weight: $text__weight--1;
+                        padding: $element__size--3;
+                        text-align: left;
+                    }
+ 
+                    &__header {
+                        background-color: $text__colour--10;
+                        font-weight: $text__weight--2;
+                    }
+                }
             }
         }
     }
