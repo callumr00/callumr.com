@@ -121,6 +121,12 @@
                         font-weight: $text__weight--2;
                     }
                 }
+
+                &--books {
+                    & th:nth-child(3) {width: $element__size--10}
+                    & td:nth-child(2) {text-align:center}
+                    & td:nth-child(3) {font-family: 'Roboto Mono', monospace}
+                }
             }
         }
     }
