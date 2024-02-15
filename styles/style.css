@@ -228,7 +228,7 @@ body {
     font-weight: 500; }
   .article__content .content__table--books th:nth-child(3) {
     width: 128px; }
-  .article__content .content__table--books td:nth-child(2) {
+  .article__content .content__table--books td:nth-child(2), .article__content .content__table--books td:nth-child(3) {
     text-align: center; }
   .article__content .content__table--books td:nth-child(3) {
     font-family: 'Roboto Mono', monospace; }
