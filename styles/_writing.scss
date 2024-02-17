@@ -123,9 +123,9 @@
                 }
 
                 &--books {
-                    & th:nth-child(3) {width: $element__size--10}
-                    & td:nth-child(2), & td:nth-child(3) {text-align:center}
-                    & td:nth-child(3) {font-family: 'Roboto Mono', monospace}
+                    & td:nth-child(3), & td:nth-child(4) {text-align:center}
+                    & th:nth-child(4) {width: $element__size--10}
+                    & td:nth-child(4) {font-family: 'Roboto Mono', monospace}
                 }
             }
         }
