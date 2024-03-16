@@ -165,7 +165,7 @@ body {
   letter-spacing: -0.25px;
   margin: 96px 0 32px 0; }
 
-.article__content .content__text {
+.article__content .content__text, .article__content .content__summary {
   color: #102A43;
   font-weight: 400;
   font-size: 18px;
@@ -232,6 +232,11 @@ body {
     width: 128px; }
   .article__content .content__table--books td:nth-child(4) {
     font-family: 'Roboto Mono', monospace; }
+
+.article__content .content__details {
+  margin: 32px 0; }
+  .article__content .content__details .content__text, .article__content .content__details .list__item {
+    font-size: 14px; }
 
 @media screen and (max-width: 599px) {
   body {

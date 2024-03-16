@@ -38,7 +38,7 @@
                 margin: $element__size--9 0 $element__size--6 0;
             }
         
-            &__text {
+            &__text, &__summary {
                 color: $text__colour--1;
                 font-weight: $text__weight--1;
                 font-size: $text__size--4;
@@ -127,6 +127,12 @@
                     & th:nth-child(4) {width: $element__size--10}
                     & td:nth-child(4) {font-family: 'Roboto Mono', monospace}
                 }
+            }
+                
+            &__details {
+                margin: $element__size--6 0;
+                
+                .content__text, .list__item {font-size: 14px}
             }
         }
     }
