@@ -1,21 +1,35 @@
 let button;
-
 document.addEventListener('FooterContentLoaded', () => {
     button = document.querySelector('.footer__button');
     button.addEventListener('click', toggleDarkMode);
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        toggleDarkMode();
+    // Set theme based on preference.
+    if (!localStorage.getItem('prefers-color-scheme')) {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            localStorage.setItem('prefers-color-scheme', 'dark-mode');
+            toggleDarkMode()
+        } else {
+            localStorage.setItem('prefers-color-scheme', 'light-mode');
+        }
+    } else if (localStorage.getItem('prefers-color-scheme') == 'dark-mode') {
+        toggleDarkMode()
     }
 });
+
 
 function toggleDarkMode() {
     const isDarkMode =  document.querySelector('body').classList.toggle('dark-mode');
 
-    // Change icon in footer.
-    button.src = isDarkMode ? '/img/footer/dark-mode.svg' : '/img/footer/light-mode.svg'
+    // Update preference and toggle icon.
+    if (isDarkMode) {
+        localStorage.setItem('prefers-color-scheme', 'dark-mode')
+        button.src = '/img/footer/dark-mode.svg'
+    } else {
+        localStorage.setItem('prefers-color-scheme', 'light-mode')
+        button.src = '/img/footer/light-mode.svg'
+    }
 
-    // Change code block styling.
+    // Update code block styling.
     const hljsStyle = document.getElementById('hljs-style')
     if (hljsStyle) {
         hljs = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0'
