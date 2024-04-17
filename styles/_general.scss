@@ -5,12 +5,13 @@
 }
 
 body {
-    max-width: $element__size--14;
+    max-width: var(--element-size-16);
     margin: auto;
+    background-color: var(--colour-11);
 
     a {
         text-decoration: none;
-        transition-duration: 80ms;
+        transition-duration: var(--duration-2);
     }
 }
 
@@ -18,49 +19,55 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: $element__size--7 0 $element__size--9 0;
+    margin: var(--element-size-9) 0 var(--element-size-10) 0;
 
     &__link {
-        color: $text__colour--1;
-        font-size: $text__size--5;
-        font-weight: $text__weight--3;
-        
-        &:hover {color: $text__colour--4}
-    }
+        color: var(--colour-1);
+        font-size: var(--text-size-4);
+        font-weight: var(--weight-3);
 
-    .image__container {
-        display: flex;
-        justify-content: space-around;
-        width: $element__size--8;
-        padding-left: $element__size--3;
+        &:hover {
+            color: var(--colour-4);
+        }
     }
 
     &__image {
-        height: $text__size--5;
+        height: var(--text-size-4);
     }
 }
 
-.main {min-height: 100vh}
+.main {
+    min-height: 100vh;
+}
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: $element__size--9 0 $element__size--7 0;
+    margin: var(--element-size-10) 0 var(--element-size-9) 0;
 
     &__link {
-        font-size: $text__size--1;
-        color: $text__colour--4;
-        padding-bottom: $element__size--1;
-        border-bottom: 1px solid $text__colour--8;
-    
-        &:hover {border-bottom: 1px solid $text__colour--2}
+        font-size: var(--text-size-1);
+        color: var(--colour-4);
+        padding-bottom: var(--element-size-3);
+        border-bottom: 1px solid var(--colour-8);
+
+        &:hover {
+            border-bottom: 1px solid var(--colour-2);
+        }
+    }
+
+    &__button {
+        width: var(--element-size-8);
+        padding: var(--element-size-4);
+        cursor: pointer;
     }
 }
 
 .error {
-    font-size: $text__size--6;
-    font-weight: $text__weight--1;
+    color: var(--colour-1);
+    font-size: var(--text-size-6);
+    font-weight: var(--weight-1);
     position: absolute;
     top: 50%;
     left: 50%;

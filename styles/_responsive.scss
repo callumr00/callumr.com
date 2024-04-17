@@ -1,26 +1,38 @@
-// Mobile.
 @media screen and (max-width: 599px) {
-    body {margin: 0 $element__size--6}
+    body {
+        margin: var(--element-size-8);
+    }
 
     .filters {
         grid-template-columns: none;
         grid-template-areas: "count" "category__select" "title__search";
 
-        &__form--category {grid-area: category__select}
+        &__form--category {
+            grid-area: category__select;
+        }
 
-        &__count {grid-area: count}
+        &__count {
+            grid-area: count;
+        }
 
-        &__form--title {grid-area: title__search}
+        &__form--title {
+            grid-area: title__search;
+        }
     }
 
     .feed {
         &__item {
             display: grid;
             flex-direction: column;
+            border-radius: var(--element-size-4);
         }
 
-        &__category, &__title, &__date {padding: $element__size--1 0}
+        &__category, &__title, &__date {
+            padding: var(--element-size-3) 0;
+        }
 
-        &__spacer {display: none}
+        &__spacer {
+            display: none;
+        }
     }
 }

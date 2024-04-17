@@ -1,54 +1,61 @@
 .hero {
     &__title {
-        color: $text__colour--1;
-        font-weight: $text__weight--2;
-        font-size: $text__size--5;
-        margin-bottom: $element__size--5;
+        color: var(--colour-1);
+        font-weight: var(--weight-2);
+        font-size: var(--text-size-4);
+        line-height: 1.45;
+        margin-bottom: var(--element-size-7);
     }
 
     &__description {
-        color: $text__colour--5;
-        font-weight: $text__weight--1;
-        font-size: $text__size--4;
-        line-height: 1.75;
+        color: var(--colour-5);
+        font-weight: var(--weight-1);
+        font-size: var(--text-size-3);
+        line-height: 1.45;
     }
 
     &__link {
-        color: $text__colour--4;
-        padding-bottom: $element__size--1;
-        border-bottom: 1px solid $text__colour--8;
-    
-        &:hover {border-bottom: 1px solid $text__colour--2}
+        color: var(--colour-3);
+        border-bottom: var(--element-size-1) solid var(--colour-8);
+
+        &:hover {
+            border-bottom: var(--element-size-1) solid var(--colour-2);
+        }
     }
 }
 
 .filters {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
-    grid-gap: $element__size--6;
-    margin: $element__size--9 0 $element__size--6 0;
+    grid-gap: var(--element-size-8);
+    margin: var(--element-size-11) 0 var(--element-size-8) 0;
     text-align: center;
 
     &__form {
         width: 100%;
-        height: $element__size--7;
-        border-radius: 30px;
-        border: 1px solid $text__colour--8;
-        box-shadow: inset 0 1px 2px $text__colour--10;
+        height: var(--element-size-9);
+        border-radius: var(--element-size-7);
+        border: var(--element-size-1) solid var(--colour-8);
+        box-shadow: inset 0 var(--element-size-1) var(--element-size-2) var(--colour-10);
 
         .form {
             &__select, &__input {
+                font-family: 'Inter';
+                color: var(--colour-1);
                 height: 100%;
                 width: 80%;
-                background-color: rgba(0, 0, 0, 0);
+                background-color: var(--colour-11);
                 border: none;
                 outline: none;
-                font-size: $text__size--2;
+                font-size: var(--text-size-2);
             }
         }
     }
 
-    &__count {margin: auto 0}
+    &__count {
+        color: var(--colour-1);
+        margin: auto 0;
+    }
 }
 
 .feed {
@@ -56,33 +63,33 @@
     flex-direction: column;
 
     &__item {
-        display: flex;
-        width: calc(100% + (#{$element__size--4} * 2));
-        margin: ($element__size--2) (-$element__size--4);
-        padding: $element__size--4;
-        line-height: 1.2;
-        border-radius: $element__size--7;
-        transition-duration: 50ms;
+        margin: var(--element-size-4) calc(var(--element-size-6) * -1);
+        padding: var(--element-size-6);
+        border-radius: var(--element-size-9);
+        transition-duration: var(--duration-1);
 
-        &:hover {background-color: $text__colour--10}
+        &:hover {
+            background-color: var(--colour-10);
+        }
     }
 
     &__category, &__date {
-        color: $text__colour--5;
-        font-weight: $text__weight--1;
-        font-size: $text__size--1;
-        font-family: 'Roboto Mono', monospace;
+        color: var(--colour-5);
+        font-weight: var(--weight-1);
+        font-size: var(--text-size-1);
+        font-family: 'RobotoMono', monospace;
+        margin-top: calc(var(--element-size-1) * -1);
     }
 
     &__category {
-        width: $element__size--8;
+        width: var(--element-size-10);
         grid-area: feed__category;
     }
 
     &__title {
-        color: $text__colour--1;
-        font-weight: $text__weight--1;
-        font-size: $text__size--2;
+        color: var(--colour-1);
+        font-weight: var(--weight-1);
+        font-size: var(--text-size-2);
         grid-area: feed__title;
     }
 
@@ -94,11 +101,11 @@
 
         &::before {
             content: "";
-            background-color: $text__colour--9;
+            background-color: var(--colour-9);
             position: absolute;
-            height: 1px;
-            margin: 0 $element__size--3;
-            width: calc(100% - (#{$element__size--3} * 2));
+            height: var(--element-size-1);
+            margin: 0 var(--element-size-5);
+            width: calc(100% - (var(--element-size-5) * 2));
         }
     }
 

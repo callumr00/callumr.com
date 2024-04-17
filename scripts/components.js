@@ -7,4 +7,6 @@ Promise.all(components.map(component =>
     data.forEach((html, index) => {
         document.querySelector(`.${components[index]}`).innerHTML = html;
     });
+    // Dispatch a custom event to signal when footer content has loaded.
+    document.dispatchEvent(new CustomEvent('FooterContentLoaded'))
 });
