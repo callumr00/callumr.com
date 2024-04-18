@@ -41,8 +41,8 @@ body {
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     margin: var(--element-size-10) 0 var(--element-size-9) 0;
 
@@ -50,16 +50,21 @@ body {
         font-size: var(--text-size-1);
         color: var(--colour-4);
         padding-bottom: var(--element-size-3);
-        border-bottom: 1px solid var(--colour-8);
+        border-bottom: var(--element-size-1) solid var(--colour-8);
 
         &:hover {
-            border-bottom: 1px solid var(--colour-2);
+            border-bottom: var(--element-size-1) solid var(--colour-2);
         }
+    }
+
+    & div:nth-child(3) {
+        margin-left: auto;
     }
 
     &__button {
         width: var(--element-size-8);
         padding: var(--element-size-4);
+        margin: 0 auto;
         cursor: pointer;
     }
 }
