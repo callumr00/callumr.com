@@ -13,6 +13,9 @@ document.addEventListener('FooterContentLoaded', () => {
         }
     } else if (localStorage.getItem('prefers-color-scheme') == 'dark-mode') {
         toggleDarkMode()
+    } else if (localStorage.getItem('prefers-color-scheme') == 'light-mode') {
+        toggleDarkMode()
+        toggleDarkMode()
     }
 });
 
