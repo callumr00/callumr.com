@@ -1,43 +1,40 @@
-let button;
+let toggleButton;
 document.addEventListener('FooterContentLoaded', () => {
-    button = document.querySelector('.footer__button');
-    button.addEventListener('click', toggleDarkMode);
+    toggleButton = document.querySelector('.footer__button');
+    toggleButton.addEventListener('click', toggleColorScheme);
 
-    // Set theme based on preference.
-    if (!localStorage.getItem('prefers-color-scheme')) {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            localStorage.setItem('prefers-color-scheme', 'dark-mode');
-            toggleDarkMode()
-        } else {
-            localStorage.setItem('prefers-color-scheme', 'light-mode');
-        }
-    } else if (localStorage.getItem('prefers-color-scheme') == 'dark-mode') {
-        toggleDarkMode()
-    } else if (localStorage.getItem('prefers-color-scheme') == 'light-mode') {
-        toggleDarkMode()
-        toggleDarkMode()
+    // Update icon on load.
+    if (document.querySelector('body').classList.contains('dark-mode')) {
+        toggleButton.src = '/img/footer/dark-mode.svg'
     }
-});
+})
 
+let storedPreference = localStorage.getItem('prefers-color-scheme');
+let browserPrefersDark = (window.matchMedia('(prefers-color-scheme: dark)')
+                         .matches);
 
-function toggleDarkMode() {
-    const isDarkMode =  document.querySelector('body').classList.toggle('dark-mode');
+if ((!storedPreference && browserPrefersDark) || storedPreference == 'dark') {
+    toggleColorScheme();
+}
 
-    // Update preference and toggle icon.
-    if (isDarkMode) {
-        localStorage.setItem('prefers-color-scheme', 'dark-mode')
-        button.src = '/img/footer/dark-mode.svg'
-    } else {
-        localStorage.setItem('prefers-color-scheme', 'light-mode')
-        button.src = '/img/footer/light-mode.svg'
+function toggleColorScheme() {
+    isDarkMode = document.querySelector('body').classList.toggle('dark-mode');
+
+    localStorage.setItem('prefers-color-scheme', isDarkMode ? 'dark' : 'light')
+
+    if (toggleButton) {
+        toggleButton.src = isDarkMode ?
+            '/img/footer/dark-mode.svg' :
+            '/img/footer/light-mode.svg'
     }
 
-    // Update code block styling.
-    const hljsStyle = document.getElementById('hljs-style')
+    // Toggle code block styling.
+    hljsStyle = document.getElementById('hljs-style')
     if (hljsStyle) {
-        hljs = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0'
-        hljsDark = hljs + '/styles/github-dark.css'
-        hljsLight = hljs + '/styles/github.css'
-        hljsStyle.href = isDarkMode ? hljsDark : hljsLight
+        hljsStyle.href = isDarkMode ?
+            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/' +
+            'styles/github-dark.css' :
+            'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/' +
+            'styles/github.css'
     }
 }
