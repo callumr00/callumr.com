@@ -114,92 +114,23 @@ main {
     max-width: var(--element-size-16);
   }
 
-  details {
-    color: var(--colour-foreground);
-    border: var(--element-size-1) solid var(--colour-middleground);
-    border-radius: var(--element-size-5);
-    margin: var(--element-size-7) 0;
-
-    &[open] {
-      summary {
-        border-bottom: var(--element-size-1) solid var(--colour-middleground);
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
-
-    summary {
-      background-color: var(--colour-highlight);
-      font-weight: var(--font-weight-bold);
-      border-radius: var(--element-size-5);
-      padding: var(--element-size-5);
-      cursor: pointer;
-    }
-
-    p, ol, ul {
-      font-size: var(--font-size-s);
-    }
-
-    p {
-      margin: var(--element-size-5);
-    }
-
-    ol, ul {
-      margin: var(--element-size-5) 0 var(--element-size-5) var(--element-size-7);
-
-      li {
-        margin: var(--element-size-4)
-      }
-    }
-  }
-
   table {
-    border-collapse: separate;
-    border-spacing: 0;
-    color: var(--colour-foreground);
+    border-collapse: collapse;
     font-size: var(--font-size-s);
 
-    tr {
-      td:first-child, th:first-child {
-        border-left: var(--element-size-1) solid var(--colour-middleground);
-      }
+    th, td {
+      border: 1px solid var(--colour-middleground);
+      padding: var(--element-size-5);
+    }      
 
-      th, td {
-        border-bottom: var(--element-size-1) solid var(--colour-middleground);
-        border-right: var(--element-size-1) solid var(--colour-middleground);
-        padding: var(--element-size-5);
-      }      
+    th {
+      color: var(--colour-foreground);
+      font-weight: var(--font-weight-bold);
+      text-align: left;
+    }
 
-      th {
-        background-color: var(--colour-highlight);
-        font-weight: var(--font-weight-bold);
-        text-align: left;
-        border-top: var(--element-size-1) solid var(--colour-middleground);
-      }
-
-      &:first-child {
-        th {
-          &:first-child {
-            border-top-left-radius: var(--element-size-5);
-          }
-
-          &:last-child {
-            border-top-right-radius: var(--element-size-5);
-          }
-        }
-      }
-
-      &:last-child {
-        td {
-          &:first-child {
-            border-bottom-left-radius: var(--element-size-5);
-          }
-
-          &:last-child {
-            border-bottom-right-radius: var(--element-size-5);
-          }
-        }
-      }
+    td {
+      color: var(--colour-middleground);
     }
   }
 }
