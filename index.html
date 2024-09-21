@@ -1,332 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callum Rafter</title>
-    <meta name="author" content="Callum Rafter">
-    <meta name="description" content="I'm Callum, a Software Engineer based in the UK.">
-    <meta name="theme-color" content="#F6F9FC">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
-    <link rel="icon" type="image/png" href="/img/favicon/favicon.png">
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-    <body>
-        <header class="header"></header>
-        <main class="main">
-            <section class="hero">
-                <h1 class="hero__title">I'm Callum, a Software Engineer based in the UK.</h1>
-                <p class="hero__description">Learn more <a class="hero__link" href="/about">About Me</a>, or have a look at the <a class="hero__link" href="/photos">Photos I've Taken</a> and <a class="hero__link" href="/books">Books I've Read</a>.</p>
-            </section>
-            <section class="filters">
-                <form class="filters__form filters__form--category">
-                    <select class="form__select" aria-label="Category Select">
-                        <option value="All">All</option>
-                        <option value="article">Articles</option>
-                        <option value="project">Projects</option>
-                        <option value="summary">Summaries</option>
-                    </select>
-                </form>
-                <p class="filters__count"></p>
-                <form class="filters__form filters__form--title" aria-label="Title Search">
-                    <input class="form__input" type="text" placeholder="Search" autocapitalize="off" autocomplete="off" spellcheck="false">
-                </form>
-            </section>
-            <section class="feed">
-                <a target="_blank" href="https://github.com/callumr00/img-tagger">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Using an LLM to Keyword-Tag Images</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jun 30, 2024</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/htdp">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">HTDP Exercise Solutions</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">May 14, 2024</p>
-                    </div>
-                </a>
-                <a href="articles/quicksort">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">A Walkthrough Example of Quicksort</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Apr 23, 2024</p>
-                    </div>
-                </a>
-                <a href="articles/recently">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">The Past Few Years</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Apr 10, 2024</p>
-                    </div>
-                </a>
-                <a href="articles/attention">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">On Reclaiming Attention</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Mar 08, 2024</p>
-                    </div>
-                </a>
-                <a href="articles/everyday">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">Capturing the Everyday</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Mar 04, 2024</p>
-                    </div>
-                </a>
-                <a href="summaries/amusingourselves">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">Amusing Ourselves to Death by Neil Postman</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jan 12, 2023</p>
-                    </div>
-                </a>
-                <a href="summaries/lowtechlife">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">Low Tech Life by José Briones</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jan 12, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/oura-daily-scores">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Displaying Oura's Daily Scores in the Terminal</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Dec 18, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://callumr00.github.io/minimal-youtube-viewer/">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">A Distraction-Free YouTube Front-End</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Dec 09, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/optiver-trading-at-the-close-submission">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Predicting the Closing Movement of US Stocks</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Nov 03, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/k-means-clustering">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Implementing the K-Means Clustering Algorithm</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jul 29, 2023</p>
-                    </div>
-                </a>
-                <a href="/articles/workspace">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">My Workspace</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jun 22, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/microsoft-outlook-emailer">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Modular Mass Emailing with Microsoft Outlook</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">May 06, 2023</p>
-                    </div>
-                </a>
-                <a href="/summaries/nomldegree">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">No ML Degree by Emil Wallnér</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Apr 15, 2023</p>
-                    </div>
-                </a>
-                <a href="/summaries/metalearning">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">Meta Learning by Radek Osmulski</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Apr 15, 2023</p>
-                    </div>
-                </a>
-                <a href="/summaries/aicareer">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">How to Build Your Career in AI by Andrew Ng</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Apr 15, 2023</p>
-                    </div>
-                </a>
-                <a href="/articles/learning">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">An Introduction to Efficient Learning</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Apr 14, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/ps3-11-submission">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Predicting Media Campaign Cost</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Mar 21, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/vanguard-investor-fund-data-eda">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Analysing Vanguard's Index Fund Offerings</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Mar 07, 2023</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.kaggle.com/code/callumrafter/loop-multiplication-vs-vectorization">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Comparing Loop Multiplication to Vectorization</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Mar 02, 2023</p>
-                    </div>
-                </a>
-                <a href="/articles/death">
-                    <div class="feed__item">
-                        <p class="feed__category">Article</p>
-                        <p class="feed__title">On Death, Finiteness, and Subsequent Beauty</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Feb 28, 2023</p>
-                    </div>
-                </a>
-                <a href="/summaries/deepwork">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">Deep Work by Cal Newport</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Nov 25, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/essentialism">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">Essentialism by Greg McKeown</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Nov 06, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/howtodie">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">How to Die by Seneca</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 29, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/howtodrink">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">How to Drink by Vincent Obsopoeus</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 29, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/managingoneself">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">Managing Oneself by Peter F. Drucker</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 29, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/millionairefastlane">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">The Millionaire Fastlane by M.J. DeMarco</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 29, 2022</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/book-summary-quotes-scraper">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Displaying Book Summary Quotes in the Terminal</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 24, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/fourhourworkweek">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">The 4-Hour Work Week by Timothy Ferriss</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 24, 2022</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/displaying-bitcoin-block-data">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Extracting and Visualizing Bitcoin Block Data</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 24, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/slightedge">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">The Slight Edge by Jeff Olson</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 10, 2022</p>
-                    </div>
-                </a>
-                <a href="/summaries/compoundeffect">
-                    <div class="feed__item">
-                        <p class="feed__category">Summary</p>
-                        <p class="feed__title">The Compound Effect by Darren Hardy</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Sep 10, 2022</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/callumr.com">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">This Website</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">May 08, 2022</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/cardmarket-price-scraper">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Web Scraping CardMarket Prices</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jan 23, 2022</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/callumr00/dotfiles">
-                    <div class="feed__item">
-                        <p class="feed__category">Project</p>
-                        <p class="feed__title">Linux Dotfiles for Installation and Customization</p>
-                        <div class="feed__spacer"></div>
-                        <p class="feed__date">Jan 06, 2021</p>
-                    </div>
-                </a>
-            </section>
-        </main>
-        <footer class="footer"></footer>
-        <script src="/scripts/components.js"></script>
-        <script src="/scripts/dark-mode.js"></script>
-        <script src="/scripts/filters.js"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Callum Rafter">
+		<title>Callum Rafter</title>
+		<link rel="stylesheet" href="/styles/style.css">
+	</head>
+	<body>
+		<nav></nav>
+		<header>
+			<pre class="ascii-art">
+                                                                                                                                                   ===--=---------=-===--=---==:-===-:-- :-----    -:=             
+                                                                                                                                                  ##. .                                               :            
+                                                                                                                                                  ##:::                                           .-  :            
+                                                                                                                                                  ##:..                                               :            
+                                                                                                                                                  ##:.. -::-.--::::::.:..-   . -.::.:........:.::.    :            
+                                                                                                                                                  ##.....#+  -+:  *+. .**   .. .*-  :*-  -+:  ++.     -            
+                                                                                                                                                  ##:...----.=-=..:-= :::-. *. -:-- -::. :-: ::--:....-            
+                                                                                                                                                  ##:..:*+%#.#*@+.+*@.=+#%= += ==*@ *-%+.*+%--=*%=..:.-            
+                                                                                                                                                  ##:...==+:.+++..-==.----: -- --=- =-=..-== :=+=:....-            
+                                                                                                                                                  ##:..:=*+..*@%:.=%%.-+**:    -*## =##-.+## :+%+:..=.-            
+                                                                                                                                                  ##-.--                                         ..:#.=            
+                                                                                                                                                  ##-=-:-::::::::-----------:::::::::-:-:::-------==--=            
+                                                                                                                                                   *#@@#%**                             %@@+  #***                 
+             +++=-==========-=========+==============+==============+==============================================++++++++++++++++++++++++++=====-------------------------------------------------====            
+            .=++: .==. -.#=.*+.* %:=*:@.                                                                                                   ..                                           .=.. .::-    =+            
+            .=++:                                                                                                                          .:                                                        :=            
+            .=+*-..............:::..::::::::::::::::::::.............................: .... ...                                            .= :::.   .. .........  .    ...  .    .    .. ..... .:- .-+            
+            .=++-              ....                   ..........   ................ .: **@+*+=+ .+++++=++++++=+++++++++++++++++++++++++++- :=.:=#+*++*=+##+*++*+-%##*++*===**#=+++=++##++*+++-###*=..-+            
+            .===-                                                                   .:          .#=##=+##-=#+==*****++##:-***+##++#-=##=== .=  .#+#*+***##+******##*****+=+#*#++*++**##*****#+%##=...-+            
+            .-==-                                                                   .:           ::::::::::::::::::::::::::--::--::--::-:. .= ..:.-:.:=+*+::::-:**+=-:::.-+++=.::..****-:-:--#**=:.  -+            
+            .-==-                          .                                        ..                                                     .=   :+++=+=++=*=+-+-*++=*===+=+=-+====-+++=*=*=*-***=..  -+            
+            .-==-.::::::--::::::::::::::::::::::....:..................           . ..                                  ...................:- ..--+-==*%*=-+-=-=#%*--+:=:+*+==--=-=*#*-:+-=-+#%*::: .-+            
+            .-==-.:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@==.++= -..                        ...     .....    .-..=.#@@@@@@@@@@@@@@@@@@@-: .=*#****+#****+#+*#**#+**+**+*#+**++#*#***#*#*###=-...==.           
+            .--==::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*-:++*-..-:-:.  ...    ::..-:   -+-  =+: .==. :+=..-.:-+.%@@@@@@@@@@@@@@@@@@@+:..=+#*+***#****+#+*##*#***+*#++#+***+**##**%*##*#%+-.=.=...          
+            .---- :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+..+++ ::--:  =@@@@@@%....--.  .=*-.:+*:.-*+..=*+...=. =.%@@@@@@@@@@@@@@@@@@@==-.++++=+++#**=*-*=*+*+##*==+*++*=++==*+#**=#=*+*#%+=:-=*...          
+            .---- :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+..+*+ --=-:.@#*%@%@@@@-...-:     ....     ..:......+. =.%@@@@@@@@@@@@@@@@@-+=-:.++===**+#**===#+****##*=++*++*=-=++#+#**===#*###+=.:=*...          
+            .---- :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+..+*+ -:-:-*%%@%%%@@@@@..-=:     .:.      .::......=. =.%@@@@@@@@@@@@@@@@@-*=--.*-+-=+=+%%=+--+-=@%*+==+:-++#*--=-=+*#%==+==++%%%=::=*...          
+            .--=- :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+..+*+ :----*@@@@%%@%@@@. .:.   =@: .*@. :#% .-@*...+..=.%@@@@@@@@@@@@@@@@@-+=-::#=*==++*@%+*==*++@%##=+*-=*%%#-=+==*#%@+*#=**+@@%+.:+*...          
+            .--=- :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#@@@@@@+..+*+ :-:::=@@@@@%@@@@-..-+:..=%@@++@%%=*@@%=#@@*..+..=.%@@@@@@-@@+@@%@@@@-+=-+.=-+=-+*###=+==*+%%%**==*-*##**-=+==%##%=+*+**#%%*==:+*...          
+            .-=-- :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+..+*+ :-:::.-+%@@@@@#.....:. .:----==:..:--:-==:...=. +.%@@@@@@@@@@@@@@@@@@%+*-.=++++=+#*+*=+-*=#%***=++=+#*+#=+=+-##*#*=#=*=%%*+-:=#*..           
+            .-==+::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+-:+**:-:.:=+::-===-...=+.-+:.  :-. .-:. .-:...=:...+:-+.%@@@@@@@@@@@@@@@@@@@*...-+*++**##==*+***#%#=*++*+##*+*++*+*###++****##%#=---=@#            
+            .-=== :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*..+*+.+-...           ..         ..        . . ...-*..=.%@@@@@@@@@@@@@@@@@@@=...=*#***#*#++#**###%#+*#*#*#####**#**%#%**#*#*%#%#=-::-%*            
+            .:     .%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*-::::::  ..+:............:::::-:---::::::::::::::::...::-:...+:.::::--:---:-------==...+*%#####%*###*%##%##%##%*#%#*%*###*%%%%%#@#%##%%+-..:#*            
+            :.     +%+.=++++**++=+***=*+++*++++++**==.+@.    *..    =.:..         =.=..=---+:  .=.  =:  +- .....:.==  =.+--.#+..++.:++..:*-:= ::*+++++**###+*=#=#%##%%*++*%%##+#+*=##%%#+%+#+%%%*=-.:#*            
+            .      .:-.++*+=--=++=====+++=-=+*+===++:..=     #      +--:.         +.+..=-- .: .+#:.=#- .-= .*#+*:+.*.:=.: ..= ... .:.. .-+::=..:*==#+##+#**=*+##****#%#**##**#=***##*#*#*#+######=...#*            
+                %%  -.++===+++++++++++==+++++++++=*#-..*    .+      + -:.         =:=..==-:=:   .       :. :+#**-+ *  =.= :.#-.:+=.-== .=*+:= .:#+==+*++***+-+#+****#*##++****==+*+*#***=-+*****#-...#*            
+           .   =@= %@@@@@@=====---=+-=====+==--=++++-.::    =-      = -::   .    .--=..-.--+. .+*: -++ .#%.:*#**=+ *  =.*--.#=.:+=.:++..=*=:+...:...............................................:...:#+            
+          ..  .@@+-@@@@@@@+*****+***++*=------:....--:+     #       =.--::........==+..*+-.=.:.:. :-. ..=:..*#+#*=.*  =.*=-:#=..+-.:++. .:.:-.                         ...   ..      .....  .       -+*            
+          .     @@#-::-==-======---=-=-.......:----+*%*    #%:     .=.=..... .. . -=-..##=-=.  :+. .+-  -- :+%+#%= *  =.=::.*-..=:.:=- ..*.::-.          .            .    ..   . .... ..          .-=*            
+         .     +%%-*+++=*==-.......===.:=-.---:..-*=+#:    .:      .=.=: ..:.. -=:.-- .##=++. .==..-+.  =+ :##+#@= *  =.+=:.#*..*+.:#*...@--:-.            :-. .:....:.: ...:...... .:..      .. ...==*            
+         .     +*:...........................:---=++=@  ##@@@@@:   .= =.:..= -.*+=+=+ .*+-=+.           ....*++*%= *. =.**-.%#..#*.:%*..:..-:-...=@........=*...-.:.:-.-..=.-..-:-..:-:........##...==*            
+        .     *%.                                   .*            ..+.+::**#++.*+-=-+ .++--=. .++. -+= .##..-+:=+: +..=.*%:.%%..#*.:%* ..%.-:+.*@@=@%=@@=#@*+@@=@@-@@=#@%*%@-@@-%@*%@%*@@:@@-%@#%@%.#=+            
+        =++++=======----==------=-----------------:--------:::::::.:*::. ... ..==:-=:.:=--=:.::-:::-:.:--::. .....::. =.-+..==..+-..*-     -=:.::.:-.:-:.::.:-.--..-:.:-.:-..-:.--:--::=:.--.--:--::=#+            
+        :-=============------------------------------------------:-%%*++=++=====================+++++++++++++++++*+++++++++++++++++++++++++++++*++*+++*++*++*++**++++++++++++*+*********************##*            
+          =++*****############################################****+++=================+===================++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*++++=           
+       -===+++++++++++++++++++++++++++++++++++++++++++++++++++++=========--=======---=================================================================++==+==+==++=++=++=+++++++++++++++++++++++++++++++++=        
+    -===----================--==-=========================-========------::----==--------=-----===-===-===================================================+=++==++=++=++==++=++=+++++==++=++=++++++=++++======     
+  ++++++++++++==================================================------=-------------------------=====================================================================================--==========================  
+  ******+**+**+++++++++++++++++++++++++++++++++++++++++++++++++===========================================+===========+=+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++- 
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@*%##*********************++********@@@********##%#+++++++++++++++********%%#%##@@%#***************##################################          
+     +##***********+++++++++++++++++++++++++++=====++++==+=+=+:#%%@@@#%#**************+*+*++++++++++++++++++++++***#**#++++++++++++++++*******###%##%@%+===+++++++++++++=++++++++++++++++++++++++++++++++-         
+     =#****++++++++++++======================================+:#%%@@@#%#***********++++++++++++++++++++++++++++++**#*+*++++++++++++++++++++++*#*##***%%+============+=====+====++++==+===+=++===+==++++++          
+     -#*************+*+++++++++++++++++++++++++++++++++++====+.*#%@@@###******++++++++++++++++++++++++++++++++++++*#*+*++++++++++++++++++++++*#*##*****+==========================++++++++++++++=++==++++          
+     -#. --:++=+==-=----:-:::-::::::::::::..:.:....::..:. .  ..*#%@@@*##+++++++++++++++++++=================+++++++#++*+=========+++++++++++++***#*****+=========================+++====+===+=++========+          
+     -#==:-*@@#@#@+@*@=@+@+@+@*@*%%*%+@=@=@-@=%+@+%*%#+%=:.  ..+##%@%+#*=============--===------------------=======*+=+---------==============+++#++++++++++++++++++++++++++++++++++++++++++++++++++++=++          
+     -#::---+====---=-----------------------------------:.=  ..+*#%@%=#*------------------:::::::::::::::::::------*=-=::::::::---------------===#=======+**********#####################***##**@@%@@@+            
+     -#::--*@@#@%@#@%@*@#@*@#@#@%%%%@*@+@+@=@=@+@+##%#+%+:=  ..+**%@%=*+::::::::::::::::::::::::::::::::::::::::::-*=-+::::::::::::::::::::::==*-#=-------+**************##*******************#*%%#@@@=            
+     -#:::--+==+=====--------:-:-:::::::::::::::.......::.=  ..+**#@#-*=::::::::::::::::...................:...::::*-:-::...:..:::::::::::::::-:=*---------+*******************************+*%*=#*#@%%=            
+     -#:---+@@#@%@*@#@+@#@*@#%##@*%*@+@-@=@-@=@=%+****=%-:=  .:**##%%###############**************************+*****++*+++++++++++++++++++++++*************#%%%%%%%%%%%%%%%%%%%@%%%%%%%%%%%%%##****@%%             
+     -#:-:--+=======-=------:-:-::::::::::-.:.:::.:::::--.=  ..***#####%###%#%####%###########################*******#*****#*#*#######***#**#*#############%%%@@@@@@@@@@@@@@@@@@@@%@@%%%%%@%%%##*+*@%%             
+     -#:=:-=#@*@*@=@*@=%*@+#*#**#*#=#=#:#-%:#-#-*-+==+-*::-  ..+++++                                                                                                                      @@@%%%%%%%#%             
+     -#:=::=--:-.::-.:.:.:.:..........: . : . . : .....::.-  ..++++=                                                                                                                      @@%#%%%%%%##             
+     -#*=.. .....                                        .: .:.++++=                                                                                                                      @@%##%%%%%##             
+     -#:*+-::=-.. .--%..=.  . -:%. :-    .*:+  =     +.*.::  .:++++=                                                                                                                     =@@####%%%%##             
+     -#==---======-------=----::::::::-:::::...:.:::.:.:...  :.+*++=                                                                                                                     +@@#####%%%##             
+     -#..**-*@+@+%=%+%=#+#=*+*+=+=+-+:*.+:*.+:+:=:----:=..-  ..+*++=                                                                                                                     +@@######%###             
+     -#*=:=**+=*+*=*=#=*=#-*=*=*=++++=#-*-#-#-*-#-++*+=#-:: .-:++++=                                                                                                                     +@@######%###             
+     -#:+:=-=%=%=#-#=*-*-*-=-=----=.=:=.-.=.-.-.:.:....::.:  ::+*++=                                                                                                                     *@@**####%###             
+     -#:+:=*@@#@#@*@*@+@*@+@*@*%#%##%*@=@=@=@-@=@=#*@**%=:.  .:+**+=                                                                                                                     *@%**####%###             
+     -#:=:-=+=-=--=---::::::.........                   ...  .:+**++                                                                                                                     *%%**####%###             
+     -#:=:-*@@%@%@*@#@+@#@*@#%#@%#%%%*@=@=@=@=%+%+%*@**@=:.  .:****+                                                                                                                     *@%**####%###             
+     -#:=:-=+==+========----=----------:::-:::::::::::::...  .:*****                                                                                                                     *@%**####%###             
+     -#:=:-*@@*@%@*@#@+@*@*@#@#%%*%#%+@=@=@=@=%=@+#*%#+%=-.  .:*****                                                                                                                     #@%**####%###             
+     -#-=.::::::::.:.............       . .            . ..  .:*****                                                                                                                     #@%*#####%###             
+     :#-=-:..--#*#*:.:. :.*++=...    -+-+..     .=:-     .: :::*##**                                                                                                                     #%%#####%%###             
+     :#:-=. ..:===:...  ..=::.  :    -=-+       .=-=   .  +  .-*###*                                                                                                                      #%%####%%###             
+     :#=:-: ......                                           .-#%%%#                                                                                                                      #%%%%#%%%###             
+     :#+-:: ......                                        -  .-#%%%#                                                                                                                       %%%%%%%%###             
+     -#=-..... . .                                          ..-#%%%%                                                                                                                         %%%@%%###             
+     -#=::.=+*=*-*+=+.+=-+.=--=     --+:-.-=:-.--.: -::- .   .-#%%%%                                                                                                                          %%%@@###             
+     -#=::..=+*. :++  .+*  .+*   .+  :+:   +-   +=   =-  .   .-#%%%%                                                                                                                            %%%*##             
+     -#=--.:#*+=.**+=.**== ====. .- .-+-. -=:. .-:. .::. ..  .-#%%%%                                                                                                                             %%**#             
+     -#==-..*+*=.*=*= *=== =:==- :: .==+: *--- -.:: =:.::..  .-#%%%                                                                                                                                ***             
+     =#==-.:*+#-.++#- ==*- -:+-. :-..--+. +-+. -.-. =:--...  .-#%%@                                                                                                                                                
+     =#++-.:@%#-:%##+.@#*+ *+++:    .##*: %**- *==- *==+...  .=#%%                                                                                                                                                 
+     +#**=:+#*-.=#*=:.#*=: #*-:.    :#*=. =+=: **=: **=-...  .=#%@                                                                                                                                                 
+     =#+=*+--::::-....-.  .:.     . ::    :.   ::   :.    -. .=#@                                                                                                                                                  
+     +#+=+=-=--------:::::............:..................:=..-=#@                                                                                                                                                  
+                             @%####*##++++=+===--::::...-:=#%@@#                                                                                                                                                   
+			</pre>
+			<h1>I'm Callum, a UK-based Software Engineer.</h1>
+		</header>
+		<main class="activity-feed">
+			<ul class="activity-feed__items">
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/about">
+							<h3 class="item__title">About Me</h3>
+						</a>
+						<p class="item__date">Sep 07, 2024</p>
+					</hgroup>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/activity">
+							<h3 class="item__title">What I've Been Working On</h3>
+						</a>
+						<p class="item__date">Sep 21, 2024</p>
+					</hgroup>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/now">
+							<h3 class="item__title">What I'm Doing Now</h3>
+						</a>
+						<p class="item__date">Sep 16, 2024</p>
+					</hgroup>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/someday">
+							<h3 class="item__title">My Future Aspirations</h3>
+						</a>
+						<p class="item__date">Sep 15, 2024</p>
+					</hgroup>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/photos">
+							<h3 class="item__title">Photos I've Taken</h3>
+						</a>
+						<p class="item__date">Aug 27, 2024</p>
+					</hgroup>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/books">
+							<h3 class="item__title">Books I've Read</h3>
+						</a>
+						<p class="item__date">Sep 20, 2024</p>
+					</hgroup>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/colophon">
+							<h3 class="item__title">About This Website</h3>
+						</a>
+						<p class="item__date">Sep 15, 2024</p>
+					</hgroup>
+				</li>
+				<h2>Highlighted Works</h2>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/articles/on-death-finiteness-and-subsequent-beauty">
+							<h3 class="item__title">On Death, Finiteness, and Subsequent Beauty</h3>
+						</a>
+						<p class="item__category">Article</p>
+						<p class="item__date">Feb 28, 2023</p>
+					</hgroup>
+					<p class="item__description">A perspective on the inevitability of death, the finiteness of life and the beauty that we experience as a result.</p>
+				</li>
+				<li class="activity-feed__item">
+					<hgroup class="item__heading">
+						<a class="item__link" href="/articles/on-reclaiming-attention">
+							<h3 class="item__title">On Reclaiming Attention</h3>
+						</a>
+						<p class="item__category">Article</p>
+						<p class="item__date">Mar 08, 2024</p>
+					</hgroup>
+					<p class="item__description">A recount of my path towards reducing distraction to enable faster progress towards that which matters most.</p>
+				</li>
+			</ul>
+		</main>
+		<footer></footer>
+		<script src="scripts/components.js"></script>
+		<script src="scripts/dark-mode.js"></script>
+	</body>
 </html>
