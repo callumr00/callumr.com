@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>A Walkthrough Example of QuickSort</title>
+		<meta name="description" content="A step-by-step walkthrough of performing Quicksort on a simple array to better understand it's workings.">
+		<meta name="author" content="Callum Rafter">
+		<link rel="stylesheet" href="/styles/style.css">
+		<link id="hljs-style" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.css">
+	</head>
+	<body>
+		<nav></nav>
+		<header>
+			<hgroup>
+				<h1>A Walkthrough Example of QuickSort</h1>
+				<time>Apr 14, 2023</time>
+			</hgroup>
+			<p><em>A step-by-step walkthrough of performing Quicksort on a simple array to better understand it's workings.</em></p>
+		</header>
+		<main>
+			<h2>Quicksort, Slowly</h2>
+			<p>Starting with an array:</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}5
+			    \end{array}
+			    \]
+			</p>
+			<p>We first set the values \(low\) and \(high\) that determine the subset of the array in which we'll be working. With this being the first pass, \(low\) will be \(0\) and \(high\) will be \(length - 1\).</p>
+			<p>We then ask the return condition.</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>No! We've only just started! But this would be \(true\) if the length of the array was \(0\) or \(1\) because an array of length \(0\) or \(1\) is always sorted. We'd then return, breaking the cycle.</p>
+			<p>We need to find where our first split will be. This will be around the \(pivot\).</p>
+			<p>We'll set \(pivot\) to \(array[high]\). For now, that's the last item in the array.</p>
+			<p>We'll also set \(index\) to \(low - 1\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\phantom{0}}}&amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>We'll then loop through the array, from \(low\) to \(high\).</p>
+			<p>Start!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\phantom{0}}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}0}&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ?</p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\underset{index}{\underset{\substack{\uparrow\\ item}}0}}&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}4}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}{\underset{index}{\underset{\substack{\uparrow\\ item}}4}}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}4}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}7}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>No!</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}4}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}2}&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}2}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}7}&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}2}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}3}&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}3}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}7}&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}3}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}6}&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>No!</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}3}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}1}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}1}&amp;
+				\underset{\hphantom{index}}6&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}7}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}5}
+			    \end{array}
+			    \]
+			</p>
+			<p>Finished! Increase \(index\) by 1 and swap \(index\) and \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}5}}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>The item at \(pivot\) is now sorted.</p>
+			<p>The array is now split at \(pivot\).</p>
+			<p>Items to the left are all less than or equal to \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underline{\underset{\hphantom{index}}0}&amp;
+				\underline{\underset{\hphantom{index}}4}&amp;
+				\underline{\underset{\hphantom{index}}2}&amp;
+				\underline{\underset{\hphantom{index}}3}&amp;
+				\underline{\underset{\hphantom{index}}1}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}5}}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Items to the right are all greater than \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}1&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}5}}&amp;
+				\underline{\underset{\hphantom{index}}7}&amp;
+				\underline{\underset{\hphantom{index}}6}
+			    \end{array}
+			    \]
+			</p>
+			<p>We'll branch off to the left first.</p>
+			<p>With \(pivot\ index - 1\) as \(high\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>No!</p>
+			<p>Set \(pivot\) to \(array[high]\) and \(index\) to \(low - 1\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\phantom{0}}}&amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}1}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Start!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\phantom{0}}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}0}&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}1}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\underset{index}{\underset{\substack{\uparrow\\ item}}0}}&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}1}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}4}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}1}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>No!</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}0}&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}2}&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}1}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>No!</p>
+			<p>Next Item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}0}&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}3}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}1}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>No!</p>
+			<p>Finished! Increase \(index\) by 1 and swap \(index\) and \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}1}}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>The item at \(pivot\) is now sorted.</p>
+			<p>The array is now split at \(pivot\).</p>
+			<p>Items to the left are all less than or equal to \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underline{\underset{\hphantom{index}}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}1}}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Items to the right are all greater than \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}0&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}1}}&amp;
+				\underline{\underset{\hphantom{index}}2}&amp;
+				\underline{\underset{\hphantom{index}}3}&amp;
+				\underline{\underset{\hphantom{index}}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>We'll continue down this path, branching off to the left first.</p>
+			<p>With \(pivot\ index - 1\) as \(high\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>Yes! This item is already sorted!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}4&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>We'll branch off to the right now.</p>
+			<p>With \(pivot\ index + 1\) as \(low\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>No!</p>
+			<p>Set \(pivot\) to \(array[high]\) and \(index\) to \(low - 1\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\color{green}1}}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Start!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\color{green}1}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}2}&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\underset{index}{\underset{\substack{\uparrow\\ item}}2}}&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Next item!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}2}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}3}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{index}{\underset{\substack{\uparrow\\ item}}3}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Finished! Increase \(index\) by 1 and swap \(index\) and \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}3&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}4}}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>The item at \(pivot\) is now sorted.</p>
+			<p>The array is now split at \(pivot\).</p>
+			<p>Items to the left are all less than or equal to \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underline{\underset{\hphantom{index}}2}&amp;
+				\underline{\underset{\hphantom{index}}3}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}4}}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Normally, there would be a second branch where the items to the right are all greater than \(pivot\). Though, in this case, the pivot is the last item in the subset and there are no items to the right! So there is only the branch to the left.</p>
+			<p>We'll continue down this path.</p>
+			<p>With \(pivot\ index - 1\) as \(high\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>No!</p>
+			<p>Set \(pivot\) to \(array[high]\) and \(index\) to \(low - 1\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\color{green}1}}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Start!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\color{green}1}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}2}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>Yes! Increase \(index\) by 1 and swap the values of \(index\) and \(item\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\underset{index}{\underset{\substack{\uparrow\\ item}}2}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>Finished! Increase \(index\) by 1 and swap \(index\) and \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}2&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}3}}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>The item at \(pivot\) is now sorted.</p>
+			<p>The array is now split at \(pivot\).</p>
+			<p>Items to the left are all less than or equal to \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underline{\underset{\hphantom{index}}2}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}3}}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>There is no right branch.</p>
+			<p>We'll continue down this path.</p>
+			<p>With \(pivot\ index - 1\) as \(high\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>Yes! This item is already sorted!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\color{green}2}&amp;
+				\underset{\hphantom{index}}{\color{green}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}6
+			    \end{array}
+			    \]
+			</p>
+			<p>We've finished the original left branch! Let's move on to the right.</p>
+			<p>With \(pivot\ index - 1\) as \(high\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>No!</p>
+			<p>Set \(pivot\) to \(array[high]\) and \(index\) to \(low - 1\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\color{green}2}&amp;
+				\underset{\hphantom{index}}{\color{green}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\color{green}5}}&amp;
+				\underset{\hphantom{index}}7&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}6}
+			    \end{array}
+			    \]
+			</p>
+			<p>Start!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\color{green}2}&amp;
+				\underset{\hphantom{index}}{\color{green}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ index}}{\color{green}5}}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ item}}7}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}6}
+			    \end{array}
+			    \]
+			</p>
+			<p>Is \(item \leq pivot\) ? </p>
+			<p>No!</p>
+			<p>Finished! Increase \(index\) by 1 and swap \(index\) and \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\color{green}2}&amp;
+				\underset{\hphantom{index}}{\color{green}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}6}}&amp;
+				\underset{\hphantom{index}}7
+			    \end{array}
+			    \]
+			</p>
+			<p>
+			<p>The item at \(pivot\) is now sorted.</p>
+			<p>The array is now split at \(pivot\).</p>
+			<p>There is no left branch.</p>
+			<p>Items to the right are all greater than \(pivot\).</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\color{green}2}&amp;
+				\underset{\hphantom{index}}{\color{green}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}{\underset{\substack{\uparrow\\ pivot}}{\color{green}6}}&amp;
+				\underline{\underset{\hphantom{index}}7}
+			    \end{array}
+			    \]
+			</p>
+			<p>We'll continue down this path.</p>
+			<p>With \(pivot\ index - 1\) as \(high\), go again!</p>
+			<p>Is \(low \geq high\) ?</p>
+			<p>Yes! This item is already sorted!</p>
+			<p>
+			    \[
+			    \begin{array}{}
+				\underset{\hphantom{index}}\ &amp;
+				\underset{\hphantom{index}}{\color{green}0}&amp;
+				\underset{\hphantom{index}}{\color{green}1}&amp;
+				\underset{\hphantom{index}}{\color{green}2}&amp;
+				\underset{\hphantom{index}}{\color{green}3}&amp;
+				\underset{\hphantom{index}}{\color{green}4}&amp;
+				\underset{\hphantom{index}}{\color{green}5}&amp;
+				\underset{\hphantom{index}}{\color{green}6}&amp;
+				\underset{\hphantom{index}}{\color{green}7}
+			    \end{array}
+			    \]
+			</p>
+			<p>All Finished!</p>
+			<p>We can visualize the result as a tree:</p>
+			<img src="/img/articles/quicksort/tree.png">
+			<h2>Write it in Python!</h2>
+			<pre><code class="python">			# quicksort.py
+			import time
+			from typing import List
+
+			def quicksort(array: List[int]) -&gt; List[int]:
+			    def _quicksort(array: List[int], low: int, high: int):
+				if low &gt;= high:
+				    return
+
+				pivot_index = _partition(array, low, high)
+
+				_quicksort(array, low, pivot_index-1)
+				_quicksort(array, pivot_index+1, high)
+
+			    def _partition(array: List[int], low: int, high: int) -&gt; int:
+				pivot = array[high]
+				index = low - 1
+				for item in range(low, high):
+				    if array[item] &lt;= pivot:
+					index += 1
+					temp = array[item]
+					array[item] = array[index]
+					array[index] = temp
+
+				index += 1
+				array[high] = array[index]
+				array[index] = pivot
+
+				return index
+
+			    _quicksort(array, 0, len(array)-1)
+			    return array
+
+			array = [0, 4, 7, 2, 3, 6, 1, 5]
+			start_time = time.time()
+			sorted_array = quicksort(array[:])
+			print(f'{array} → {sorted_array} in {(time.time() - start_time) * 1000:.3f}ms')</code></pre>
+			<pre><code class="console">			$ python quicksort.py
+			[0, 4, 7, 2, 3, 6, 1, 5] → [0, 1, 2, 3, 4, 5, 6, 7] in 0.008ms </code></pre>
+			<p>0.008ms?! Maybe we'll let the computer handle it from now on...</p>
+	    </main>
+	    <footer class="footer"></footer>
+	    <script src="/scripts/components.js"></script>
+	    <script src="/scripts/dark-mode.js"></script>
+	    <script src="/scripts/codeblocks.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	</body>
+</html>
