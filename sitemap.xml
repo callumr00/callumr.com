@@ -5,128 +5,149 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://callumr.com/</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://callumr.com/about</loc>
-  <lastmod>2023-12-17T19:55:11+00:00</lastmod>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.com/activity</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/now</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/uses</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <loc>https://callumr.com/someday</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://callumr.com/photos</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/articles/workspace</loc>
-  <lastmod>2023-12-17T19:55:11+00:00</lastmod>
+  <loc>https://callumr.com/books</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/articles/learning</loc>
-  <lastmod>2023-12-17T19:55:11+00:00</lastmod>
+  <loc>https://callumr.com/colophon</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/summaries/nomldegree</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <loc>https://callumr.com/articles/on-death-finiteness-and-subsequent-beauty</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/summaries/metalearning</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <loc>https://callumr.com/articles/on-reclaiming-attention</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://callumr.com/summaries/aicareer</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://callumr.com/articles/a-walkthrough-example-of-quicksort</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://callumr.com/articles/death</loc>
-  <lastmod>2023-12-17T19:55:11+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://callumr.com/articles/the-past-few-years</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://callumr.com/summaries/deepwork</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://callumr.com/articles/capturing-the-everyday</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/amusing-ourselves-to-death</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/low-tech-life</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/articles/my-workspace</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/no-ml-degree</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/meta-learning</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/how-to-build-your-career-in-ai</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/articles/an-introduction-to-efficient-learning</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/deep-work</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://callumr.com/summaries/essentialism</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/howtodie</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/howtodrink</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/managingoneself</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/millionairefastlane</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/fourhourworkweek</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/slightedge</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/summaries/compoundeffect</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://callumr.com/index?category=notes</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://callumr.com/index?category=project</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <loc>https://callumr.com/summaries/how-to-die</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://callumr.com/index?category=article</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <loc>https://callumr.com/summaries/how-to-drink</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://callumr.com/index?category=summary</loc>
-  <lastmod>2023-12-17T19:55:12+00:00</lastmod>
+  <loc>https://callumr.com/summaries/managing-oneself</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
-
+<url>
+  <loc>https://callumr.com/summaries/the-millionaire-fastlane</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/the-4-hour-work-week</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/the-slight-edge</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://callumr.com/summaries/the-compound-effect</loc>
+  <lastmod>2024-09-21T15:34:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>
