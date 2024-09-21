@@ -1,38 +1,43 @@
 @media screen and (max-width: 599px) {
-    body {
-        margin: var(--element-size-8);
+  body {
+    margin: var(--element-size-8);
+  }
+
+  .ascii-art {
+    font-size: var(--element-size-2);
+  }
+
+  .activity-feed {
+    &__filters {
+      display: flex;
+      flex-direction: column;
     }
 
-    .filters {
-        grid-template-columns: none;
-        grid-template-areas: "count" "category__select" "title__search";
-
-        &__form--category {
-            grid-area: category__select;
-        }
-
-        &__count {
-            grid-area: count;
-        }
-
-        &__form--title {
-            grid-area: title__search;
-        }
+    &__item {
+      margin: var(--element-size-9) 0;
     }
 
-    .feed {
-        &__item {
-            display: grid;
-            flex-direction: column;
-            border-radius: var(--element-size-4);
-        }
+    .item {
+      &__heading {
+        flex-direction: column;
+      }
 
-        &__category, &__title, &__date {
-            padding: var(--element-size-3) 0;
-        }
+      &__title, &__category, &__date {
+        text-align: center;
+      }
 
-        &__spacer {
-            display: none;
+      &__category {
+        margin-top: var(--element-size-4);
+      
+        &::after {
+          content: "";
+          margin: 0;
         }
+      }
+
+      &__date {
+        margin-top: var(--element-size-2);
+      }
     }
+  }
 }
