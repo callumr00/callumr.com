@@ -1,11 +1,11 @@
 let toggleButton;
-document.addEventListener('FooterContentLoaded', () => {
-    toggleButton = document.querySelector('.footer__button');
+document.addEventListener('NavContentLoaded', () => {
+    toggleButton = document.querySelector('.theme-toggle-button');
     toggleButton.addEventListener('click', toggleColorScheme);
 
     // Update icon on load.
     if (document.querySelector('body').classList.contains('dark-mode')) {
-        toggleButton.src = '/img/footer/dark-mode.svg'
+        toggleButton.src = '/img/nav/dark-mode.svg'
     }
 })
 
@@ -24,8 +24,8 @@ function toggleColorScheme() {
 
     if (toggleButton) {
         toggleButton.src = isDarkMode ?
-            '/img/footer/dark-mode.svg' :
-            '/img/footer/light-mode.svg'
+            '/img/nav/dark-mode.svg' :
+            '/img/nav/light-mode.svg'
     }
 
     // Toggle code block styling.

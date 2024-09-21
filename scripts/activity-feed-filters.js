@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
         let totalItems = 0;
         let shownItems = 0;
 
-        document.querySelectorAll('.feed__item').forEach(function(item) {
-            const itemCategory = item.querySelector('.feed__category').textContent.toLowerCase();
-            const itemTitle = item.querySelector('.feed__title').textContent.toLowerCase();
+        document.querySelectorAll('.activity-feed__item').forEach(function(item) {
+            const itemCategory = item.querySelector('.item__category').textContent.toLowerCase();
+            const itemTitle = item.querySelector('.item__title').textContent.toLowerCase();
 
             const categoryMatch = selectedCategory === 'all' || itemCategory === selectedCategory;
             const titleMatch = itemTitle.includes(searchQuery);
 
             if (categoryMatch && titleMatch) {
-                item.style.display = 'flex';
+                item.style.display = 'block';
                 shownItems++;
             } else {
                 item.style.display = 'none';
