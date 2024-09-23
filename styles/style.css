@@ -152,13 +152,13 @@ main {
 
 .ascii-art {
   width: 100%;
-  color: var(--colour-foreground);
+  color: var(--colour-middleground);
   font-size: var(--element-size-3);
   font-weight: var(--font-weight-bold);
   line-height: 1;
   text-align: center;
   display: table;
-  margin-bottom: var(--element-size-11); }
+  margin: var(--element-size-9) 0 var(--element-size-6) 0; }
 
 .activity-feed__filters {
   display: grid;
@@ -202,6 +202,7 @@ main {
 
 .activity-feed .item__title {
   font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
   margin: 0; }
 
 .activity-feed .item__category, .activity-feed .item__date {
