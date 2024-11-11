@@ -150,22 +150,12 @@ main {
     main table td {
       color: var(--colour-middleground); }
 
-.ascii-art {
-  width: 100%;
-  color: var(--colour-middleground);
-  font-size: var(--element-size-3);
-  font-weight: var(--font-weight-bold);
-  line-height: 1;
-  text-align: center;
-  display: table;
-  margin: var(--element-size-9) 0 var(--element-size-6) 0; }
-
 .activity-feed__filters {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
   grid-gap: var(--element-size-8);
   text-align: center;
-  margin: var(--element-size-8) 0; }
+  margin: var(--element-size-10) 0 var(--element-size-8) 0; }
 
 .activity-feed .filters__form {
   width: 100%;
