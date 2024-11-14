@@ -187,7 +187,7 @@ main {
   display: flex; }
 
 .activity-feed .item__link {
-  flex-grow: 1;
+  margin-right: auto;
   color: var(--colour-foreground); }
 
 .activity-feed .item__title {
@@ -213,8 +213,6 @@ main {
 @media screen and (max-width: 599px) {
   body {
     margin: var(--element-size-8); }
-  .ascii-art {
-    font-size: var(--element-size-2); }
   .activity-feed__filters {
     display: flex;
     flex-direction: column; }
@@ -222,6 +220,8 @@ main {
     margin: var(--element-size-9) 0; }
   .activity-feed .item__heading {
     flex-direction: column; }
+  .activity-feed .item__link {
+    margin: 0; }
   .activity-feed .item__title, .activity-feed .item__category, .activity-feed .item__date {
     text-align: center; }
   .activity-feed .item__category {

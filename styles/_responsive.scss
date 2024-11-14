@@ -18,6 +18,10 @@
         flex-direction: column;
       }
 
+      &__link {
+        margin: 0;
+      }
+
       &__title, &__category, &__date {
         text-align: center;
       }
