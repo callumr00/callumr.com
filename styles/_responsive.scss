@@ -4,13 +4,17 @@
   }
 
   .activity-feed {
+
     &__filters {
-      display: flex;
       flex-direction: column;
     }
 
     &__item {
       margin: var(--element-size-9) 0;
+    }
+
+    .filters__count {
+      width: 100%;
     }
 
     .item {

@@ -1,10 +1,11 @@
 .activity-feed {
+  margin-top: var(--element-size-8);
+
   &__filters {
-    display: grid;
-    grid-template-columns: 3fr 1fr 3fr;
+    display: none;
     grid-gap: var(--element-size-8);
     text-align: center;
-    margin: var(--element-size-10) 0 var(--element-size-8) 0;
+    margin: var(--element-size-8) 0;
   }
 
   .filters {
@@ -29,6 +30,8 @@
     &__count {
       color: var(--colour-foreground);
       margin: auto 0;
+      width: var(--element-size-10);
+      flex-shrink: 0;
     }
   }
 
