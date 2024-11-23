@@ -1,28 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Add event listeners to Category Select and Title Search when the DOM has loaded.
-    const categorySelect = document.querySelector('.form__select');
-    const titleSearch = document.querySelector('.form__input');
+    function displayFilters() {
+        document.querySelector('.activity-feed__filters').style.display = 'flex'
+    }
+    displayFilters()
 
-    categorySelect.addEventListener('change', filterItems);
-    titleSearch.addEventListener('input', filterItems);
+    categorySelect = document.querySelector('.form__select');
+    titleSearch = document.querySelector('.form__input');
 
-    // Filter items for matches to Selected Category and Search Query.
+    function getSearchParameters() {
+        params = new URLSearchParams(window.location.search);
+
+	if (params.has('category')) {
+	    categorySelect.value = params.get('category');
+        }
+
+	if (params.has('search_query')) {
+	    titleSearch.value = params.get('search_query');
+	}
+    }
+    getSearchParameters()
+
+    function addEventListeners() {
+	categorySelect.addEventListener('change', filterItems);
+	titleSearch.addEventListener('input', filterItems);
+    }
+    addEventListeners()
+
     function filterItems() {
-        const selectedCategory = categorySelect.value.toLowerCase();
-        const searchQuery = titleSearch.value.toLowerCase();
+        selectedCategory = categorySelect.value.toLowerCase();
+        searchQuery = titleSearch.value.toLowerCase();
 
-        let totalItems = 0;
-        let shownItems = 0;
+        totalItems = 0;
+        shownItems = 0;
 
         document.querySelectorAll('.activity-feed__item').forEach(function(item) {
-            const itemCategory = item.querySelector('.item__category').textContent.toLowerCase();
-            const itemTitle = item.querySelector('.item__title').textContent.toLowerCase();
+            itemCategory = item.querySelector('.item__category');
+	    categoryContent = itemCategory.textContent.toLowerCase();
+            categoryMatch = selectedCategory === 'all' ||
+			          categoryContent  === selectedCategory;
 
-            const categoryMatch = selectedCategory === 'all' || itemCategory === selectedCategory;
-            const titleMatch = itemTitle.includes(searchQuery);
+            itemTitle = item.querySelector('.item__title');
+	    titleContent = itemTitle.textContent.toLowerCase();
+            titleMatch = titleContent.includes(searchQuery);
 
             if (categoryMatch && titleMatch) {
                 item.style.display = 'block';
+		highlightTitleMatch(itemTitle, searchQuery)
+
                 shownItems++;
             } else {
                 item.style.display = 'none';
@@ -31,16 +55,40 @@ document.addEventListener('DOMContentLoaded', function() {
             totalItems++;
         });
 
-        // Display count of shown items.
-        document.querySelector('.filters__count').textContent = `${shownItems} / ${totalItems}`;
-
-        // Update URL with filters.
+	updateCount(shownItems, totalItems)
         updateURL(selectedCategory, searchQuery)
     }
 
-    // Update URL params with applied filters.
+    function highlightTitleMatch(itemTitle, searchQuery) {
+	titleContent = itemTitle.textContent
+
+	if (searchQuery === '') {
+	    itemTitle.innerHTML = titleContent
+	    itemTitle.style.color = 'var(--colour-foreground)'
+	} else {
+	    index = titleContent.toLowerCase().indexOf(searchQuery)
+	    length = searchQuery.length
+
+	    prefix = titleContent.slice(0, index);
+	    openingTag = '<strong style="color: var(--colour-foreground);">'
+	    queryMatch = titleContent.slice(index, index+length);
+	    closingTag = '</strong>'
+	    suffix = titleContent.slice(index+length)
+
+	    content = prefix + openingTag + queryMatch + closingTag + suffix
+
+	    itemTitle.innerHTML = content
+	    itemTitle.style.color = 'var(--colour-middleground)'
+	}
+    }
+
+    function updateCount(shownItems, totalItems) {
+	filtersCount = document.querySelector('.filters__count')
+	filtersCount.textContent = `${shownItems} / ${totalItems}`		
+    }
+
     function updateURL(selectedCategory, searchQuery) {
-        const params = new URLSearchParams();
+        params = new URLSearchParams();
 
         if (selectedCategory && selectedCategory !== 'all') {
             params.set('category', selectedCategory);
@@ -50,22 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
             params.set('search_query', searchQuery);
         }
 
-        const queryString = params.toString();
-        const newURL = window.location.pathname + (queryString ? '?' + queryString : '');
+        queryString = params.toString();
+	path = window.location.pathname
+        newURL = path + (queryString ? '?' + queryString : '');
         window.history.pushState({path: newURL}, '', newURL);
     }
 
-    // Set filters based on URL params.
-    const params = new URLSearchParams(window.location.search);
-
-    if (params.has('category')) {
-        categorySelect.value = params.get('category');
-    }
-
-    if (params.has('search_query')) {
-        titleSearch.value = params.get('search_query');
-    }
-
-    // Run on page load for count display and filtering.
     filterItems();
 });
