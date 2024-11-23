@@ -139,7 +139,8 @@ main {
     max-width: var(--element-size-16); }
   main table {
     border-collapse: collapse;
-    font-size: var(--font-size-s); }
+    font-size: var(--font-size-s);
+    margin: var(--element-size-7) 0; }
     main table th, main table td {
       border: 1px solid var(--colour-middleground);
       padding: var(--element-size-5); }

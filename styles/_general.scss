@@ -117,6 +117,7 @@ main {
   table {
     border-collapse: collapse;
     font-size: var(--font-size-s);
+    margin: var(--element-size-7) 0;
 
     th, td {
       border: 1px solid var(--colour-middleground);
