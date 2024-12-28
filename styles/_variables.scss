@@ -47,8 +47,6 @@
   --element-size-14: 256px;
   --element-size-15: 384px;
   --element-size-16: 512px;
-
-  font-family: 'Inter', sans-serif;
 }
 
 .dark-mode {
@@ -56,10 +54,4 @@
   --colour-middleground: #BBB;
   --colour-foreground: #FFF;
   --colour-highlight: #444;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }

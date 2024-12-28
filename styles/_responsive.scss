@@ -4,7 +4,6 @@
   }
 
   .activity-feed {
-
     &__filters {
       flex-direction: column;
     }
@@ -42,6 +41,15 @@
       &__date {
         margin-top: var(--element-size-2);
       }
+    }
+  }
+
+  .hobbies--container {
+    flex-direction: column;
+
+    .ascii-art {
+      display: table;
+      margin: 0 auto;
     }
   }
 }

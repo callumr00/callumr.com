@@ -1,3 +1,13 @@
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--colour-background);
   max-width: var(--element-size-16);
@@ -120,7 +130,7 @@ main {
     margin: var(--element-size-7) 0;
 
     th, td {
-      border: 1px solid var(--colour-middleground);
+      border: var(--element-size-1) solid var(--colour-middleground);
       padding: var(--element-size-5);
     }      
 
