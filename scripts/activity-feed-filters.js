@@ -20,6 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     getSearchParameters()
 
+    function closeBio() {
+	activityFeedIsFiltered = categorySelect.value != 'All' || titleSearch.value;
+
+	if (activityFeedIsFiltered) {
+	    document.querySelector('.bio').open = false;
+	}
+    }
+    closeBio()
+
     function addEventListeners() {
 	categorySelect.addEventListener('change', filterItems);
 	titleSearch.addEventListener('input', filterItems);
@@ -37,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             itemCategory = item.querySelector('.item__category');
 	    categoryContent = itemCategory.textContent.toLowerCase();
             categoryMatch = selectedCategory === 'all' ||
-			          categoryContent  === selectedCategory;
+		            categoryContent  === selectedCategory;
 
             itemTitle = item.querySelector('.item__title');
 	    titleContent = itemTitle.textContent.toLowerCase();

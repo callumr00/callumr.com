@@ -153,7 +153,19 @@ main {
     main table td {
       color: var(--colour-middleground); }
 
-.font-size-xs {
+.bio summary {
+  display: flex;
+  cursor: pointer; }
+  .bio summary::after {
+    content: "+";
+    font-size: var(--font-size-xl);
+    flex-grow: 1;
+    text-align: end; }
+
+.bio[open] summary::after {
+  content: "-"; }
+
+.note {
   font-size: var(--font-size-xs); }
 
 .activity-feed {
@@ -208,6 +220,8 @@ main {
   .activity-feed .item__category::after {
     content: "•";
     margin: var(--element-size-4); }
+  .activity-feed .item__rating::after {
+    content: "/10"; }
   .activity-feed .item__description {
     font-size: var(--font-size-s);
     margin-top: var(--element-size-4); }

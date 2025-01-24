@@ -1,4 +1,22 @@
-.font-size-xs {
+.bio {
+  summary {
+    display: flex;
+    cursor: pointer;
+
+    &::after {
+      content: "+";
+      font-size: var(--font-size-xl);
+      flex-grow: 1;
+      text-align: end;
+    }
+  }
+
+  &[open] summary::after {
+    content: "-";
+  }
+}
+
+.note {
   font-size: var(--font-size-xs);
 }
 
@@ -84,6 +102,10 @@
     &__category::after {
       content: "•";
       margin: var(--element-size-4);
+    }
+
+    &__rating::after {
+      content: "/10";
     }
 
     &__description {
