@@ -6,6 +6,7 @@
     &::after {
       content: "+";
       font-size: var(--font-size-xl);
+      color: var(--colour-foreground);
       flex-grow: 1;
       text-align: end;
     }
