@@ -214,13 +214,15 @@ main {
     font-weight: var(--font-weight-regular); }
   .activity-feed .item__category, .activity-feed .item__date, .activity-feed .item__author, .activity-feed .item__rating {
     color: var(--colour-middleground); }
+  .activity-feed .item__info {
+    display: flex; }
   .activity-feed .item__category, .activity-feed .item__date, .activity-feed .item__rating {
     font-size: var(--font-size-xs);
     font-family: 'RobotoMono', monospace;
     text-align: end; }
   .activity-feed .item__category::after {
     content: "•";
-    margin: var(--element-size-4); }
+    margin: 0 var(--element-size-4); }
   .activity-feed .item__rating::after {
     content: "/10"; }
   .activity-feed .item__description {
@@ -230,18 +232,18 @@ main {
     display: grid;
     grid-template-columns: 1fr auto; }
 
-.hobbies--container {
+.hobbies__container {
   display: flex;
   grid-gap: var(--element-size-8);
   margin: var(--element-size-7) 0; }
-  .hobbies--container .hobbies--text {
+  .hobbies__container .hobbies__text {
     margin-top: calc(-1 * var(--element-size-7)); }
-  .hobbies--container .ascii-art {
+  .hobbies__container .ascii-art {
     font-size: 2.6px;
     font-weight: var(--font-weight-bold);
     line-height: 1.5;
     font-family: monospace; }
-    .hobbies--container .ascii-art--link {
+    .hobbies__container .ascii-art--link {
       text-decoration: none; }
 
 .dumbphone-screen {
@@ -259,28 +261,18 @@ main {
 
 @media screen and (max-width: 599px) {
   body {
-    margin: var(--element-size-8); }
+    margin: 0 calc((600px - var(--element-size-16)) / 2); }
   .activity-feed__filters {
-    flex-direction: column; }
-  .activity-feed__item {
-    margin: var(--element-size-9) 0; }
-  .activity-feed .filters__count {
-    width: 100%; }
+    grid-gap: var(--element-size-5);
+    justify-content: space-between; }
+  .activity-feed .filters__form {
+    max-width: var(--element-size-13); }
   .activity-feed .item__heading {
     flex-direction: column; }
-  .activity-feed .item__link {
-    margin: 0; }
-  .activity-feed .item__title, .activity-feed .item__category, .activity-feed .item__date {
-    text-align: center; }
-  .activity-feed .item__category {
+  .activity-feed .item__info {
     margin-top: var(--element-size-4); }
-    .activity-feed .item__category::after {
-      content: "";
-      margin: 0; }
-  .activity-feed .item__date {
-    margin-top: var(--element-size-2); }
-  .hobbies--container {
+  .hobbies__container {
     flex-direction: column; }
-    .hobbies--container .ascii-art {
+    .hobbies__container .ascii-art {
       display: table;
       margin: 0 auto; } }

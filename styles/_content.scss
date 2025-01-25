@@ -94,6 +94,10 @@
       color: var(--colour-middleground);
     }
 
+    &__info {
+      display: flex;
+    }
+
     &__category, &__date, &__rating {
       font-size: var(--font-size-xs);
       font-family: 'RobotoMono', monospace;
@@ -102,7 +106,7 @@
 
     &__category::after {
       content: "•";
-      margin: var(--element-size-4);
+      margin: 0 var(--element-size-4);
     }
 
     &__rating::after {
@@ -121,12 +125,12 @@
   }
 }
 
-.hobbies--container {
+.hobbies__container {
   display: flex;
   grid-gap: var(--element-size-8);
   margin: var(--element-size-7) 0;
   
-  .hobbies--text {
+  .hobbies__text {
     margin-top: calc(-1 * var(--element-size-7));
   }
 
