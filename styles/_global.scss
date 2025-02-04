@@ -10,7 +10,7 @@
 
 body {
   background-color: var(--colour-background);
-  max-width: var(--element-size-16);
+  max-width: var(--size-16);
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
@@ -30,7 +30,7 @@ a {
 nav, footer {
   display: flex;
   justify-content: space-between;
-  margin: var(--element-size-9) 0;
+  margin: var(--size-9) 0;
 
   a {
     font-size: var(--font-size-xs);
@@ -39,70 +39,69 @@ nav, footer {
 
 nav .theme-toggle-button {
   cursor: pointer;
-  height: var(--element-size-6);
+  height: var(--size-6);
   width: auto;
   margin: 0;
 }
 
 header {
-  margin-top: var(--element-size-9);
+  margin-top: var(--size-9);
 
   h1 {
     color: var(--colour-foreground);
     font-size: var(--font-size-xl);
-    letter-spacing: 0.2px;
   }
 
   time {
     display: inline-block;
     font-size: var(--font-size-xs);
     color: var(--colour-middleground);
-    margin-top: var(--element-size-4);
+    margin-top: var(--size-4);
   }
 
   p {
-    margin-top: var(--element-size-7); 
+    margin-top: var(--size-7); 
   }
 }
 
 main {
-  margin-bottom: var(--element-size-7);
+  margin-bottom: var(--size-7);
 
   h2 {
     color: var(--colour-foreground);
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-regular);
-    margin: var(--element-size-9) 0 var(--element-size-7) 0;
+    margin: var(--size-9) 0 var(--size-7) 0;
   }
 
   p {
-    margin: var(--element-size-7) 0; 
+    margin: var(--size-7) 0; 
   }
 
   ol, ul {
-    margin: var(--element-size-7) 0 var(--element-size-7) var(--element-size-7);
+    margin: var(--size-7) 0 var(--size-7) var(--size-7);
 
     li {
       color: var(--colour-middleground);
       font-size: var(--font-size-m);
       line-height: 1.45;
-      margin: var(--element-size-5) 0;
+      margin: var(--size-5) 0;
     }
   }
 
   img {
     display: block;
     width: 100%;
-    margin: var(--element-size-8) 0;
+    margin: var(--size-8) 0;
   }
 
   figure {
-    border-left: var(--element-size-3) solid var(--colour-highlight);
-    padding-left: var(--element-size-5);
-    margin: var(--element-size-7) 0;
+    border-left: var(--size-3) solid var(--colour-highlight);
+    padding-left: var(--size-5);
+    margin: var(--size-7) 0;
 
     p {
-      margin-bottom: var(--element-size-4);
+      margin-bottom: var(--size-4);
     }
 
     figcaption {
@@ -120,18 +119,18 @@ main {
   code {
     background: none !important;
     padding: 0 !important;
-    margin: var(--element-size-7) 0;
-    max-width: var(--element-size-16);
+    margin: var(--size-7) 0;
+    max-width: var(--size-16);
   }
 
   table {
     border-collapse: collapse;
     font-size: var(--font-size-s);
-    margin: var(--element-size-7) 0;
+    margin: var(--size-7) 0;
 
     th, td {
-      border: var(--element-size-1) solid var(--colour-middleground);
-      padding: var(--element-size-5);
+      border: var(--size-1) solid var(--colour-middleground);
+      padding: var(--size-5);
     }      
 
     th {

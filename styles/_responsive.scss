@@ -1,16 +1,16 @@
 @media screen and (max-width: 599px) {
   body {
-    margin: 0 calc((600px - var(--element-size-16)) / 2);
+    margin: 0 calc((600px - var(--size-16)) / 2);
   }
 
   .activity-feed {
     &__filters {
-      grid-gap: var(--element-size-5);
+      grid-gap: var(--size-5);
       justify-content: space-between;
     }
 
     .filters__form {
-      max-width: var(--element-size-13);
+      max-width: var(--size-13);
     }
 
     .item {
@@ -19,7 +19,7 @@
       }
 
       &__info {
-        margin-top: var(--element-size-4);
+        margin-top: var(--size-4);
       }
     }
   }
