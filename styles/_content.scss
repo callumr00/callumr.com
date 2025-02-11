@@ -28,7 +28,7 @@
     display: none;
     grid-gap: var(--size-8);
     text-align: center;
-    margin: var(--size-8) 0;
+    margin: var(--size-8) 0 var(--size-6) 0;
   }
 
   .filters {
@@ -60,11 +60,21 @@
 
   &__items {
     margin: 0;
+
+    &:hover .activity-feed__item {
+      opacity: 0.4;
+    }
   }
 
   &__item {
     list-style: none;
-    margin: var(--size-8) 0;
+    padding: var(--size-6) 0;
+    margin: 0;
+    transition-duration: 50ms;
+
+    &:hover {
+      opacity: 1 !important;
+    }
   }
 
   .item {
@@ -115,7 +125,7 @@
 
     &__description {
       font-size: var(--font-size-s);
-      margin-top: var(--size-4);
+      margin: var(--size-4) 0 0 0;
     }
   }
 
